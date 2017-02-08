@@ -1,0 +1,45 @@
+Réflexion changement nom de domaine : USOMATIC.COM ?
+USO : usage + MATIC : automatique, simple, intuitif
+U : vous, l'utilisateur, son besoin
+SOMA : une entreprise qui a du corps
+TIC : Technologies de l'Info et de la Com
+plus latin que USER-FACTORY.COM, mais moins explicite ?
+
+NEOGRATIAS.COM, WEBEMPATHIE.COM, ...
+DEO GRATIAS : Expression qui signifie littéralement: "(Rendons) grâces à Dieu". Elle est composée des substantifs deus (ablatif deo) = dieu et gratia (accusatif pluriel gratias). Elle se retrouve fréquemment à la fin d'une prière ou à la fin de la messe en réponse au prêtre qui renvoie les fidèles en disant: Ite, missa est (Allez, vous avez congé). Deo gratias est employé aussi pour traduire un pieux soulagement: "Il est sauvé. Deo gratias".
+positionnement :
+expertise IHM web
+
+points forts :
+- une approche globale : décloissonnement des disciplines, développement équilibré entre les différentes contraintes
+Un site fonctionnel (ergonomie et technique), beau et vendeur (marketting et référencement) est pensé sur ces 3 dimensions dès le départ.
+L'ergonomie est pensée en amont.
+Le plus juste compromis contraintes techniques et ergonomie
+Le design orienté : renforcer la structure de l'information (fonctionnalisme, minimalisme)
+- une approche visionnaire, anticiper l'évolution du web 
+construire des développements pérennes en s'appuyant sur les standards web (W3C)
+(web sémantique, réseau de neurones, ...)
+-> pérennité, portabilité, anticipation, innovation
+- cohérence, réactivité de la structure indépendante
+User-factory : agence de production et de valorisation de contenu (d'information) -> architecte de l'info + référenceur (stratégie de communication, ergonomie, design)
+User-factory : conception d'interface web une synthèse unique entre 2 métiers :
+	expertise technique sur les formats de document web + expertise ergonomique pour comprendre et servir la logique utlisateur
+
+à ne pas faire : 
+- bonne communication mais tout graphique -> mauvaise lisibilité (le contenu éditorial n'est pas dominant), moins d'élements accessibles (WAI) et indexables par les moteurs de recherche (référencement)
+- beaucoup de fonctionnalités mais injustifiée, nom organisées (par rapport au besoin utilisateur)
+
+argumentaire : ce que vous aurez pour ce prix : site accessible aux déficients visuels, conformes aux standards W3C, ergonomie totale, lisibilité totale, etc ...
+
+catalogue de formation
+public : université (cursus multimedia), agences web.
+- Développer pérenne avec les Standards W3C (DOM, ECMASCript)
+- SVG concurent open-source de Flash
+- comment allier application dynamique et rich-design
+
+- approche artisanale ? type Bauhaus : art + industrie;
+alliance technologie et savoir-faire; ceux qui savent font.
+User Factory : Maison de confiance
+
+la standardisation des languages de script côté client (DOM, ECMAScript)
+permettent l'avènement des possibilités de conception d'interface web évoluée (fonctionalités et ergonomie)

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT activité (#PCDATA)>
+<!ATTLIST activité domaine (musique|sport|ergonomie|programmation|graphisme|veille) #IMPLIED>
+<!ELEMENT adresse (immeuble?, numéro, voie, ville)>
+<!ELEMENT année (#PCDATA)>
+<!ELEMENT cadre (nom, site_web?, adresse?)>
+<!ATTLIST cadre type (société | université) #REQUIRED>
+<!ELEMENT client (nom, produit, activité+)>
+<!ELEMENT commentaire (#PCDATA)>
+<!ELEMENT coordonnées (e-mail+, adresse, téléphone)>
+<!ELEMENT cv (date, identité, formation, parcours_professionnel, langues, loisirs)>
+<!ELEMENT date (jour?, mois?, année)>
+<!ELEMENT diplôme (intitulé, cadre, commentaire?)>
+<!ATTLIST diplôme anneObtention (1995 | 1996 | 1997 | 1999) #REQUIRED>
+<!ELEMENT début (jour?, mois, année)>
+<!ELEMENT e-mail (#PCDATA)>
+<!ATTLIST e-mail rang (principal | secondaire) #REQUIRED>
+<!ELEMENT expérience (période, cadre, mission?, fonction, activité+, références?)>
+<!ATTLIST expérience type (CDI | stage) #REQUIRED>
+<!ELEMENT fin (mois, année)>
+<!ELEMENT fonction (#PCDATA)>
+<!ELEMENT formation (diplôme+)>
+<!ELEMENT identité (nom, prénom, naissance, âge, situation_famille, coordonnées)>
+<!ELEMENT immeuble (#PCDATA)>
+<!ELEMENT intitulé (#PCDATA)>
+<!ELEMENT jour (#PCDATA)>
+<!ELEMENT langue (intitulé, commentaire)>
+<!ELEMENT langues (langue+)>
+<!ELEMENT loisirs (activité+)>
+<!ELEMENT mission (#PCDATA)>
+<!ELEMENT mois (#PCDATA)>
+<!ATTLIST mois codeNum (01 | 02 | 03 | 04 | 05 | 06 | 07 | 08 | 09 | 10 | 11 | 12) #REQUIRED>
+<!ELEMENT naissance (date, ville)>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT numéro (#PCDATA)>
+<!ELEMENT parcours_professionnel (expérience+)>
+<!ELEMENT produit (#PCDATA)>
+<!ELEMENT prénom (#PCDATA)>
+<!ELEMENT période (début, fin?)>
+<!ELEMENT références (client+)>
+<!ELEMENT site_web (#PCDATA)>
+<!ELEMENT situation_famille (#PCDATA)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT téléphone (#PCDATA)>
+<!ELEMENT ville (#PCDATA)>
+<!ATTLIST ville codePostal CDATA #REQUIRED>
+<!ELEMENT voie (type, nom)>
+<!ELEMENT âge (#PCDATA)>

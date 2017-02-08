@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF 
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+<foaf:PersonalProfileDocument rdf:about="">
+  <foaf:maker rdf:nodeID="me"/>
+  <foaf:primaryTopic rdf:nodeID="me"/>
+</foaf:PersonalProfileDocument>
+
+<foaf:Person rdf:nodeID="me">
+	<foaf:name>Florent Chanavat</foaf:name>
+	<foaf:title>M.</foaf:title>
+	<foaf:givenname>Florent</foaf:givenname>
+	<foaf:family_name>Chanavat</foaf:family_name>
+	<foaf:nick>Florent</foaf:nick>
+	<foaf:mbox_sha1sum>5dba79b3b37866181687a135822e5f939f257984</foaf:mbox_sha1sum>
+	<foaf:homepage rdf:resource="http://www.usocrate.fr"/>
+	<foaf:workplaceHomepage rdf:resource="http://www.action-on-line.fr"/>
+	<foaf:schoolHomepage rdf:resource="http://www.psycho.univ-paris5.fr/lei/"/>
+</foaf:Person>
+</rdf:RDF>

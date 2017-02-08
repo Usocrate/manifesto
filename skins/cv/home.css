@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+@import url('cv.css');
+
+BODY {
+	border-width: 0;
+	border-spacing: 0;
+	background-image: none
+}
+
+.wrapper {
+	width: 670px;
+	margin: 40px auto;
+	padding: 0;
+}
+
+H1 {
+	width: 457px;
+	height: 43px;
+	margin: 7px 0 0 26px;
+	padding: 0;
+	float: left;
+	background-image: url('img/home_h1.gif');
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	border-width: 0;
+	background-image: url('img/home_h1.gif');
+}
+
+H1 SPAN {
+	visibility: hidden;
+}
+
+#badge {
+	width: 42px;
+	height: 43px;
+	float: left;
+	margin: 0 0 0 10px;
+	background-image: url('img/badge_42x43.gif');
+	background-repeat: no-repeat;
+}
+
+DIV {
+	padding: 0;
+	margin: 0
+}
+
+IMG {
+	border-width: 0;
+	margin: 0
+}
+
+#etiquette {
+	clear: both;
+	float: left;
+	background-color: #FFF;
+	color: inherit;
+	border: 1px solid #FFA366;
+	text-align: center;
+	padding: 10px 0;
+	width: 24px;
+	height: 280px;
+	margin: 0
+}
+
+#etiquette img {
+	vertical-align: bottom
+}
+
+#corps {
+	float: left;
+	background-image: url('img/mouth.png');
+	background-position: bottom left;
+	background-repeat: no-repeat;
+	padding: 0 0 0 200px;
+	margin: 10px 20px;
+	border-width: 0;
+	width: 400px;
+	text-align: left;
+}
+
+#corps p {
+	margin: 1.4em 0;
+}
+
+#foot {
+	clear: both;
+	border-top: 24px solid #FFA366;
+	margin: 0 0 0 26px;
+	width: auto;
+	padding: 4px 0;
+	text-align: right;
+	color: #000;
+	background-color: inherit;
+}
+
+#foot A {
+	color: #000;
+	font-weight: bold
+}
