@@ -25,10 +25,10 @@ switch ($_SERVER ['SERVER_NAME']) {
 		define ( 'PROJECT_DESCRIPTION', "Le design ce n'est pas du style, c'est de l'usage" );
 		define ( 'PROJECT_PUBLISHER', 'Usocrate.fr' );
 		define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
-		define ( 'PROJECT_URL', 'http://www.usocrate.fr/' );
-		define ( 'SKIN_URL', 'http://usocrate.fr/skins/usocrate/' );
-		define ( 'BOOKMARKS_URL', 'http://em.usocrate.fr/' );
-		define ( 'CV_URL', 'http://cv.usocrate.fr/' );
+		define ( 'PROJECT_URL', 'https://usocrate.fr/' );
+		define ( 'SKIN_URL', 'https://usocrate.fr/skins/usocrate/' );
+		define ( 'BOOKMARKS_URL', 'https://usocrate.fr/em/' );
+		define ( 'CV_URL', 'https://usocrate.fr/cv/' );
 		/**
 		 * Google Analytics
 		 */
