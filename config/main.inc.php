@@ -10,19 +10,19 @@ switch ($_SERVER ['SERVER_NAME']) {
 		define ( 'BOOKMARKS_URL', 'http://em.usocrate.traktor/' );
 		define ( 'CV_URL', PROJECT_URL . 'cv/' );
 		break;
-	case 'usocrate.mp110352' :
-		define ( 'PROJECT_NAME', 'Usocrate (mp110352)' );
-		define ( 'PROJECT_DESCRIPTION', 'Site perso de Florent Chanavat (test)' );
-		define ( 'PROJECT_PUBLISHER', 'usocrate.mp110352' );
-		define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
-		define ( 'PROJECT_URL', 'http://usocrate.mp110352/' );
-		define ( 'SKIN_URL', 'http://usocrate.mp110352/skins/usocrate/' );
-		define ( 'BOOKMARKS_URL', 'http://em.usocrate.fr/' );
-		define ( 'CV_URL', PROJECT_URL . 'cv/' );
-		break;
+	case 'chosta' :
+			define ( 'PROJECT_NAME', 'Usocrate (chosta)' );
+			define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique');
+			define ( 'PROJECT_PUBLISHER', 'usocrate' );
+			define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
+			define ( 'PROJECT_URL', 'http://chosta/manifesto/' );
+			define ( 'SKIN_URL', 'http://chosta/manifesto//skins/usocrate/' );
+			define ( 'BOOKMARKS_URL', 'http://chosta/em/' );
+			define ( 'CV_URL', PROJECT_URL . 'http://chosta/cv/' );
+			break;
 	default :
 		define ( 'PROJECT_NAME', 'Usocrate.fr' );
-		define ( 'PROJECT_DESCRIPTION', "Le design ce n'est pas du style, c'est de l'usage" );
+		define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique' );
 		define ( 'PROJECT_PUBLISHER', 'Usocrate.fr' );
 		define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
 		define ( 'PROJECT_URL', 'https://usocrate.fr/' );
