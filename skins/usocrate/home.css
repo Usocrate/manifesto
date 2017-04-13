@@ -11,8 +11,16 @@ H1 {
 	border-width: 0 0 1px 0;
 }
 
-.container {
+SECTION {
+	margin-top:1rem;
+}
+
+.container, .container-fluid {
 	background-color:#fff;
+}
+
+.badge-default {
+	background-color: #C9462C;
 }
 
 @media ( min-width : 962px) {
