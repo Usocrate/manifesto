@@ -1,26 +1,6 @@
 <?php
 switch ($_SERVER ['SERVER_NAME']) {
-	case 'usocrate.traktor' :
-		define ( 'PROJECT_NAME', 'Usocrate (traktor)' );
-		define ( 'PROJECT_DESCRIPTION', 'Site perso de Florent Chanavat' );
-		define ( 'PROJECT_PUBLISHER', 'usocrate.traktor' );
-		define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
-		define ( 'PROJECT_URL', 'http://usocrate.traktor/' );
-		define ( 'SKIN_URL', 'http://usocrate.traktor/skins/usocrate/' );
-		define ( 'BOOKMARKS_URL', 'http://em.usocrate.traktor/' );
-		define ( 'CV_URL', PROJECT_URL . 'cv/' );
-		break;
-	case 'chosta' :
-			define ( 'PROJECT_NAME', 'Usocrate (chosta)' );
-			define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique');
-			define ( 'PROJECT_PUBLISHER', 'usocrate' );
-			define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
-			define ( 'PROJECT_URL', 'http://chosta/manifesto/' );
-			define ( 'SKIN_URL', 'http://chosta/manifesto//skins/usocrate/' );
-			define ( 'BOOKMARKS_URL', 'http://chosta/em/' );
-			define ( 'CV_URL', PROJECT_URL . 'http://chosta/cv/' );
-			break;
-	default :
+	case 'usocrate.fr':
 		define ( 'PROJECT_NAME', 'Usocrate.fr' );
 		define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique' );
 		define ( 'PROJECT_PUBLISHER', 'Usocrate.fr' );
@@ -34,6 +14,27 @@ switch ($_SERVER ['SERVER_NAME']) {
 		 */
 		define ( 'GA_KEY', 'UA-6475427-3' );
 		define ( 'GA_ACCOUNT', 'usocrate.fr' );
+		break;
+	case 'traktor' :
+		define ( 'PROJECT_NAME', 'Usocrate (traktor)' );
+		define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique' );
+		define ( 'PROJECT_PUBLISHER', 'traktor' );
+		define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
+		define ( 'PROJECT_URL', 'http://traktor/manifesto/' );
+		define ( 'SKIN_URL', 'http://traktor/manifesto/skin/' );
+		define ( 'BOOKMARKS_URL', 'http://traktor/em/' );
+		define ( 'CV_URL', PROJECT_URL . 'cv/' );
+		break;
+	case 'chosta' :
+			define ( 'PROJECT_NAME', 'Usocrate (chosta)' );
+			define ( 'PROJECT_DESCRIPTION', 'Manifeste pour l\'usocratie numérique');
+			define ( 'PROJECT_PUBLISHER', 'usocrate' );
+			define ( 'PROJECT_CREATOR', 'Florent Chanavat' );
+			define ( 'PROJECT_URL', 'http://chosta/manifesto/' );
+			define ( 'SKIN_URL', 'http://chosta/manifesto//skins/usocrate/' );
+			define ( 'BOOKMARKS_URL', 'http://chosta/em/' );
+			define ( 'CV_URL', PROJECT_URL . 'http://chosta/cv/' );
+			break;
 }
 // commun
 define ( 'IMAGES_URL', SKIN_URL . 'images/' );
