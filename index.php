@@ -173,7 +173,7 @@
 					</div>
 				</div>
 
-				<h4>2- Changer les indicateurs de réussite d’un projet</h4>
+				<h4>2- Changer les indicateurs de réussite</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
@@ -235,8 +235,8 @@
 					</div>
 				</div>
 
-				<h4>3- Favoriser la collaboration et la créativité</h4>
-				<p>Réaffirmer la production de valeur comme une pratique sociale.</p>
+				<h4>3- Décloisonner</h4>
+				<p>Favoriser la collaboration et la créativité<br>Réaffirmer la production de valeur comme une pratique sociale.</p>
 				<div class="card">
 						<div class="card-block">
 							<div class="card-text">
