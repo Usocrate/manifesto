@@ -1,4 +1,0 @@
-AuthName "Acc�s prot�g�"
-AuthType Basic
-Require valid-user
-AuthUserFile /srv/A/www/usocrate/cv/annexes/.htpasswd
