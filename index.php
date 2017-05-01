@@ -45,7 +45,7 @@
 			<div class="row justify-content-md-center">
 				<div class="col-md-10">
 					<div class="card">
-						<img class="card-img-top" src="skin/images/process2.jpg">
+						<img class="card-img-top" src="skin/images/method.png">
 						<div class="card-block">
 							<h3 class="card-title">Une méthode</h3>
 							<div class="card-text">
@@ -170,7 +170,7 @@
 									<li>Je m’attache à des faits pas à des opinions</li>
 									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisiste.</li>
 									<li>En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
-								</ul>								
+								</ul>
 							</div>
 						</div>
 					</div>
