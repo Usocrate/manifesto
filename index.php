@@ -34,25 +34,25 @@
 				</div>
 			</header>
 		</section>
-
 		<section id="manifesto">
 			<h2>Manifeste<br><small>Pour une usocratie numérique</small></h2>
 			<p>
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou encore la manière dont individuellement nous nous représentons le monde.<br>
-					Les anciens modes de production industriels, ne permettent plus de construire des outils numériques à la hauteur des enjeux collectifs et individuels liés à la transformation actuelle.
+					Les anciens modes de production industriels, ne permettent pas de construire des outils numériques à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
+					Nous avons besoin d'une renaissance numérique qui place l'humain au coeur du processus de conception et qui s'oppose à une vision de l’innovation pilotée par la faisablité technologique, faite de gadgets technologiques consommés sur un mode ludique et hautement périssables.<br>
 			</p>
 			<div class="row justify-content-md-center">
-				<div class="col-md-8">
+				<div class="col-md-10">
 					<div class="card">
+						<img class="card-img-top" src="skin/images/process2.jpg">
 						<div class="card-block">
 							<h3 class="card-title">Une méthode</h3>
 							<div class="card-text">
-								<p>
-									Placer les usagers au centre des attentions dans le processus de conception de produit / service numérique.<br>
-									Faire de la valeur d’usage le premier indicateur du progrès et de l’innovation.<br>
-									C'est s'opposer à une vision de l’innovation pilotée par la faisablité technologique, faite de gadgets technologiques consommés sur un mode ludique et hautement périssables.<br>
-								</p>
+								<ol>
+									<li>Placer les usagers au centre des attentions dans le processus de conception de produit / service numérique.</li>
+									<li>Faire de la valeur d’usage le premier indicateur du progrès et de l’innovation.</li>
+								</ol>
 								<blockquote>Focus on the user and all else will follow  - Rechercher l’intérêt de l’utilisateur et le reste suivra (Google)</blockquote>
 							</div>
 						</div>
@@ -70,8 +70,14 @@
 								<ul>
 									<li>Améliorer la vie des gens, notamment dans leurs conditions de travail, en concevant des outils numériques adaptés, efficaces, libérant les potentiels individuels.</li>
 									<li>Mettre le numérique au service de l'intelligence humaine plutôt que d’en faire un vecteur d’aliénation et de déshumanisation.</li>
+									<li>Veiller à ce que les services développés soient accessibles et utilisables par tous pour une une société numérique inclusive et équitable</li>
 								</ul>
-								<p><span class="badge badge-pill badge-default">Utilité</span> <span class="badge badge-pill badge-default">Progrès</span> <span class="badge badge-pill badge-default">Intégration</span>  <span class="badge badge-pill badge-default">Société</span>  <span class="badge badge-pill badge-default">Ethique</span></p>
+								<p>
+									<span class="badge badge-pill badge-default">Utilité</span>
+									<span class="badge badge-pill badge-default">Progrès</span>
+									<span class="badge badge-pill badge-default">Intégration</span>
+									<span class="badge badge-pill badge-default">Société</span>
+									<span class="badge badge-pill badge-default">Ethique</span></p>
 							</div>
 						</div>
 					</div>
@@ -81,14 +87,13 @@
 						<div class="card-block">
 							<h4 class="card-title">Efficacité économique et innovation</h4>
 							<div class="card-text">
-								<p>
-									La compétitivité de notre industrie numérique est aussi au premier plan.<br>
-									Être usocrate, c’est être dépité par l’absence de leaders français du numérique massivement adoptés à l'échelle mondiale ou simplement nationale; absence dûe en partie à une apathie généralisée face à la nécessité de faire de bon produits pour pouvoir être compétitifs.
-								</p>
-								<p>
-									Donner une place centrale aux usages dans la conception de produit ou service c’est sécuriser les investissements en assurant la viabilité des services numériques développés qu’ils le soient dans un esprit de service public ou pour le secteur marchand.<br>
-									Se focaliser sur les usages est le meilleur vecteur d’innovation pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût pour pouvoir générer du chiffre d’affaires.
-								</p>
+								<ul>
+									<li>
+										Rompre avec l'apathie généralisée face à la nécessité de faire de bon produits pour pouvoir être compétitifs.<br>
+										Travailler à la prise de conscience que l'émergence de leaders français du numérique massivement adoptés à l'échelle mondiale ou simplement nationale passe par une approche centrée utilisateurs.</li>
+									<li>Donner une place centrale aux usages dans la conception de produit ou service c’est sécuriser les investissements en assurant la viabilité des services numériques développés qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
+									<li>Se focaliser sur les usages est le meilleur vecteur d’innovation pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût pour pouvoir générer du chiffre d’affaires.</li>
+								</ul>
 								<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
 							</div>
 						</div>
@@ -96,18 +101,16 @@
 				</div>
 			</div>
 
-			<div>
-				<p>
-					Pour ceux qui portent traditionnellement une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
-				</p>
-				<ul>
-					<li>Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de produits / services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.</li>
-					<li>Il se veut un moyen, parmi d’autres, pour les professionnels du numérique de partager cette vision.</li>
-				</ul>
-				<p>
-					Il s'adresse à l’ensemble des professionnels du secteur numérique qui ont entre les mains la destinée de services numériques : chef de produit, designers, chef de projets, financeurs.
-				</p>
-			</div>
+			<p>
+				Pour ceux qui portent traditionnellement une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
+			</p>
+			<ul>
+				<li>Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de produits / services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.</li>
+				<li>Il se veut un moyen, parmi d’autres, pour les professionnels du numérique de partager cette vision.</li>
+			</ul>
+			<p>
+				Il s'adresse à l’ensemble des professionnels du secteur numérique qui ont entre les mains la destinée de services numériques : chef de produit, designers, chef de projets, financeurs.
+			</p>
 
 			<div>
 				<h3>3 engagements</h3>
@@ -121,7 +124,7 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">Aller à la rencontre des usagers</h5>
+							<h5 class="card-title">Aller à la rencontre des usagers : pas de conception sans usagers</h5>
 							<div class="card-text">
 								<p>Moi usocrate...</p>
 								<ul>
@@ -167,104 +170,99 @@
 									<li>Je m’attache à des faits pas à des opinions</li>
 									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisiste.</li>
 									<li>En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
-								</ul>
+								</ul>								
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<h4>2- Changer les indicateurs de réussite</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">La valeur d’usage comme projet industriel</h5>
-							<p>Sortir du modèle de la société de consommation. De la vision marketing : vendre une production abondante, fétichisme de l’objet, différenciation statutaire sans fin (Baudrillard). Pour un développement rationnel et durable.</p>
+							<h4 class="card-title">2- Changer les indicateurs de réussite d’un projet</h4>
 							<div class="card-text">
-								<p>Moi usocrate...</p>
 								<ul>
-										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité attendue est disponible. Il faut qu'elle soit localisée et utilisée par les usagers.</li>
-										<li>Je ne considère pas que le travail soit fait lorsque les données attendues sont diffusées. Il faut qu'elles soient consultables et portent une valeur métier </li>
-										<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit / service</li>
-										<li>Je valorise l'écoute</li>
-										<li>Une de mes qualités est la réactivité</li>
-										<li>Je fais de la simplicité du produit / service un objectif<br>Stopper la déviance fonctionnelle - pas d'arrêt du dev de fonctionnalités c'est de la valeur ajoutée, mais pas d'exposition intégrale du fonctionnel : génératrice de complexité, de coût de dev et de maintenance. Des vues glanceable : halte à l'interactivité. unbundling (profil tâches). Pas de développement de nouvelles fonctionnalités sans organisation, intégration et valorisation  (utilité, utilisabilité)<br>Nécessaires à l'attractivité du service le marketing et l'habillage visuel de l'application, il faut plus pour garantir durablement l'engagement des usagers</li>
-										<li>Je ne confonds pas nouveauté et innovation.</li>
-										<li>Je crois que c'est la valeur d'usage qui permet d'asseoir la pérennité d'un produit / service</li>
-										<li>Je considère que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit; ce n'est pas parce que c'est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
-										<li>Je pense le choix du framework et des outils permettant dev le produit et service est négligeable dans la valeur aux usagers.</li>
-										<li>Je crois que la démonstration technologique à toujours rendu davantage service aux forces de ventes en déficit d'argument qu'aux usagers.</li>
-										<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
-										<li>Je pense que l'échec de beaucoup de produit / service numériques est prévisible lorsque l'utilité et la désirabilité de ceux n'a pas été questionnées auprès des usagers</li>
-										<li>Je pense qu'il y a dans les projets numériques beaucoup de temps perdu à des activités qui n'ont pas d'impact sur la qalité du produit / service livré aux usagers</li>
+									<li>La valeur d’usage comme projet industriel<br>Sortir du modèle de la société de consommation. De la vision marketing : vendre une production abondante, fétichisme de l’objet, différenciation statutaire sans fin (Baudrillard). Pour un développement rationnel et durable.</li>
+									<li>Mesurer la réussite : appropriation, satisfaction, feedback</li>
 								</ul>
+								<div><span class="badge badge-default">charge cognitive</span>, <span class="badge badge-default">expérience utilisateur</span></div>
+								<div>
+									<p>Moi usocrate...</p>
+									<ul>
+											<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité attendue est disponible. Il faut qu'elle soit localisée et utilisée par les usagers.</li>
+											<li>Je ne considère pas que le travail soit fait lorsque les données attendues sont diffusées. Il faut qu'elles soient consultables et portent une valeur métier </li>
+											<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit / service</li>
+											<li>Je valorise l'écoute</li>
+											<li>Une de mes qualités est la réactivité</li>
+											<li>Je fais de la simplicité du produit / service un objectif<br>Stopper la déviance fonctionnelle - pas d'arrêt du dev de fonctionnalités c'est de la valeur ajoutée, mais pas d'exposition intégrale du fonctionnel : génératrice de complexité, de coût de dev et de maintenance. Des vues glanceable : halte à l'interactivité. unbundling (profil tâches). Pas de développement de nouvelles fonctionnalités sans organisation, intégration et valorisation  (utilité, utilisabilité)<br>Nécessaires à l'attractivité du service le marketing et l'habillage visuel de l'application, il faut plus pour garantir durablement l'engagement des usagers</li>
+											<li>Je ne confonds pas nouveauté et innovation.</li>
+											<li>Je crois que c'est la valeur d'usage qui permet d'asseoir la pérennité d'un produit / service</li>
+											<li>Je considère que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit; ce n'est pas parce que c'est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
+											<li>Je pense le choix du framework et des outils permettant dev le produit et service est négligeable dans la valeur aux usagers.</li>
+											<li>Je crois que la démonstration technologique à toujours rendu davantage service aux forces de ventes en déficit d'argument qu'aux usagers.</li>
+											<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
+											<li>Je pense que l'échec de beaucoup de produit / service numériques est prévisible lorsque l'utilité et la désirabilité de ceux n'a pas été questionnées auprès des usagers</li>
+											<li>Je pense qu'il y a dans les projets numériques beaucoup de temps perdu à des activités qui n'ont pas d'impact sur la qalité du produit / service livré aux usagers</li>
+									</ul>
+									<p>Moi usocrate...</p>
+									<ul>
+										<li>émotion (confiance), effort, productivité</li>
+										<li>L'ux c'est la rencontre entre un artefact, une interface, et un humain.</li>
+										<li>Elle s'apprécie donc en termes d'expérience humain : compréhension,  effort, satisfaction, impression.
+										<p>Google Heart Framework<br>
+										Happiness, Engagement, Adoption, Retention, Task success</p>
+										</li>
+										<p>+ The Goals-Signals-Metrics process</p>
+										Les indicateurs suivants deviennent tous caduques à partir du moment ou la valeur d’usage n’est pas démontrée :
+										<ul>
+											<li>Détourner le focus du respect des délais et des échéances de livraison (cf. : Alan Cooper).</li>
+											<li>L’industrialisation de la chaîne de production</li>
+											<li>Nécessité d’une approche sur mesure vs industrialisation</li>
+											<li>unbundling (profil tâches)</li>
+											<li>pour se mettre en mouvement (segmentation fonctionnelle) le design c'est le passage entre l'industrialisable (API) et le consommable</li>
+											<li>Nouveauté, rénovation, adhésion tendances</li>
+											<li>à copier les autres ont perd de la valeur</li>
+											<li>Ventes, valeur d’échange</li>
+											<li>pas de garanties moyen termes si absence d’innovation dans un domaine fortement concurrentiel</li>
+											<li>Le taux d’occupation des ressources (développeurs) n’est pas un critère</li>
+											<li>Ce n’est pas le nombre de fonctionnalités développées et le temps consacré qui fait la valeur du produit</li>
+										</ul>
+										<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
+									</ul>
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">Mesurer la réussite : appropriation, satisfaction, feedback</h5>
-							<div class="card-text">
-								<p>Moi usocrate...</p>
-								<ul>
-									<li>émotion (confiance), effort, productivité</li>
-									<li>L'ux c'est la rencontre entre un artefact, une inerface, et un humain.</li>
-									<li>Elle s'apprécie donc en termes d'expérience humain : compréhension,  effort, satisfaction, impression.
-									<p>Google Heart Framework<br>
-									Happiness, Engagement, Adoption, Retention, Task success</p>
-									</li>
-									<p>+ The Goals-Signals-Metrics process</p>
-									Les indicateurs suivants deviennent tous caduques à partir du moment ou la valeur d’usage n’est pas démontrée :
-									<ul>
-										<li>Détourner le focus du respect des délais et des échéances de livraison (cf. : Alan Cooper).</li>
-										<li>L’industrialisation de la chaîne de production</li>
-										<li>Nécessité d’une approche sur mesure vs industrialisation</li>
-										<li>unbundling (profil tâches)</li>
-										<li>pour se mettre en mouvement (segmentation fonctionnelle) le design c'est le passage entre l'industrialisable (API) et le consommable</li>
-										<li>Nouveauté, rénovation, adhésion tendances</li>
-										<li>à copier les autres ont perd de la valeur</li>
-										<li>Ventes, valeur d’échange</li>
-										<li>pas de garanties moyen termes si absence d’innovation dans un domaine fortement concurrentiel</li>
-										<li>Le taux d’occupation des ressources (développeurs) n’est pas un critère</li>
-										<li>Ce n’est pas le nombre de fonctionnalités développées et le temps consacré qui fait la valeur du produit</li>
-									</ul>
-									<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
-								</ul>
-								<div><span class="badge badge-default">charge cognitive</span>, <span class="badge badge-default">expérience utilisateur</span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<h4>3- Décloisonner</h4>
-				<p>Favoriser la collaboration et la créativité<br>Réaffirmer la production de valeur comme une pratique sociale.</p>
-				<div class="card">
-						<div class="card-block">
+							<h4 class="card-title">3- Réaffirmer la production de valeur comme une pratique sociale.</h4>
 							<div class="card-text">
 								<ul>
 									<li>Collaborer pour l’efficacité, dépasser les conflits d’intérêts</li>
+									<li>Itérer pour converger autour d'une vision commune</li>
 									<li>Collaborer pour la créativité</li>
 									<li>Faire la promotion de la culture design</li>
 									<li>Le design est un processus : pour la planification</li>
 									<li>Halte au gaspillage : toute l'énergie consacrée à la création de valeur</li>
 								</ul>
 								<p>Moi usocrate...</p>
-								<li>Je suis convaincu que collaborer et dépasser les conflits d’intérêts favorise l’efficacité</li>
-								<li>Je m’assure que tous les participants au projet se sentent légitimes (Empowernment)</li>
-								<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
-								<li>Je vise l'harmonie et la résolution des conflits plutôt que leur exploitation à des fins politiques</li>
-								<li>Casser les silos</li>
-								<li>Je pense que certains livrables sont inutiles et privilégie l'échange à la documentation</li>
-								<li>Je tente de cadrer l'expression des goûts personnels de l'équipe projet.</li>
-								<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
-								<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
-								<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
-								</li>
+								<ul>
+									<li>J'ai la volonté de dépasser les conflits d’intérêts et de faire converger tous les protagonistes du projet vers une vision partagée</li>
+									<li>Je m’assure que tous les participants au projet se sentent légitimes (Empowerment)</li>
+									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
+									<li>Je vise l'harmonie et la résolution des conflits plutôt que leur exploitation à des fins politiques</li>
+									<li>Je travaille à casser les silos</li>
+									<li>Je pense que certains livrables sont inutiles et privilégie l'échange à la documentation</li>
+									<li>Je tente de cadrer l'expression des goûts personnels de l'équipe projet.</li>
+									<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
+									<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
+									<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
+								</ul>
 							</div>
 						</div>
 					</div>
-
+				</div>
 			</div>
-
 			</section>
 
 			<section id="subscriptionArea">
