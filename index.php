@@ -114,7 +114,7 @@
 
 			<div>
 				<h3>3 engagements</h3>
-				<div class="text-center" style="background-color:#fff">
+				<div class="text-center" style="background-color:#fff;display:none">
 					<figure class="figure">
 						<img src="http://democratieouverte.org/media/default/0001/01/7c9acdbad8af2125e03d1aaa4eb33a3ffcc2b2b4.jpeg" class="img-fluid" alt="Responsive image">
 					</figure>
@@ -124,23 +124,19 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">Aller à la rencontre des usagers</h5>
+							<h5 class="card-title">Aller sur le terrain et aimer le réel</h5>
 							<div class="card-text">
 								<p>Moi usocrate...</p>
 								<ul>
-									<li>J’ai la volonté d’aller à la rencontre des usagers et de leur besoin aussi souvent que possible (du réel).</li>
-									<li>Je sors de mon bureau pour aller sur le terrain, au contact des usagers</li>
-									<li>
-										J’affirme l’impossibilité du design hors sol et sans connaissance du contexte.
-										Définir précisément les usagers auxquels on s’adresse et leurs problématiques est une nécessité. Plus d'usager lampda.
-									</li>
-									<li>Considération plutôt que personnalisation. Évaluer au plus tôt le produit auprès d’usagers potentiels</li>
-									<li>
-										Je mets en place des méthodes et outils pour collecter de l’information de terrain et je travaille à la maîtrise de ces outils..
-										En amont : étude ethnographique, observations de terrain
-										En aval : enquête de satisfaction, collecte de données d’usage (ex. : Mixpanel), demandes formulées au support client
-									</li>
-									<li>Je favorise les approches de co-conception</li>
+									<li>J’ai la volonté de sortir de mon bureau pour aller à la rencontre des usagers aussi souvent que possible.</li>
+									<li>Je favorise les approches de co-conception même si cela complexifie les prises de décisions</li>
+									<li>Je mets en place des méthodes et outils pour collecter de l’information de terrain et travaille à la maîtrise de ces outils	(étude ethnographique, tests d'utilisabilité, analyse des données d’usage (ex. : Mixpanel), analyse des demandes formulées au support client, etc...)</li>
+									<li>J’affirme l’impossibilité d'un design hors sol et sans connaissance du contexte.</li>
+									<li>Définir précisément les usagers auxquels on s’adresse et leurs problématiques est une nécessité. Plus d'usager lampda.</li>
+									<li>Je fais de la résolution des problèmes de usagers l'objectif premier d'une démarche de conception</li>
+									<li>Je m’attache à des faits pas à des opinions</li>
+									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisistes.<br>
+										En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
 								</ul>
 							</div>
 						</div>
@@ -151,57 +147,52 @@
 							<div class="card-text">
 								<p>Moi usocrate...</p>
 								<ul>
+									<li>Je valorise l'écoute et l'empathie</li>
+									<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
 									<li>Je ne discrédite pas les usagers et ne justifient pas des dysfonctionnements par leur incapacité</li>
-									<li>Je valorise l'écoute</li>
+									<li>Je ne m’approprie pas le service pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
+									<li>Je cadre l'expression des opinions et goûts personnels des membres l'équipe projet.</li>
+									<li>Je n'abandonne pas les usagers aux possibilités de paramétrage et de personalisation que les outils proposent</li>
+									<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
+									<li>Je privilégie une attitude de considération des usagers</li>
+									<li>J'évalue au plus tôt le produit auprès d’usagers potentiels</li>
 									<li>J’admets l’idée que les comportements des usagers avec le produit ou service numérique soit en décalage avec ce qui était attendu :  je suis capable d’intégrer le principe de réalité</li>
 									<li>Je prends soin des usagers (éthique, économie de l’attention, ...)</li>
-									<li>Je ne m’approprie pas le service, ne me substitue pas aux usagers</li>
-									<li>Je cadre l'expression des goûts personnels de l'équipe projet.</li>
-									<li>Je me soucie de l'impact des choix de conception sur la vie des usagers et j'affirmer la dimension éthique du design</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="card">
-						<div class="card-block">
-							<h5 class="card-title">Aimer le réel</h5>
-							<div class="card-text">
-								<p>Moi usocrate...</p>
-								<ul>
-									<li>Je m’attache à des faits pas à des opinions</li>
-									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisiste.</li>
-									<li>En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
+									<li>Je me soucie de l'impact des choix de conception sur leur vie et j'affirme la dimension éthique du design</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
-				
-				<h4>2- Changer les indicateurs de réussite</h4>
+
+				<h4>2- Contribuer à changer les indicateurs de réussite</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
 							<h5 class="card-title">La valeur d’usage comme projet industriel</h5>
 							<div class="card-text">
-								<p>Sortir du modèle de la société de consommation.<br>De la vision marketing : vendre une production abondante, fétichisme de l’objet, différenciation statutaire sans fin (Baudrillard). Pour un développement rationnel et durable.</p>
-								<div><span class="badge badge-default">charge cognitive</span>, <span class="badge badge-default">expérience utilisateur</span></div>
+								<div>
+									<p>Sortir du modèle de la société de consommation.<br>De la vision marketing : vendre une production abondante, fétichisme de l’objet, différenciation statutaire sans fin (Baudrillard). Pour un développement rationnel et durable.</p>
+									<p><span class="badge badge-default">valeur d'usage</span> <span class="badge badge-default">service</span></p>
+								</div>
 								<div>
 									<p>Moi usocrate...</p>
 									<ul>
+										<li>Je refuse la course à la fonctionnalité en affirmant que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit</li>
+										<li>J'affirme que ce n'est pas parce que quelque chose est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
+										<li>Je crois que c'est la valeur d'usage c'est à dire la qualité du service rendu à l'utilisateur qui permet d'asseoir la pérennité d'une production numéique</li>
+										<li>Je ne confonds pas nouveauté et innovation.</li>
 										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité attendue est disponible. Il faut qu'elle soit localisée et utilisée par les usagers.</li>
 										<li>Je ne considère pas que le travail soit fait lorsque les données attendues sont diffusées. Il faut qu'elles soient consultables et portent une valeur métier </li>
 										<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit / service</li>
 										<li>Je fais de la simplicité du produit / service un objectif<br>Stopper la déviance fonctionnelle - pas d'arrêt du dev de fonctionnalités c'est de la valeur ajoutée, mais pas d'exposition intégrale du fonctionnel : génératrice de complexité, de coût de dev et de maintenance. Des vues glanceable : halte à l'interactivité. unbundling (profil tâches). Pas de développement de nouvelles fonctionnalités sans organisation, intégration et valorisation  (utilité, utilisabilité)<br>Nécessaires à l'attractivité du service le marketing et l'habillage visuel de l'application, il faut plus pour garantir durablement l'engagement des usagers</li>
-										<li>Je ne confonds pas nouveauté et innovation.</li>
-										<li>Je crois que c'est la valeur d'usage qui permet d'asseoir la pérennité d'un produit / service</li>
-										<li>Je considère que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit; ce n'est pas parce que c'est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
 										<li>Je pense le choix du framework et des outils permettant dev le produit et service est négligeable dans la valeur aux usagers.</li>
 										<li>Je crois que la démonstration technologique à toujours rendu davantage service aux forces de ventes en déficit d'argument qu'aux usagers.</li>
 										<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
 										<li>Je pense que l'échec de beaucoup de produit / service numériques est prévisible lorsque l'utilité et la désirabilité de ceux n'a pas été questionnées auprès des usagers</li>
 										<li>Je pense qu'il y a dans les projets numériques beaucoup de temps perdu à des activités qui n'ont pas d'impact sur la qualité du produit / service livré aux usagers</li>
 									</ul>
-								</div>								
+								</div>
 							</div>
 						</div>
 					</div>
@@ -209,8 +200,11 @@
 						<div class="card-block">
 							<h5 class="card-title">Mesurer les résultats</h5>
 							<div class="card-text">
-								<p>Mesurer la réussite : appropriation, satisfaction, feedback</p>
-								<p>Design with a purpose</p>
+								<div>
+									<p>Mesurer la réussite : appropriation, satisfaction, feedback</p>
+									<p>Design with a purpose</p>
+									<p><span class="badge badge-default">expérience utilisateur</span> <span class="badge badge-default">appropriation</span> <span class="badge badge-default">satisfaction</span></p>
+								</div>
 								<div>
 									<p>Moi usocrate...</p>
 									<ul>
@@ -237,35 +231,48 @@
 										</ul>
 										<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
 									</ul>
-								</div>								
+								</div>
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
-				
+
 				<h4 class="card-title">3- Réaffirmer la production de valeur comme une pratique sociale.</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
+							<h5 class="card-title">Collaborer pour l'efficacité économique</h5>
 							<div class="card-text">
 								<ul>
 									<li>Collaborer pour l’efficacité, dépasser les conflits d’intérêts</li>
 									<li>Itérer pour converger autour d'une vision commune</li>
-									<li>Collaborer pour la créativité, valoriser l'expérimentation</li>
-									<li>Faire la promotion de la culture design</li>
 									<li>Le design est un processus : pour la planification</li>
 									<li>Halte au gaspillage : toute l'énergie consacrée à la création de valeur</li>
 								</ul>
 								<p>Moi usocrate...</p>
 								<ul>
 									<li>J'ai la volonté de dépasser les conflits d’intérêts et de faire converger tous les protagonistes du projet vers une vision partagée</li>
-									<li>Je m’assure que tous les participants au projet se sentent légitimes (Empowerment)</li>
-									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
 									<li>Je vise l'harmonie et la résolution des conflits plutôt que leur exploitation à des fins politiques</li>
 									<li>Une de mes qualités est la réactivité</li>
-									<li>Je travaille à casser les silos</li>
 									<li>Je pense que certains livrables sont inutiles et privilégie l'échange à la documentation</li>
 									<li>Je tente de cadrer l'expression des goûts personnels de l'équipe projet.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-block">
+							<h5 class="card-title">Collaborer pour la créativité et l'innovation</h5>
+							<div class="card-text">
+								<ul>
+									<li>Collaborer pour la créativité, valoriser l'expérimentation</li>
+									<li>Faire la promotion de la culture design</li>
+								</ul>
+								<p>Moi usocrate...</p>
+								<ul>
+									<li>Je m’assure que tous les participants au projet se sentent légitimes (Empowerment)</li>
+									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
+									<li>Je travaille à casser les silos</li>
 									<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
 									<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
 									<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
@@ -274,6 +281,7 @@
 						</div>
 					</div>
 				</div>
+			</div>
 			</div>
 			</section>
 
