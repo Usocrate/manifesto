@@ -39,8 +39,8 @@
 			<p>
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou encore la manière dont individuellement nous nous représentons le monde.<br>
-					Les anciens modes de production industriels, ne permettent pas de construire des outils numériques à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
-					Nous avons besoin d'une renaissance numérique qui place l'humain au coeur du processus de conception et qui s'oppose à une vision de l’innovation pilotée par la faisablité technologique, faite de gadgets technologiques consommés sur un mode ludique et hautement périssables.<br>
+					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
+					Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative numérique... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 			</p>
 			<div class="row justify-content-md-center">
 				<div class="col-md-10">
@@ -134,6 +134,7 @@
 									<li>J’affirme l’impossibilité d'un design hors sol et sans connaissance du contexte.</li>
 									<li>Définir précisément les usagers auxquels on s’adresse et leurs problématiques est une nécessité. Plus d'usager lampda.</li>
 									<li>Je fais de la résolution des problèmes de usagers l'objectif premier d'une démarche de conception</li>
+									<li>J'évalue au plus tôt le produit auprès d’usagers potentiels</li>
 									<li>Je m’attache à des faits pas à des opinions</li>
 									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisistes.<br>
 										En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
@@ -155,7 +156,6 @@
 									<li>Je n'abandonne pas les usagers aux possibilités de paramétrage et de personalisation que les outils proposent</li>
 									<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
 									<li>Je privilégie une attitude de considération des usagers</li>
-									<li>J'évalue au plus tôt le produit auprès d’usagers potentiels</li>
 									<li>J’admets l’idée que les comportements des usagers avec le produit ou service numérique soit en décalage avec ce qui était attendu :  je suis capable d’intégrer le principe de réalité</li>
 									<li>Je prends soin des usagers (éthique, économie de l’attention, ...)</li>
 									<li>Je me soucie de l'impact des choix de conception sur leur vie et j'affirme la dimension éthique du design</li>
@@ -180,7 +180,7 @@
 									<ul>
 										<li>Je refuse la course à la fonctionnalité en affirmant que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit</li>
 										<li>J'affirme que ce n'est pas parce que quelque chose est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
-										<li>Je crois que c'est la valeur d'usage c'est à dire la qualité du service rendu à l'utilisateur qui permet d'asseoir la pérennité d'une production numéique</li>
+										<li>Je crois que c'est la valeur d'usage c'est à dire la qualité du service rendu à l'utilisateur qui permet d'asseoir la pérennité d'une production numérique</li>
 										<li>Je ne confonds pas nouveauté et innovation.</li>
 										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité attendue est disponible. Il faut qu'elle soit localisée et utilisée par les usagers.</li>
 										<li>Je ne considère pas que le travail soit fait lorsque les données attendues sont diffusées. Il faut qu'elles soient consultables et portent une valeur métier </li>
@@ -203,19 +203,17 @@
 								<div>
 									<p>Mesurer la réussite : appropriation, satisfaction, feedback</p>
 									<p>Design with a purpose</p>
-									<p><span class="badge badge-default">expérience utilisateur</span> <span class="badge badge-default">appropriation</span> <span class="badge badge-default">satisfaction</span></p>
+									<li>L'ux c'est la rencontre entre un artefact, une interface, et un humain.</li>
+									<li>Elle s'apprécie donc en termes d'expérience humain : compréhension,  effort, satisfaction, impression.
+									<p>Google Heart Framework<br>
+									Happiness, Engagement, Adoption, Retention, Task success</p>
+									</li>
+									<p>+ The Goals-Signals-Metrics process</p>
+									<p><span class="badge badge-default">expérience utilisateur</span> <span class="badge badge-default">appropriation</span> <span class="badge badge-default">satisfaction</span> <span class="badge badge-default">effort</span> <span class="badge badge-default">productivité</span></p>
 								</div>
 								<div>
 									<p>Moi usocrate...</p>
 									<ul>
-										<li>émotion (confiance), effort, productivité</li>
-										<li>L'ux c'est la rencontre entre un artefact, une interface, et un humain.</li>
-										<li>Elle s'apprécie donc en termes d'expérience humain : compréhension,  effort, satisfaction, impression.
-										<p>Google Heart Framework<br>
-										Happiness, Engagement, Adoption, Retention, Task success</p>
-										</li>
-										<p>+ The Goals-Signals-Metrics process</p>
-										Les indicateurs suivants deviennent tous caduques à partir du moment ou la valeur d’usage n’est pas démontrée :
 										<ul>
 											<li>Détourner le focus du respect des délais et des échéances de livraison (cf. : Alan Cooper).</li>
 											<li>L’industrialisation de la chaîne de production</li>
