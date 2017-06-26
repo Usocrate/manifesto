@@ -50,7 +50,7 @@
 							<h3 class="card-title">Une méthode</h3>
 							<div class="card-text">
 								<ol>
-									<li>Placer les usagers au centre des attentions dans le processus de conception de produit / service numérique.</li>
+									<li>Placer <strong>les usagers au centre des attentions</strong> de toute démarche de conception de produit / service numérique.</li>
 									<li>Faire de la valeur d’usage le premier indicateur du progrès et de l’innovation.</li>
 								</ol>
 								<blockquote>Focus on the user and all else will follow  - Rechercher l’intérêt de l’utilisateur et le reste suivra (Google)</blockquote>
@@ -65,12 +65,12 @@
 				<div class="col-md-6">
 					<div class="card">
 						<div class="card-block">
-							<h4 class="card-title">Humanisme et éthique</h4>
+							<h4 class="card-title">Humaniste</h4>
 							<div class="card-text">
 								<ul>
-									<li>Améliorer la vie des gens, notamment dans leurs conditions de travail, en concevant des outils numériques adaptés, efficaces, libérant les potentiels individuels.</li>
-									<li>Mettre le numérique au service de l'intelligence humaine plutôt que d’en faire un vecteur d’aliénation et de déshumanisation.</li>
-									<li>Veiller à ce que les services développés soient accessibles et utilisables par tous pour une une société numérique inclusive et équitable</li>
+									<li><strong>Améliorer la vie des gens</strong>, impacter notamment leurs conditions de travail en construisant des outils numériques adaptés, efficaces et libérant les potentiels individuels.</li>
+									<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong> plutôt qu’en faire un vecteur d’aliénation et de déshumanisation.</li>
+									<li>Veiller à ce que les services développés soient accessibles et utilisables par tous pour <strong>une société numérique inclusive</strong>.</li>
 								</ul>
 								<p>
 									<span class="badge badge-pill badge-default">Utilité</span>
@@ -85,16 +85,17 @@
 				<div class="col-md-6">
 					<div class="card">
 						<div class="card-block">
-							<h4 class="card-title">Efficacité économique et innovation</h4>
+							<h4 class="card-title">Economique</h4>
 							<div class="card-text">
 								<ul>
 									<li>
-										Rompre avec l'apathie généralisée face à la nécessité de faire de bon produits pour pouvoir être compétitifs.<br>
-										Travailler à la prise de conscience que l'émergence de leaders français du numérique massivement adoptés à l'échelle mondiale ou simplement nationale passe par une approche centrée utilisateurs.</li>
-									<li>Donner une place centrale aux usages dans la conception de produit ou service c’est sécuriser les investissements en assurant la viabilité des services numériques développés qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
-									<li>Se focaliser sur les usages est le meilleur vecteur d’innovation pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût pour pouvoir générer du chiffre d’affaires.</li>
+										Pour la compétitivité de notre industrie numérique, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bon produits</strong>.<br>
+										Il s'agit d'organiser les conditions pour garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
+									</li>
+									<li>Penser usages permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des services numériques développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
+									<li>Se focaliser sur les usages est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût pour pouvoir générer du chiffre d’affaires.</li>
 								</ul>
-								<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
+								<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
 							</div>
 						</div>
 					</div>
@@ -114,30 +115,23 @@
 
 			<div>
 				<h3>3 engagements</h3>
-				<div class="text-center" style="background-color:#fff;display:none">
-					<figure class="figure">
-						<img src="http://democratieouverte.org/media/default/0001/01/7c9acdbad8af2125e03d1aaa4eb33a3ffcc2b2b4.jpeg" class="img-fluid" alt="Responsive image">
-					</figure>
-				</div>
-
 				<h4>1- Porter toute l'attention aux usagers</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">Aller sur le terrain et aimer le réel</h5>
+							<h5 class="card-title">Aller sur le terrain, aimer le réel</h5>
 							<div class="card-text">
 								<p>Moi usocrate...</p>
 								<ul>
+									<li>J’affirme l’impossibilité d'un design hors sol, sans connaissance du contexte dans lequel le produit / service sera utilisé.</li>
 									<li>J’ai la volonté de sortir de mon bureau pour aller à la rencontre des usagers aussi souvent que possible.</li>
+									<li>Je fais de la résolution des problèmes de usagers l'objectif premier d'une démarche de conception</li>
+									<li>Je refuse l'idée d'un utilisateur générique et idéalisé : qui adhèrerait à la logique du système, sans culture, besoins ou problématiques particulières.</li>
 									<li>Je favorise les approches de co-conception même si cela complexifie les prises de décisions</li>
 									<li>Je mets en place des méthodes et outils pour collecter de l’information de terrain et travaille à la maîtrise de ces outils	(étude ethnographique, tests d'utilisabilité, analyse des données d’usage (ex. : Mixpanel), analyse des demandes formulées au support client, etc...)</li>
-									<li>J’affirme l’impossibilité d'un design hors sol et sans connaissance du contexte.</li>
-									<li>Définir précisément les usagers auxquels on s’adresse et leurs problématiques est une nécessité. Plus d'usager lampda.</li>
-									<li>Je fais de la résolution des problèmes de usagers l'objectif premier d'une démarche de conception</li>
+									<li>Je m’attache à des faits observables et objectifs, pas à des opinions</li>
 									<li>J'évalue au plus tôt le produit auprès d’usagers potentiels</li>
-									<li>Je m’attache à des faits pas à des opinions</li>
-									<li>Je suis attaché à ce que les prototypes soient construits sur des données réelles, non fictives, parcellaires ou fantaisistes.<br>
-										En particulier lorsqu’on teste auprès des usagers on doit utiliser des ensembles de données qui ont du sens pour eux et leur permettent de se projeter dans un cas d'utilisation réaliste (sens, complexité).</li>
+									<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiel soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
 								</ul>
 							</div>
 						</div>
@@ -285,31 +279,31 @@
 
 			<section id="subscriptionArea">
 				<div class="row justify-content-md-center">
-	          <div class="col-xs-12 col-md-8">
-							<div class="card">
-								<div class="card-block">
-			            			<h3 class="text-center card-title">Je suis Usocrate !</h3>
-									<div class="card-text">
-										<p>Peut-on vous compter parmi les rangs des usocrates ?</p>
-										<ul>
-											<li>Je partage la vision, je souhaite donner du poids à ce discours</li>
-											<li>J'ai conscience de ma responsabilité individuelle et je témoigne de mon engagement à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
-										</ul>
-							            <form method="POST" action="">
-							                  <div class="form-group ">
-												<label>Je me présente</label>
-												<input class="form-control input-lg" id="" name="url" value="" placeholder="un profil web Twitter, LinkedIn,..." type="url">
-							                  </div>
-												<div class="form-group ">
-												<label>Un email ?</label>
-												<input required="" class="form-control input-lg" id="" name="email" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
-							                  </div>
-							                  <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
-							            </form>
-									</div>
+		         	<div class="col-xs-12 col-md-8">
+						<div class="card">
+							<div class="card-block">
+				       			<h3 class="text-center card-title">Je suis Usocrate !</h3>
+								<div class="card-text">
+									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
+									<ul>
+										<li>Je partage la vision, je souhaite donner du poids à ce discours</li>
+										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de mon engagement à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
+									</ul>
+						            <form method="POST" action="">
+										<div class="form-group ">
+											<label>Je me présente</label>
+											<input class="form-control input-lg" id="" name="url" value="" placeholder="un profil web Twitter, LinkedIn,..." type="url">
+					                  	</div>
+										<div class="form-group ">
+											<label>Un email ?</label>
+											<input required="" class="form-control input-lg" id="" name="email" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
+							            </div>
+							            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
+							        </form>
 								</div>
 							</div>
-	          </div>
+						</div>
+		          	</div>
 				</div>
 			</section>
 
@@ -325,7 +319,9 @@
 			<section id="références">
 				<div class="text-center">
 					<h3>Références</h3>
-					<p>...</p>
+					<div class="row">
+						<div><ul><li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li></ul></div>
+					</div>
 				</div>
 			</section>
 	</div>
