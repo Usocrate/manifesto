@@ -37,21 +37,21 @@
 		<section id="manifesto">
 			<h2>Manifeste<br><small>Pour une usocratie numérique</small></h2>
 			<p>
-					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
-					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou encore la manière dont individuellement nous nous représentons le monde.<br>
-					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
-					Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative numérique... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
+				Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
+				Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou encore la manière dont individuellement nous nous représentons le monde.<br>
+				Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
+				Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative numérique... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 			</p>
 			<div class="row justify-content-md-center">
-				<div class="col-md-10">
+				<div class="col-md-6">
 					<div class="card">
-						<img class="card-img-top" src="skin/images/method.png">
+						<img class="card-img-top" src="skin/images/method.png" style="display:none">
 						<div class="card-block">
 							<h3 class="card-title">Une méthode</h3>
 							<div class="card-text">
 								<ol>
-									<li>Placer <strong>les usagers au centre des attentions</strong> de toute démarche de conception de produit / service numérique.</li>
-									<li>Faire de la valeur d’usage le premier indicateur du progrès et de l’innovation.</li>
+									<li>Aller <strong>à la rencontre des usagers</strong>, mettre les décisions que nous prenons en tant que concepteurs à l'épreuve du réel.</li>
+									<li>Faire de la <strong>valeur d’usage</strong> le premier indicateur du progrès et de l’innovation.</li>
 								</ol>
 								<blockquote>Focus on the user and all else will follow  - Rechercher l’intérêt de l’utilisateur et le reste suivra (Google)</blockquote>
 							</div>
@@ -69,7 +69,7 @@
 							<div class="card-text">
 								<ul>
 									<li><strong>Améliorer la vie des gens</strong>, impacter notamment leurs conditions de travail en construisant des outils numériques adaptés, efficaces et libérant les potentiels individuels.</li>
-									<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong> plutôt qu’en faire un vecteur d’aliénation et de déshumanisation.</li>
+									<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong>, refuser d’en faire un vecteur d’aliénation et de déshumanisation.</li>
 									<li>Veiller à ce que les services développés soient accessibles et utilisables par tous pour <strong>une société numérique inclusive</strong>.</li>
 								</ul>
 								<p>
@@ -89,11 +89,11 @@
 							<div class="card-text">
 								<ul>
 									<li>
-										Pour la compétitivité de notre industrie numérique, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bon produits</strong>.<br>
-										Il s'agit d'organiser les conditions pour garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
+										Pour notre compétitivité, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bon produits</strong>.<br>
+										Il s'agit de garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
 									</li>
-									<li>Penser usages permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des services numériques développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
-									<li>Se focaliser sur les usages est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût pour pouvoir générer du chiffre d’affaires.</li>
+									<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des services numériques développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
+									<li>Etre à l'écoute des usagers est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût.</li>
 								</ul>
 								<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
 							</div>
@@ -103,10 +103,10 @@
 			</div>
 
 			<p>
-				Pour ceux qui portent traditionnellement une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
+				Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 			</p>
 			<ul>
-				<li>Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de produits / services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.</li>
+				<li>Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.</li>
 				<li>Il se veut un moyen, parmi d’autres, pour les professionnels du numérique de partager cette vision.</li>
 			</ul>
 			<p>
@@ -123,15 +123,15 @@
 							<div class="card-text">
 								<p>Moi usocrate...</p>
 								<ul>
-									<li>J’affirme l’impossibilité d'un design hors sol, sans connaissance du contexte dans lequel le produit / service sera utilisé.</li>
+									<li>J’affirme l’impossibilité d'un design hors sol, sans connaissance du contexte dans lequel le produit sera utilisé.</li>
 									<li>J’ai la volonté de sortir de mon bureau pour aller à la rencontre des usagers aussi souvent que possible.</li>
-									<li>Je fais de la résolution des problèmes de usagers l'objectif premier d'une démarche de conception</li>
-									<li>Je refuse l'idée d'un utilisateur générique et idéalisé : qui adhèrerait à la logique du système, sans culture, besoins ou problématiques particulières.</li>
-									<li>Je favorise les approches de co-conception même si cela complexifie les prises de décisions</li>
-									<li>Je mets en place des méthodes et outils pour collecter de l’information de terrain et travaille à la maîtrise de ces outils	(étude ethnographique, tests d'utilisabilité, analyse des données d’usage (ex. : Mixpanel), analyse des demandes formulées au support client, etc...)</li>
-									<li>Je m’attache à des faits observables et objectifs, pas à des opinions</li>
-									<li>J'évalue au plus tôt le produit auprès d’usagers potentiels</li>
-									<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiel soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
+									<li>Je fais de la résolution des problèmes des usagers l'objectif premier d'une démarche de conception</li>
+									<li>Je refuse l'idée d'un utilisateur générique et idéalisé qui adhèrerait à la logique du produit, sans culture, besoins ou problématiques particulières.</li>
+									<li>Je favorise les approches de co-conception, impliquant directement les usagers, même si cela complexifie les prises de décisions</li>
+									<li>Je mets en place des méthodes et outils pour collecter de l’information de terrain et travaille à la maîtrise de ces outils</li>
+									<li>Je m’attache à des faits, pas à des opinions</li>
+									<li>Je confronte au plus tôt les usagers au produit</li>
+									<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiels soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
 								</ul>
 							</div>
 						</div>
@@ -145,21 +145,19 @@
 									<li>Je valorise l'écoute et l'empathie</li>
 									<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
 									<li>Je ne discrédite pas les usagers et ne justifient pas des dysfonctionnements par leur incapacité</li>
+									<li>J’admets l’idée que les comportements des usagers face au produit soit en décalage avec ce qui était attendu</li>
 									<li>Je ne m’approprie pas le service pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
-									<li>Je cadre l'expression des opinions et goûts personnels des membres l'équipe projet.</li>
-									<li>Je n'abandonne pas les usagers aux possibilités de paramétrage et de personalisation que les outils proposent</li>
+									<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
+									<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
 									<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
-									<li>Je privilégie une attitude de considération des usagers</li>
-									<li>J’admets l’idée que les comportements des usagers avec le produit ou service numérique soit en décalage avec ce qui était attendu :  je suis capable d’intégrer le principe de réalité</li>
-									<li>Je prends soin des usagers (éthique, économie de l’attention, ...)</li>
-									<li>Je me soucie de l'impact des choix de conception sur leur vie et j'affirme la dimension éthique du design</li>
+									<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur vie et affirme la dimension éthique du design</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<h4>2- Contribuer à changer les indicateurs de réussite</h4>
+				<h4>2- Contribuer à changer les indicateurs de réussite des projets</h4>
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
@@ -172,19 +170,16 @@
 								<div>
 									<p>Moi usocrate...</p>
 									<ul>
-										<li>Je refuse la course à la fonctionnalité en affirmant que ce n’est ni la somme des fonctionnalités, ni le temps consacré à développer ces fonctionnalités qui fait la valeur du produit</li>
-										<li>J'affirme que ce n'est pas parce que quelque chose est possible techniquement et à moindre coût que ça apporte de la valeur au produit.</li>
-										<li>Je crois que c'est la valeur d'usage c'est à dire la qualité du service rendu à l'utilisateur qui permet d'asseoir la pérennité d'une production numérique</li>
+										<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique</li>
+										<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit</li>
+										<li>Je recherche la simplicité comme un objectif en soi</li>
 										<li>Je ne confonds pas nouveauté et innovation.</li>
-										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité attendue est disponible. Il faut qu'elle soit localisée et utilisée par les usagers.</li>
-										<li>Je ne considère pas que le travail soit fait lorsque les données attendues sont diffusées. Il faut qu'elles soient consultables et portent une valeur métier </li>
-										<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit / service</li>
-										<li>Je fais de la simplicité du produit / service un objectif<br>Stopper la déviance fonctionnelle - pas d'arrêt du dev de fonctionnalités c'est de la valeur ajoutée, mais pas d'exposition intégrale du fonctionnel : génératrice de complexité, de coût de dev et de maintenance. Des vues glanceable : halte à l'interactivité. unbundling (profil tâches). Pas de développement de nouvelles fonctionnalités sans organisation, intégration et valorisation  (utilité, utilisabilité)<br>Nécessaires à l'attractivité du service le marketing et l'habillage visuel de l'application, il faut plus pour garantir durablement l'engagement des usagers</li>
-										<li>Je pense le choix du framework et des outils permettant dev le produit et service est négligeable dans la valeur aux usagers.</li>
-										<li>Je crois que la démonstration technologique à toujours rendu davantage service aux forces de ventes en déficit d'argument qu'aux usagers.</li>
-										<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
-										<li>Je pense que l'échec de beaucoup de produit / service numériques est prévisible lorsque l'utilité et la désirabilité de ceux n'a pas été questionnées auprès des usagers</li>
-										<li>Je pense qu'il y a dans les projets numériques beaucoup de temps perdu à des activités qui n'ont pas d'impact sur la qualité du produit / service livré aux usagers</li>
+										<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût qu'il faille le faire</li>
+										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité est disponible à moins d'un engagement durable et effectif des usagers à l'utiliser</li>
+										<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit</li>
+										<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers</li>
+										<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts</li>
+										<li>Je pense que l'échec de beaucoup de produit numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers</li>
 									</ul>
 								</div>
 							</div>
@@ -235,19 +230,17 @@
 						<div class="card-block">
 							<h5 class="card-title">Collaborer pour l'efficacité économique</h5>
 							<div class="card-text">
-								<ul>
-									<li>Collaborer pour l’efficacité, dépasser les conflits d’intérêts</li>
-									<li>Itérer pour converger autour d'une vision commune</li>
-									<li>Le design est un processus : pour la planification</li>
-									<li>Halte au gaspillage : toute l'énergie consacrée à la création de valeur</li>
-								</ul>
 								<p>Moi usocrate...</p>
 								<ul>
-									<li>J'ai la volonté de dépasser les conflits d’intérêts et de faire converger tous les protagonistes du projet vers une vision partagée</li>
-									<li>Je vise l'harmonie et la résolution des conflits plutôt que leur exploitation à des fins politiques</li>
-									<li>Une de mes qualités est la réactivité</li>
-									<li>Je pense que certains livrables sont inutiles et privilégie l'échange à la documentation</li>
-									<li>Je tente de cadrer l'expression des goûts personnels de l'équipe projet.</li>
+									<li>Je n'ai pas le goût des débats d'experts</li>
+									<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques</li>
+									<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite</li>
+									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
+									<li>Le design est un processus : pour la planification</li>
+									<li>Je considère de mon devoir d'être réactif face aux demandes des usagers</li>
+									<li>Je pense que certains activités sont inutiles et privilégie l'échange à la documentation</li>
+									<li>Je mobilise toute mon énergie pour améliorer la qualité du produit livré aux usagers</li>
+									<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
 								</ul>
 							</div>
 						</div>
@@ -256,15 +249,13 @@
 						<div class="card-block">
 							<h5 class="card-title">Collaborer pour la créativité et l'innovation</h5>
 							<div class="card-text">
-								<ul>
-									<li>Collaborer pour la créativité, valoriser l'expérimentation</li>
-									<li>Faire la promotion de la culture design</li>
-								</ul>
 								<p>Moi usocrate...</p>
 								<ul>
-									<li>Je m’assure que tous les participants au projet se sentent légitimes (Empowerment)</li>
-									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
-									<li>Je travaille à casser les silos</li>
+									<li>Je m’assure que tous les participants au projet se sentent légitimes dans leur rôle contributif</li>
+									<li>Je travaille à casser les silos cloisonnant les différents métiers de l'entreprise au service des usagers</li>
+									<li>Je suis convaincu qu'une d'exploration, d'ouverture à des domaines connexes, d'acculturation est nécessaire à toute démarche d'innovation. Je valorise et organise de telles phases de recherche.</li>
+									<li>Je valorise l'expérimentation</li>
+									<li>Faire la promotion de la culture design</li>
 									<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
 									<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
 									<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
@@ -320,7 +311,14 @@
 				<div class="text-center">
 					<h3>Références</h3>
 					<div class="row">
-						<div><ul><li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li></ul></div>
+						<div>
+							<ul>
+								<li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li>
+								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
+								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
+								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</section>
