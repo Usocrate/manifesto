@@ -38,9 +38,9 @@
 			<h2>Manifeste<br><small>Pour une usocratie numérique</small></h2>
 			<p>
 				Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
-				Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou encore la manière dont individuellement nous nous représentons le monde.<br>
+				Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.<br>
 				Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
-				Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative numérique... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
+				Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 			</p>
 			<div class="row justify-content-md-center">
 				<div class="col-md-6">
@@ -105,10 +105,10 @@
 			<p>
 				Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 			</p>
-			<ul>
-				<li>Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.</li>
-				<li>Il se veut un moyen, parmi d’autres, pour les professionnels du numérique de partager cette vision.</li>
-			</ul>
+			<p>
+				Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.<br/>
+				Il se veut un moyen, parmi d’autres, pour les professionnels du numérique de partager cette vision.
+			</p>
 			<p>
 				Il s'adresse à l’ensemble des professionnels du secteur numérique qui ont entre les mains la destinée de services numériques : chef de produit, designers, chef de projets, financeurs.
 			</p>
@@ -133,6 +133,7 @@
 									<li>Je confronte au plus tôt les usagers au produit</li>
 									<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiels soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
 								</ul>
+								<p><span class="badge badge-default">Co-conception</span> <span class="badge badge-default">Principe de réalité</span></p>
 							</div>
 						</div>
 					</div>
@@ -144,14 +145,16 @@
 								<ul>
 									<li>Je valorise l'écoute et l'empathie</li>
 									<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
-									<li>Je ne discrédite pas les usagers et ne justifient pas des dysfonctionnements par leur incapacité</li>
-									<li>J’admets l’idée que les comportements des usagers face au produit soit en décalage avec ce qui était attendu</li>
+									<li>Je ne discrédite pas les usagers et ne justifie pas des dysfonctionnements par leur incapacité</li>
+									<li>J’admets l’idée que les comportements des usagers face au produit puissent être en décalage avec ce qui était attendu</li>
 									<li>Je ne m’approprie pas le service pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
 									<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
 									<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
 									<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
-									<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur vie et affirme la dimension éthique du design</li>
+									<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance.</li>
+									<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur bien-être et affirme la dimension éthique du design</li>
 								</ul>
+								<p><span class="badge badge-default">Empathie</span> <span class="badge badge-default">Ethique</span></p>
 							</div>
 						</div>
 					</div>
@@ -161,20 +164,20 @@
 				<div class="card-group">
 					<div class="card">
 						<div class="card-block">
-							<h5 class="card-title">La valeur d’usage comme projet industriel</h5>
+							<h5 class="card-title">La valeur d’usage comme projet économique</h5>
 							<div class="card-text">
-								<div>
-									<p>Sortir du modèle de la société de consommation.<br>De la vision marketing : vendre une production abondante, fétichisme de l’objet, différenciation statutaire sans fin (Baudrillard). Pour un développement rationnel et durable.</p>
-									<p><span class="badge badge-default">valeur d'usage</span> <span class="badge badge-default">service</span></p>
-								</div>
 								<div>
 									<p>Moi usocrate...</p>
 									<ul>
+										<li>Je crois qu'avec le numérique l'ancien modèle de production industriel a vécu</li>
 										<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique</li>
 										<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit</li>
 										<li>Je recherche la simplicité comme un objectif en soi</li>
-										<li>Je ne confonds pas nouveauté et innovation.</li>
 										<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût qu'il faille le faire</li>
+										<li>Je ne confonds pas nouveauté et innovation.</li>
+										<li>Je ne suis pas un suiveur de tendances</li>
+										<li>Je pense qu'à copier les concurrents on met en danger la compétitivité des produits dont on a la charge.</li>
+										<li>Je constate que le pilotage de l'innovation basé sur des échéances de livraison et la tenue des délais, trahit le plus souvent un manque de vision produit.</li>
 										<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité est disponible à moins d'un engagement durable et effectif des usagers à l'utiliser</li>
 										<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit</li>
 										<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers</li>
@@ -182,6 +185,7 @@
 										<li>Je pense que l'échec de beaucoup de produit numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers</li>
 									</ul>
 								</div>
+								<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
 							</div>
 						</div>
 					</div>
@@ -190,36 +194,20 @@
 							<h5 class="card-title">Mesurer les résultats</h5>
 							<div class="card-text">
 								<div>
-									<p>Mesurer la réussite : appropriation, satisfaction, feedback</p>
-									<p>Design with a purpose</p>
-									<li>L'ux c'est la rencontre entre un artefact, une interface, et un humain.</li>
-									<li>Elle s'apprécie donc en termes d'expérience humain : compréhension,  effort, satisfaction, impression.
-									<p>Google Heart Framework<br>
-									Happiness, Engagement, Adoption, Retention, Task success</p>
-									</li>
-									<p>+ The Goals-Signals-Metrics process</p>
-									<p><span class="badge badge-default">expérience utilisateur</span> <span class="badge badge-default">appropriation</span> <span class="badge badge-default">satisfaction</span> <span class="badge badge-default">effort</span> <span class="badge badge-default">productivité</span></p>
-								</div>
-								<div>
 									<p>Moi usocrate...</p>
 									<ul>
-										<ul>
-											<li>Détourner le focus du respect des délais et des échéances de livraison (cf. : Alan Cooper).</li>
-											<li>L’industrialisation de la chaîne de production</li>
-											<li>Nécessité d’une approche sur mesure vs industrialisation</li>
-											<li>unbundling (profil tâches)</li>
-											<li>pour se mettre en mouvement (segmentation fonctionnelle) le design c'est le passage entre l'industrialisable (API) et le consommable</li>
-											<li>Nouveauté, rénovation, adhésion tendances</li>
-											<li>A copier les autres ont perd de la valeur</li>
-											<li>Ventes, valeur d’échange</li>
-											<li>pas de garanties moyen termes si absence d’innovation dans un domaine fortement concurrentiel</li>
-											<li>Le taux d’occupation des ressources (développeurs) n’est pas un critère</li>
-											<li>Ce n’est pas le nombre de fonctionnalités développées et le temps consacré qui fait la valeur du produit</li>
-										</ul>
+										<li>Je pense qu'une conception réussie sert les objectifs qu'on se fixe au départ</li>
+										<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent</li>
+										<li>Je pense que la qualité de l'expérience des usagers d'un produit numérique est un bon indicateur (engagement, compréhension, satisfaction, considération, confiance)</li>
+										<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
+										<li>Je pense que l'objectif d’industrialisation de la chaîne de production détourne souvent des vrais enjeux business et va parfois même à l'encontre de l'intêrêt de l'entreprise.</li>
+										<li>Je définis dès le moment où l'on fixe la stratégie produit et les objectifs du projet des indicateurs qui permettent de mesurer la réalisation de ces objectifs.</li>
 										<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
+										<li>Je pense qu'optimiser le taux d’occupation des développeurs élévé ne garantie pas la réussite de l'entreprise numérique.</li>
 									</ul>
 								</div>
 							</div>
+							<p><span class="badge badge-default">Expérience utilisateur</span> <span class="badge badge-default">Appropriation</span> <span class="badge badge-default">Satisfaction</span> <span class="badge badge-default">Productivité</span></p>							
 						</div>
 					</div>
 				</div>
@@ -236,12 +224,13 @@
 									<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques</li>
 									<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite</li>
 									<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
+									<li>Je crois que les meilleures solutions émanent d'équipes pluridisciplinaires</li>
 									<li>Le design est un processus : pour la planification</li>
 									<li>Je considère de mon devoir d'être réactif face aux demandes des usagers</li>
 									<li>Je pense que certains activités sont inutiles et privilégie l'échange à la documentation</li>
 									<li>Je mobilise toute mon énergie pour améliorer la qualité du produit livré aux usagers</li>
-									<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
 								</ul>
+								<p><span class="badge badge-default">Collaboration</span> <span class="badge badge-default">Planification</span> <span class="badge badge-default">Agilité</span></p>								
 							</div>
 						</div>
 					</div>
@@ -253,13 +242,14 @@
 								<ul>
 									<li>Je m’assure que tous les participants au projet se sentent légitimes dans leur rôle contributif</li>
 									<li>Je travaille à casser les silos cloisonnant les différents métiers de l'entreprise au service des usagers</li>
-									<li>Je suis convaincu qu'une d'exploration, d'ouverture à des domaines connexes, d'acculturation est nécessaire à toute démarche d'innovation. Je valorise et organise de telles phases de recherche.</li>
+									<li>Je suis convaincu qu'une phase d'exploration, d'ouverture à des domaines connexes, d'acculturation est nécessaire à toute démarche d'innovation. Je valorise et organise de telles phases de recherche.</li>
 									<li>Je valorise l'expérimentation</li>
 									<li>Faire la promotion de la culture design</li>
 									<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
 									<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
 									<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
 								</ul>
+								<p><span class="badge badge-default">Créativité</span> <span class="badge badge-default">Expérimentation</span></p>
 							</div>
 						</div>
 					</div>
@@ -317,6 +307,8 @@
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
+								<li><p>Google Heart Framework<br>Happiness, Engagement, Adoption, Retention, Task success</p></li>
+								<li>+ The Goals-Signals-Metrics process</li>
 							</ul>
 						</div>
 					</div>
