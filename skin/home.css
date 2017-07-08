@@ -11,6 +11,15 @@ H1 {
 	border-width: 0 0 1px 0;
 }
 
+h3, h4 {
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	background-color: #8ea4bc;
+}
+
 SECTION {
 	margin-top:1rem;
 }
@@ -21,6 +30,10 @@ SECTION {
 
 .badge-default {
 	background-color: #C9462C;
+}
+
+div.area {
+	background-color: #e2d4b7;
 }
 
 @media ( min-width : 962px) {
