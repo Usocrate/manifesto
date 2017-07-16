@@ -40,24 +40,22 @@
 				Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 				Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.</p>
 			<p>
-				Une certitude aujourd'hui est que les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
+				Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
 				Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 			</p>
 			<p>
 				Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 			</p>
 			<p>
-				Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’impact et l’utilité sociale du numérique.<br/>
-				Toi, professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeurs), ce manifeste te propose de partager une vision.
+				Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
+				Professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
+				Il te propose de partager une vision.
 			</p>
 			
-			<h2>1 méthode</h2>
-			<ol>
-				<li>Aller <strong>à la rencontre des usagers</strong>, mettre les décisions que nous prenons en tant que concepteurs à l'épreuve du réel.</li>
-				<li>Faire de la <strong>valeur d’usage</strong> le premier indicateur du progrès et de l’innovation.</li>
-			</ol>
-		
-			<h2>2 ambitions</h2>
+			<h2>1 Méthode</h2>
+			<p>Aller <strong>à la rencontre des usagers</strong> et faire de la <strong>valeur d’usage</strong> le premier indicateur du progrès et de l’innovation.</p>
+
+			<h2>2 Ambitions</h2>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -81,7 +79,7 @@
 						<h4>Economique</h4>
 						<ul>
 							<li>
-								Pour notre compétitivité, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bon produits</strong>.<br>
+								Pour notre compétitivité, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bons produits</strong>.<br>
 								Il s'agit de garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
 							</li>
 							<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des services numériques développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
@@ -92,7 +90,7 @@
 				</div>
 			</div>
 
-			<h2>3 engagements</h2>
+			<h2>3 Engagements</h2>
 			
 			<h3>1- Porter toute l'attention aux usagers</h3>
 			<blockquote>Focus on the user and all else will follow (Google)</blockquote>
@@ -122,14 +120,14 @@
 						<ul>
 							<li>Je valorise l'écoute et l'empathie</li>
 							<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
-							<li>Je ne discrédite pas les usagers et ne justifie pas des dysfonctionnements par leur incapacité</li>
+							<li>Je ne discrédite pas les usagers et ne justifie pas de dysfonctionnements par leur incapacité</li>
 							<li>J’admets l’idée que les comportements des usagers face au produit puissent être en décalage avec ce qui était attendu</li>
-							<li>Je ne m’approprie pas le service pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
+							<li>Je ne m’approprie pas le produit pour en faire ce qui me plairait, je ne me substitue pas aux usagers</li>
 							<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
 							<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
 							<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
 							<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance.</li>
-							<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur bien-être et affirme la dimension éthique du design</li>
+							<li>Je prends soin des usagers me souciant de l'impact des choix de conception sur leur bien-être et affirme la dimension éthique du design</li>
 						</ul>
 						<p><span class="badge badge-default">Empathie</span> <span class="badge badge-default">Ethique</span></p>
 					</div>
@@ -137,27 +135,27 @@
 			</div>
 			
 			<h3>2- Contribuer à changer les indicateurs de réussite des projets</h3>
-			<blockquote>intro...</blockquote>
+			<blockquote>Je crois que le numérique rend obsolète l'ancien modèle de production industriel.<br/>Make things people want vs Make people want things.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
 						<h4>La valeur d’usage comme projet économique</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je crois qu'avec le numérique l'ancien modèle de production industriel a vécu</li>
 							<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique</li>
+							<li>Je pense que l'échec de beaucoup de produits numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers</li>
 							<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit</li>
 							<li>Je recherche la simplicité comme un objectif en soi</li>
-							<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût qu'il faille le faire</li>
+							<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût, qu'il faut le faire, et refuse que la faisabilité technique décide du devenir du produit</li>
+							<li>Je pense que la disponibilité des développeurs informatiques ne justifie en aucun cas d'engager des évolutions du produit et optimiser leur taux d’occupation n'a jamais garantie la réussite de l'entreprise numérique.</li>
 							<li>Je ne confonds pas nouveauté et innovation.</li>
+							<li>Je constate que fixer des échéances de livraison du produit a priori trahit le plus souvent un manque de vision produit.</li>
+							<li>Je ne crois pas que la tenue des délais de livraison soit un objectif suffisant</li>
 							<li>Je ne suis pas un suiveur de tendances</li>
 							<li>Je pense qu'à copier les concurrents on met en danger la compétitivité des produits dont on a la charge.</li>
-							<li>Je constate que le pilotage de l'innovation basé sur des échéances de livraison et la tenue des délais, trahit le plus souvent un manque de vision produit.</li>
-							<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionnalité est disponible à moins d'un engagement durable et effectif des usagers à l'utiliser</li>
-							<li>Je refuse que la faisabilité technique ou la disponibilité des développeurs informatiques décide du devenir du produit</li>
 							<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers</li>
 							<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts</li>
-							<li>Je pense que l'échec de beaucoup de produit numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers</li>
+							<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à proposer aux usagers des services adaptés à leurs besoins.</li>
 						</ul>
 						<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
 					</div>
@@ -167,14 +165,15 @@
 						<h4>Mesurer les résultats</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je pense qu'une conception réussie sert les objectifs qu'on se fixe au départ</li>
+							<li>Je pense qu'une bonne stratégie produit s'accompagne d'indicateurs qui permettront de mesurer la réussite du projet auprès des usagers.</li>
+							<li>Je pense qu'une conception réussie sert des objectifs qu'on se fixe au départ</li>
+							<li>J'organise la chaîne de production pour diffuser en continu les évolutions du produit afin d'apprendre au plus tôt des réactions des usagers</li>
 							<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent</li>
-							<li>Je pense que la qualité de l'expérience des usagers d'un produit numérique est un bon indicateur (engagement, compréhension, satisfaction, considération, confiance)</li>
+							<li>Je ne considère pas que le travail soit terminé lorsqu'un produit est disponible à moins d'un engagement durable et effectif des usagers à l'utiliser</li>
+							<li>Je pense que la facilité de compréhension et de prise en main d'un produit numérique est un avantage concurrentiel majeur</li>
+							<li>Je pense que la satisfaction et la confiance des usagers sont des conditions nécessaires à leur fidélisation et à l'éventualité qu'ils recommandent le service</li>
 							<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
-							<li>Je pense que l'objectif d’industrialisation de la chaîne de production détourne souvent des vrais enjeux business et va parfois même à l'encontre de l'intêrêt de l'entreprise.</li>
-							<li>Je définis dès le moment où l'on fixe la stratégie produit et les objectifs du projet des indicateurs qui permettent de mesurer la réalisation de ces objectifs.</li>
 							<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
-							<li>Je pense qu'optimiser le taux d’occupation des développeurs élévé ne garantie pas la réussite de l'entreprise numérique.</li>
 						</ul>
 						<p><span class="badge badge-default">Expérience utilisateur</span> <span class="badge badge-default">Appropriation</span> <span class="badge badge-default">Satisfaction</span> <span class="badge badge-default">Productivité</span></p>							
 					</div>
@@ -263,8 +262,8 @@
 			</section>
 
 			<section id="références">
-				<div>
-					<h3>Références</h3>
+				<div class="area">
+					<h2>Références</h2>
 					<div class="row">
 						<div>
 							<ul>
@@ -272,7 +271,7 @@
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
-								<li><p>Google Heart Framework<br>Happiness, Engagement, Adoption, Retention, Task success</p></li>
+								<li><a href="https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be">Google Heart Framework</a><br>Happiness, Engagement, Adoption, Retention, Task success</p></li>
 								<li>+ The Goals-Signals-Metrics process</li>
 							</ul>
 						</div>
