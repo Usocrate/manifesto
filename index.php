@@ -19,7 +19,7 @@
 		<section id="usocrateDef">
 			<header>
 				<div class="jumbotron">
-					<div class="card">
+					<div>
 						<h1>Usocrate.fr</h1>
 						<p>Usus magister est optimus</p>
 						<dl>
@@ -126,8 +126,9 @@
 							<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
 							<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
 							<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
-							<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance.</li>
-							<li>Je prends soin des usagers me souciant de l'impact des choix de conception sur leur bien-être et affirme la dimension éthique du design</li>
+							<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance durable</li>
+							<li>Je prends soin des usagers me souciant de l'impact des choix de conception sur leur bien-être</li>
+							<li>Je reconnais la dimension éthique du design</li>
 						</ul>
 						<p><span class="badge badge-default">Empathie</span> <span class="badge badge-default">Ethique</span></p>
 					</div>
@@ -142,19 +143,20 @@
 						<h4>La valeur d’usage comme projet économique</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique</li>
-							<li>Je pense que l'échec de beaucoup de produits numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers</li>
-							<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit</li>
+							<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique.</li>
+							<li>Je pense que l'échec de beaucoup de produits numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers.</li>
+							<li>Je pense qu'aujourd'hui le principal moteur de croissance c'est le produit et plus les forces de ventes et le marketing.</li>
+							<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit.</li>
 							<li>Je recherche la simplicité comme un objectif en soi</li>
-							<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût, qu'il faut le faire, et refuse que la faisabilité technique décide du devenir du produit</li>
-							<li>Je pense que la disponibilité des développeurs informatiques ne justifie en aucun cas d'engager des évolutions du produit et optimiser leur taux d’occupation n'a jamais garantie la réussite de l'entreprise numérique.</li>
+							<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût, qu'il faut le faire, et refuse que la faisabilité technique décide de la feuille de route.</li>
+							<li>Je pense que la disponibilité des développeurs informatiques ne justifie en aucun cas d'engager des évolutions du produit et que la volonté d'optimiser leur taux d’occupation ne devrait jamais être décisive.</li>
 							<li>Je ne confonds pas nouveauté et innovation.</li>
 							<li>Je constate que fixer des échéances de livraison du produit a priori trahit le plus souvent un manque de vision produit.</li>
-							<li>Je ne crois pas que la tenue des délais de livraison soit un objectif suffisant</li>
-							<li>Je ne suis pas un suiveur de tendances</li>
+							<li>Je ne crois pas que la tenue des délais de livraison soit une fin en soi.</li>
+							<li>Je ne suis pas un suiveur de tendances.</li>
 							<li>Je pense qu'à copier les concurrents on met en danger la compétitivité des produits dont on a la charge.</li>
-							<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers</li>
-							<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts</li>
+							<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers.</li>
+							<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
 							<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à proposer aux usagers des services adaptés à leurs besoins.</li>
 						</ul>
 						<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
@@ -165,13 +167,13 @@
 						<h4>Mesurer les résultats</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je pense qu'une bonne stratégie produit s'accompagne d'indicateurs qui permettront de mesurer la réussite du projet auprès des usagers.</li>
-							<li>Je pense qu'une conception réussie sert des objectifs qu'on se fixe au départ</li>
-							<li>J'organise la chaîne de production pour diffuser en continu les évolutions du produit afin d'apprendre au plus tôt des réactions des usagers</li>
-							<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent</li>
-							<li>Je ne considère pas que le travail soit terminé lorsqu'un produit est disponible à moins d'un engagement durable et effectif des usagers à l'utiliser</li>
-							<li>Je pense que la facilité de compréhension et de prise en main d'un produit numérique est un avantage concurrentiel majeur</li>
-							<li>Je pense que la satisfaction et la confiance des usagers sont des conditions nécessaires à leur fidélisation et à l'éventualité qu'ils recommandent le service</li>
+							<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent.</li>
+							<li>Je pense qu'une bonne stratégie produit s'accompagne nécessairement d'indicateurs permettant de mesurer sa réussite.</li>
+							<li>Je pense qu'une conception réussie sert des objectifs qu'on se fixe au départ.</li>
+							<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionalité est publiée à moins d'un engagement durable et effectif des usagers à l'utiliser.</li>
+							<li>J'organise la chaîne de production pour diffuser en continu les évolutions du produit afin d'apprendre au plus tôt des réactions des usagers.</li>
+							<li>Je pense que la facilité de compréhension et de prise en main d'un produit numérique est un avantage concurrentiel majeur.</li>
+							<li>Je pense que la satisfaction et la confiance des usagers sont des conditions nécessaires à leur fidélisation et à l'éventualité qu'ils recommandent le service.</li>
 							<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
 							<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
 						</ul>
@@ -180,8 +182,8 @@
 				</div>
 			</div>
 			
-			<h3>3- Réaffirmer la production de valeur comme une pratique sociale.</h3>
-			<blockquote>Etre usocrate c'est être un organisateur et facilitateur. C'est viser à régler les dysfonctionnements internes et rationaliser la chaîne de production pour que toute l'énergie sur les projets soit mobilisée au profit des utilisateurs. Leadership, vision collective et agilité.</blockquote>
+			<h3>3- Rappeler que la production de valeur est une activité sociale.</h3>
+			<blockquote>Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes pour que toute l'énergie soit mobilisée au profit des utilisateurs.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -194,7 +196,7 @@
 							<li>Je n'ai pas le goût des débats d'experts</li>
 							<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
 							<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques</li>
-							<li>Je considère de mon devoir d'être réactif face aux demandes des usagers</li>
+							<li>Je considère de mon devoir d'être réactif face aux besoins des usagers</li>
 							<li>Je pense que certains activités sont inutiles et privilégie l'échange à la documentation</li>
 							<li>Je mobilise toute mon énergie pour améliorer la qualité du produit livré aux usagers</li>
 						</ul>
@@ -232,7 +234,7 @@
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
 									<ul>
 										<li>Je partage la vision, je souhaite donner du poids à ce discours</li>
-										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de mon engagement à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
+										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
 									</ul>
 						            <form method="POST" action="">
 										<div class="form-group ">
@@ -271,8 +273,12 @@
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
-								<li><a href="https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be">Google Heart Framework</a><br>Happiness, Engagement, Adoption, Retention, Task success</p></li>
+								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a></li>
+								<li><a href="http://blog.popcornmetrics.com/5-user-engagement-metrics-for-growth/">User Engagement: 5 Awesome Metrics for Growth</a></li>
+								<li><a href="http://www.uxmatters.com/mt/archives/2014/06/choosing-the-right-metrics-for-user-experience.php">Choosing the Right Metrics for User Experience</a> <small>(Pamela Pavliscak)</small></li>
+								<li><a href="https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be">How to choose the right ux metrics for your product</a> <small>(Kerry Rodden)</small><p>Google Heart Framework<br/>Happiness, Engagement, Adoption, Retention, Task success</p></li>
 								<li>+ The Goals-Signals-Metrics process</li>
+								<li><a href="https://static1.squarespace.com/static/57c6b79629687fde090a0fdd/t/589911ba3a04117857abca73/1486426561759/dschool+operator%27s+handbook+G+Kembel+edit.pdf">George Kembel's "d.school Operator's Handbook"</a></li>
 							</ul>
 						</div>
 					</div>
