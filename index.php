@@ -93,7 +93,7 @@
 			<h2>3 Engagements</h2>
 			
 			<h3>1- Porter toute l'attention aux usagers</h3>
-			<blockquote>Focus on the user and all else will follow (Google)</blockquote>
+			<blockquote>Focus on the user and all else will follow (Google)<br/>Make things people want vs Make people want things.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -110,7 +110,7 @@
 							<li>Je confronte au plus tôt les usagers au produit</li>
 							<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiels soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
 						</ul>
-						<p><span class="badge badge-default">Co-conception</span> <span class="badge badge-default">Principe de réalité</span></p>
+						<p><span class="badge badge-default">Co-conception</span> <span class="badge badge-default">Principe de réalité</span> <span class="badge badge-default">#IRL</span></p>
 					</div>
 				</div>
 				<div class="col-md-6">
@@ -130,13 +130,13 @@
 							<li>Je prends soin des usagers me souciant de l'impact des choix de conception sur leur bien-être</li>
 							<li>Je reconnais la dimension éthique du design</li>
 						</ul>
-						<p><span class="badge badge-default">Empathie</span> <span class="badge badge-default">Ethique</span></p>
+						<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Ethique</span></p>
 					</div>
 				</div>
 			</div>
 			
 			<h3>2- Contribuer à changer les indicateurs de réussite des projets</h3>
-			<blockquote>Je crois que le numérique rend obsolète l'ancien modèle de production industriel.<br/>Make things people want vs Make people want things.</blockquote>
+			<blockquote>Je crois que le numérique rend obsolète l'ancien modèle de production industriel.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -150,13 +150,13 @@
 							<li>Je recherche la simplicité comme un objectif en soi</li>
 							<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût, qu'il faut le faire, et refuse que la faisabilité technique décide de la feuille de route.</li>
 							<li>Je pense que la disponibilité des développeurs informatiques ne justifie en aucun cas d'engager des évolutions du produit et que la volonté d'optimiser leur taux d’occupation ne devrait jamais être décisive.</li>
-							<li>Je ne confonds pas nouveauté et innovation.</li>
 							<li>Je constate que fixer des échéances de livraison du produit a priori trahit le plus souvent un manque de vision produit.</li>
 							<li>Je ne crois pas que la tenue des délais de livraison soit une fin en soi.</li>
 							<li>Je ne suis pas un suiveur de tendances.</li>
-							<li>Je pense qu'à copier les concurrents on met en danger la compétitivité des produits dont on a la charge.</li>
+							<li>Je ne confonds pas nouveauté et innovation.</li>
+							<li>Je crois que la volonté de se distinguer de la concurrence n'est pas une bonne motivation pour innover.</li>							
+							<li>Je pense qu'à copier les concurrents, on met en danger la compétitivité des produits dont on a la charge.</li>
 							<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers.</li>
-							<li>Je pense que l'argument de non faisabilité technique n'est en 2017 plus recevable sans en étudier les coûts.</li>
 							<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à proposer aux usagers des services adaptés à leurs besoins.</li>
 						</ul>
 						<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
@@ -183,22 +183,24 @@
 			</div>
 			
 			<h3>3- Rappeler que la production de valeur est une activité sociale.</h3>
-			<blockquote>Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes pour que toute l'énergie soit mobilisée au profit des utilisateurs.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
+			<blockquote>Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes pour que toute l'énergie mobilisable le soit au profit des utilisateurs, sans dissipation.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
 						<h4>Collaborer pour l'efficacité économique</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite</li>
-							<li>Je pense que l'appropriation des enjeux et des objectifs par l'ensemble des membre de l'équipe projet est un facteur clé de réussite</li>
-							<li>Le design est un processus : pour la planification</li>
-							<li>Je n'ai pas le goût des débats d'experts</li>
-							<li>Je ne suis pas attaché à une position d'expert et privilégie la collaboration plutôt que la juxtaposition d'avis</li>
-							<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques</li>
-							<li>Je considère de mon devoir d'être réactif face aux besoins des usagers</li>
-							<li>Je pense que certains activités sont inutiles et privilégie l'échange à la documentation</li>
-							<li>Je mobilise toute mon énergie pour améliorer la qualité du produit livré aux usagers</li>
+							<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite.</li>
+							<li>Je ne suis pas attaché à ma position d'expert</li>
+							<li>Je n'ai pas le goût des débats d'experts et privilégie la collaboration à la juxtaposition d'avis.</li>
+							<li>Je pense que les activités de tous les contributeurs du projet doivent planifiées de manière cohérente, sans discrimination.</li>
+							<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques.</li>
+							<li>Je considère de mon devoir de répondre aux demandes des usagers.</li>
+							<li>Je mobilise toute mon énergie à l'amélioration du produit livré aux usagers.</li>
+							<li>Je m'attache à ce que chaque membre de l'équipe se sente responsable de la réussite du projet.</li>
+							<li>Je fais la chasse aux livrables inutiles et privilégie l'échange à la documentation.</li>
+							<li>Je ne stigmatise pas a priori comme improductif les temps d'échanges.</li>
+							<li>Je refuse le jargon et j'ai le soucis que tous les membres de l'équipe parlent le même langage.</li>
 						</ul>
 						<p><span class="badge badge-default">Collaboration</span> <span class="badge badge-default">Planification</span> <span class="badge badge-default">Agilité</span></p>								
 					</div>
@@ -208,14 +210,14 @@
 						<h4>Collaborer pour la créativité et l'innovation</h4>
 						<p>Moi usocrate...</p>
 						<ul>
-							<li>Je m’assure que tous les participants au projet se sentent légitimes dans leur rôle contributif</li>
-							<li>Je travaille à casser les silos cloisonnant les différents métiers de l'entreprise au service des usagers</li>
-							<li>Je crois que les meilleures solutions émanent d'équipes pluridisciplinaires</li>
+							<li>Je m’assure que tous les participants au projet se sentent légitimes dans leur rôle contributif.</li>
+							<li>Je travaille à casser les silos cloisonnant les différents métiers de l'entreprise au service des usagers.</li>
+							<li>Je crois que les meilleures solutions émanent d'équipes pluridisciplinaires.</li>
 							<li>Je suis convaincu qu'une phase d'exploration, d'ouverture à des domaines connexes, d'acculturation est nécessaire à toute démarche d'innovation. Je valorise et organise de telles phases de recherche.</li>
-							<li>Je valorise l'expérimentation</li>
-							<li>Faire la promotion de la culture design</li>
-							<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers</li>
-							<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue</li>
+							<li>Je valorise l'expérimentation.</li>
+							<li>Je fais la promotion de la culture design.</li>
+							<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers.</li>
+							<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue.</li>
 						</ul>
 						<p><span class="badge badge-default">Créativité</span> <span class="badge badge-default">Expérimentation</span></p>
 					</div>
@@ -270,8 +272,11 @@
 						<div>
 							<ul>
 								<li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li>
+								<li><a href="http://www.gartner.com/smarterwithgartner/improve-user-experience-by-reducing-features/">Improve-user-experience-by-reducing-features, curing featuritis (Gartner)</a></li>
+								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak (Create passionate users)</a></li>
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
+								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
 								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a></li>
 								<li><a href="http://blog.popcornmetrics.com/5-user-engagement-metrics-for-growth/">User Engagement: 5 Awesome Metrics for Growth</a></li>
