@@ -1,21 +1,32 @@
-<?php include 'config/main.inc.php'; ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<?php
+function __autoload($class_name) {
+	$path = './classes/';
+	if (is_file ( $path . $class_name . '.class.php' )) {
+		include_once $path . $class_name . '.class.php';
+	} elseif ($path . $class_name . '.interface.php') {
+		include_once $path . $class_name . '.interface.php';
+	}
+}
+$system = new System ( './config/host.json' );
+
+header('charset=utf-8');
+?>
+<!doctype html>
+<html lang="fr">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlentities(PROJECT_DESCRIPTION, ENT_QUOTES, "UTF-8") ?>" />
-	<meta name="author" content="<?php echo htmlentities(PROJECT_CREATOR, ENT_QUOTES, "UTF-8") ?>" />
-	<meta name="google-site-verification" content="IGn5YZNqRLliRu_AMTiCNF-Jf6voQ6BjvxX5gcu2tIw" />
-	<title><?php echo PROJECT_NAME ?></title>
+	<meta name="description" content="<?php echo htmlentities($system->getProjectDescription()) ?>" />
+	<title><?php echo htmlentities($system->getProjectName()) ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="skin/home.css" />
 </head>
 <body>
 	<div class="container">
+		<?php //phpinfo(); ?>
 		<section id="usocrateDef">
 			<header>
 				<div class="jumbotron">
@@ -122,12 +133,12 @@
 							<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
 							<li>Je ne discrédite pas les usagers et ne justifie pas de dysfonctionnements par leur incapacité</li>
 							<li>J’admets l’idée que les comportements des usagers face au produit puissent être en décalage avec ce qui était attendu</li>
-							<li>Je ne m’approprie pas le produit pour en faire ce qui me plairait, je ne me substitue pas aux usagers</li>
+							<li>Je ne m’approprie pas le produit pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
 							<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
 							<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
 							<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
 							<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance durable</li>
-							<li>Je prends soin des usagers me souciant de l'impact des choix de conception sur leur bien-être</li>
+							<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur bien-être</li>
 							<li>Je reconnais la dimension éthique du design</li>
 						</ul>
 						<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Ethique</span></p>
@@ -136,7 +147,7 @@
 			</div>
 			
 			<h3>2- Contribuer à changer les indicateurs de réussite des projets</h3>
-			<blockquote>Je crois que le numérique rend obsolète l'ancien modèle de production industriel.</blockquote>
+			<blockquote>Le numérique rend obsolète l'ancien modèle de production industriel.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -168,14 +179,14 @@
 						<p>Moi usocrate...</p>
 						<ul>
 							<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent.</li>
-							<li>Je pense qu'une bonne stratégie produit s'accompagne nécessairement d'indicateurs permettant de mesurer sa réussite.</li>
+							<li>Je mets systématiquement en place une démarche et des outils de captation des retours d’expérience</li>
+							<li>Je pense qu'une bonne stratégie produit s'accompagne nécessairement d'indicateurs permettant d'en mesurer la pertinence.</li>
+							<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>							
 							<li>Je pense qu'une conception réussie sert des objectifs qu'on se fixe au départ.</li>
 							<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionalité est publiée à moins d'un engagement durable et effectif des usagers à l'utiliser.</li>
 							<li>J'organise la chaîne de production pour diffuser en continu les évolutions du produit afin d'apprendre au plus tôt des réactions des usagers.</li>
 							<li>Je pense que la facilité de compréhension et de prise en main d'un produit numérique est un avantage concurrentiel majeur.</li>
 							<li>Je pense que la satisfaction et la confiance des usagers sont des conditions nécessaires à leur fidélisation et à l'éventualité qu'ils recommandent le service.</li>
-							<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>
-							<li>Mise en place systématique d’une démarche et d’outils de captation des retours d’expérience</li>
 						</ul>
 						<p><span class="badge badge-default">Expérience utilisateur</span> <span class="badge badge-default">Appropriation</span> <span class="badge badge-default">Satisfaction</span> <span class="badge badge-default">Productivité</span></p>							
 					</div>
@@ -183,7 +194,7 @@
 			</div>
 			
 			<h3>3- Rappeler que la production de valeur est une activité sociale.</h3>
-			<blockquote>Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes pour que toute l'énergie mobilisable le soit au profit des utilisateurs, sans dissipation.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
+			<blockquote>Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes de l'entreprise pour que toute l'énergie mobilisable le soit au profit des utilisateurs, sans dissipation.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
 			<div class="row">
 				<div class="col-md-6">
 					<div class="area">
@@ -191,16 +202,17 @@
 						<p>Moi usocrate...</p>
 						<ul>
 							<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite.</li>
-							<li>Je ne suis pas attaché à ma position d'expert</li>
-							<li>Je n'ai pas le goût des débats d'experts et privilégie la collaboration à la juxtaposition d'avis.</li>
-							<li>Je pense que les activités de tous les contributeurs du projet doivent planifiées de manière cohérente, sans discrimination.</li>
-							<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques.</li>
-							<li>Je considère de mon devoir de répondre aux demandes des usagers.</li>
+							<li>Je ne stigmatise pas a priori comme improductifs les temps d'échange.</li>
+							<li>Je refuse le jargon et j'ai le soucis que tous les membres de l'équipe parlent le même langage.</li>							
+							<li>Je n'ai pas le goût des débats d'experts</li>
 							<li>Je mobilise toute mon énergie à l'amélioration du produit livré aux usagers.</li>
-							<li>Je m'attache à ce que chaque membre de l'équipe se sente responsable de la réussite du projet.</li>
+							<li>Je ne suis pas attaché à ma propre position d'expert et privilégie la collaboration à la juxtaposition d'avis.</li>
+							<li>Je pense que les activités de tous les contributeurs du projet doivent être planifiées de manière cohérente, sans discrimination.</li>
+							<li>Je crois aux vertus de la planification.</li>
+							<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques.</li>
 							<li>Je fais la chasse aux livrables inutiles et privilégie l'échange à la documentation.</li>
-							<li>Je ne stigmatise pas a priori comme improductif les temps d'échanges.</li>
-							<li>Je refuse le jargon et j'ai le soucis que tous les membres de l'équipe parlent le même langage.</li>
+							<li>Je considère de mon devoir de répondre aux demandes des usagers.</li>
+							<li>Je m'attache à ce que chaque membre de l'équipe se sente responsable de la réussite du projet.</li>
 						</ul>
 						<p><span class="badge badge-default">Collaboration</span> <span class="badge badge-default">Planification</span> <span class="badge badge-default">Agilité</span></p>								
 					</div>
@@ -238,10 +250,10 @@
 										<li>Je partage la vision, je souhaite donner du poids à ce discours</li>
 										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
 									</ul>
-						            <form method="POST" action="">
+						            <form id="subscription_form">
 										<div class="form-group ">
 											<label>Je me présente</label>
-											<input class="form-control input-lg" id="" name="url" value="" placeholder="un profil web Twitter, LinkedIn,..." type="url">
+											<input class="form-control input-lg" id="" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="url">
 					                  	</div>
 										<div class="form-group ">
 											<label>Un email ?</label>
@@ -278,7 +290,7 @@
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
 								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
-								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a></li>
+								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a> <small>(Jerrod Larson and Daan Lindhout)</small></li>
 								<li><a href="http://blog.popcornmetrics.com/5-user-engagement-metrics-for-growth/">User Engagement: 5 Awesome Metrics for Growth</a></li>
 								<li><a href="http://www.uxmatters.com/mt/archives/2014/06/choosing-the-right-metrics-for-user-experience.php">Choosing the Right Metrics for User Experience</a> <small>(Pamela Pavliscak)</small></li>
 								<li><a href="https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be">How to choose the right ux metrics for your product</a> <small>(Kerry Rodden)</small><p>Google Heart Framework<br/>Happiness, Engagement, Adoption, Retention, Task success</p></li>
@@ -290,34 +302,26 @@
 				</div>
 			</section>
 	</div>
-	<?php if (defined('GA_KEY') && defined('GA_ACCOUNT') ) : ?>
-  <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', '<?php echo GA_KEY ?>', '<?php echo GA_ACCOUNT ?>');
-      ga('send', 'pageview');
-    </script>
-	<?php endif; ?>
+	
+	<?php if ($system->hasGoogleAnalyticsKey()): ?>
 	<script>
-		window.twttr = (function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0],
-	    t = window.twttr || {};
-	  if (d.getElementById(id)) return t;
-	  js = d.createElement(s);
-	  js.id = id;
-	  js.src = "https://platform.twitter.com/widgets.js";
-	  fjs.parentNode.insertBefore(js, fjs);
-
-	  t._e = [];
-	  t.ready = function(f) {
-	    t._e.push(f);
-	  };
-
-	  return t;
-	}(document, "script", "twitter-wjs"));
-</script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	  ga('create', '<?php echo $system->getGoogleAnalyticsKey() ?>', 'auto');
+	  ga('send', 'pageview');
+	</script>
+	<?php endif; ?>
+	
+	<script>
+		$(document).ready(function(){
+			$("#subscription_form").submit(function(e){
+				e.preventDefault();
+				alert('usocrate !');
+			});
+		});
+	</script>
+	
 </body>
 </html>
