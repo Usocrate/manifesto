@@ -19,7 +19,7 @@ header('charset=utf-8');
 	<meta name="description" content="<?php echo htmlentities($system->getProjectDescription()) ?>" />
 	<title><?php echo htmlentities($system->getProjectName()) ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.js" integrity="sha256-tA8y0XqiwnpwmOIl3SGAcFl2RvxHjA8qp0+1uCGmRmg=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 	<link rel="stylesheet" type="text/css" href="skin/home.css" />
@@ -251,14 +251,15 @@ header('charset=utf-8');
 										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
 									</ul>
 						            <form id="subscription_form">
-										<div class="form-group ">
+						            	<div class="form-group ">
 											<label>Je me présente</label>
-											<input class="form-control input-lg" id="" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="url">
+											<input class="form-control input-lg" id="" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="text">
 					                  	</div>
 										<div class="form-group ">
 											<label>Un email ?</label>
-											<input required="" class="form-control input-lg" id="" name="email" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
+											<input required="" class="form-control input-lg" id="" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
 							            </div>
+							            <input name="cmd" value="subscription" type="hidden"></input>
 							            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
 							        </form>
 								</div>
@@ -318,7 +319,20 @@ header('charset=utf-8');
 		$(document).ready(function(){
 			$("#subscription_form").submit(function(e){
 				e.preventDefault();
-				alert('usocrate !');
+				$.ajax({
+				    url: "subscription.api.php",
+				    data: $( "#subscription_form" ).serialize(),
+				    type: "POST",
+				    dataType : "json",
+				})
+				.done(function( json ) {
+					alert(json.message);
+				})
+				.fail(function( xhr, status, errorThrown ) {
+					console.log( "Erreur: " + errorThrown );
+				    console.log( "Etat: " + status );
+				    console.dir( xhr );
+				 });
 			});
 		});
 	</script>

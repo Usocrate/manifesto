@@ -9,15 +9,21 @@ function __autoload($class_name) {
 }
 $system = new System ( './config/host.json' );
 
-if (isset($_REQUEST['cmd'])) {
-    switch ($cmd) {
+$output = array();
+
+if (isset($_POST['cmd'])) {
+    switch ($_POST['cmd']) {
         case 'subscription' :
             $statement = $system->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
-            $statement->bindValue(':id', $_REQUEST['id'], PDO::PARAM_STR);
-            $statement->bindValue(':mail', $_REQUEST['mail'], PDO::PARAM_STR);
-            $statement->execute();
+            $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);
+            $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
+            if ($statement->execute()) {
+                $output['success'] = true;
+                $output['message'] = 'Bienvenue camarade usocrate.';
+            }
             break;
     }
 }
-header('charset=utf-8');
+header('Content-type: text/plain; charset=UTF-8');
+echo json_encode($output);
 ?>
