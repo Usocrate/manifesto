@@ -13,8 +13,14 @@ H1 {
 
 h2 {
 	text-align: center;
+	/*
 	background-color: #8ea4bc;
+	background-color: #03712f
 	color:#fff;
+	*/
+	border-bottom-width: 1px;
+	border-color: #03712f;
+	color:#fff;	
 }
 
 h3 {
@@ -30,7 +36,8 @@ SECTION {
 }
 
 .badge-default {
-	background-color: #C9462C;
+	/* background-color: #C9462C; */
+	background-color: #b20c16;
 }
 
 .jumbotron > div {
@@ -46,9 +53,16 @@ div.area {
 	margin: 1em .5em;
 }
 
+/* Bootstrap */
+.btn-primary {
+	color:#fff;
+	background-color: #03712f;
+	border-color: #03712f;
+}
+
 @media ( min-width : 962px) {
 	.jumbotron {
-		background-image: url('images/meeting_bg.png') !important;
+		background-image: url('images/usocrate.png') !important;
 		padding: 100px 0 20px 0 !important;
 	}
 	.jumbotron > div {
