@@ -2,7 +2,7 @@
 /**
  * @since 09/2017
  */
-class System {
+class Environment {
     
     private $config_file_path;
     

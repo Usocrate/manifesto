@@ -7,14 +7,14 @@ function __autoload($class_name) {
 		include_once $path . $class_name . '.interface.php';
 	}
 }
-$system = new System ( './config/host.json' );
+$env = new Environment ( './config/host.json' );
 
 $output = array();
 
 if (isset($_POST['cmd'])) {
     switch ($_POST['cmd']) {
         case 'subscription' :
-            $statement = $system->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
+            $statement = $env->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
             $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);
             $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
             if ($statement->execute()) {

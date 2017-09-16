@@ -68,7 +68,7 @@ header('charset=utf-8');
 			<section id="method">
 				<h2>1 Méthode</h2>
 				<div class="area">
-					<p>Aller <strong>à la rencontre des usagers</strong> et faire de la <strong>valeur d’usage</strong> le premier indicateur du progrès et de l’innovation.</p>
+					<p>Placer les usagers au coeur de la démarche de conception.</p>
 				</div>
 			</section>
 
@@ -167,8 +167,7 @@ header('charset=utf-8');
 								<li>Je pense qu'aujourd'hui le principal moteur de croissance c'est le produit et plus les forces de ventes et le marketing.</li>
 								<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit.</li>
 								<li>Je recherche la simplicité comme un objectif en soi</li>
-								<li>Je crois pas que parce que quelque chose est possible techniquement et à moindre coût, qu'il faut le faire, et refuse que la faisabilité technique décide de la feuille de route.</li>
-								<li>Je pense que la disponibilité des développeurs informatiques ne justifie en aucun cas d'engager des évolutions du produit et que la volonté d'optimiser leur taux d’occupation ne devrait jamais être décisive.</li>
+								<li>Je refuse que la faisabilité technique, même à moindre coût, décide de l'évolution du produit.</li>
 								<li>Je constate que fixer des échéances de livraison du produit a priori trahit le plus souvent un manque de vision produit.</li>
 								<li>Je ne crois pas que la tenue des délais de livraison soit une fin en soi.</li>
 								<li>Je ne suis pas un suiveur de tendances.</li>
@@ -176,7 +175,7 @@ header('charset=utf-8');
 								<li>Je crois que la volonté de se distinguer de la concurrence n'est pas une bonne motivation pour innover.</li>							
 								<li>Je pense qu'à copier les concurrents, on met en danger la compétitivité des produits dont on a la charge.</li>
 								<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers.</li>
-								<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à proposer aux usagers des services adaptés à leurs besoins.</li>
+								<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à répondre aux besoins des usagers.</li>
 							</ul>
 							<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
 						</div>
