@@ -7,7 +7,9 @@ function __autoload($class_name) {
 		include_once $path . $class_name . '.interface.php';
 	}
 }
-$system = new System ( './config/host.json' );
+$env = new Environment ( './config/host.json' );
+$m = new Manifesto($env);
+$quotes = $m->getQuotes();
 
 header('charset=utf-8');
 ?>
@@ -16,8 +18,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlentities($system->getProjectDescription()) ?>" />
-	<title><?php echo htmlentities($system->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo htmlentities($env->getProjectDescription()) ?>" />
+	<title><?php echo htmlentities($env->getProjectName()) ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -26,7 +28,6 @@ header('charset=utf-8');
 </head>
 <body>
 	<div class="container">
-		<?php //phpinfo(); ?>
 		<section id="usocrateDef">
 			<header>
 				<div class="jumbotron">
@@ -119,15 +120,13 @@ header('charset=utf-8');
 							<h4>Aller sur le terrain, aimer le réel</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>J’affirme l’impossibilité d'un design hors sol, sans connaissance du contexte dans lequel le produit sera utilisé.</li>
-								<li>J’ai la volonté de sortir de mon bureau pour aller à la rencontre des usagers aussi souvent que possible.</li>
-								<li>Je fais de la résolution des problèmes des usagers l'objectif premier d'une démarche de conception</li>
-								<li>Je refuse l'idée d'un utilisateur générique et idéalisé qui adhèrerait à la logique du produit, sans culture, besoins ou problématiques particulières.</li>
-								<li>Je favorise les approches de co-conception, impliquant directement les usagers, même si cela complexifie les prises de décisions</li>
-								<li>Je mets en place des méthodes et outils pour collecter de l’information de terrain et travaille à la maîtrise de ces outils</li>
-								<li>Je m’attache à des faits, pas à des opinions</li>
-								<li>Je confronte au plus tôt les usagers au produit</li>
-								<li>Je pense qu'il est important que les prototypes testés auprès d'usagers potentiels soient construits sur des données réelles, c'est à dire non fictives, parcellaires ou fantaisistes.</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '1')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Co-conception</span> <span class="badge badge-default">Principe de réalité</span> <span class="badge badge-default">#IRL</span></p>
 						</div>
@@ -137,17 +136,13 @@ header('charset=utf-8');
 							<h4>Respecter les usagers</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>Je valorise l'écoute et l'empathie</li>
-								<li>Je ne recycle pas a priori des solutions existantes sans considérer ce que le projet a de spécifique</li>
-								<li>Je ne discrédite pas les usagers et ne justifie pas de dysfonctionnements par leur incapacité</li>
-								<li>J’admets l’idée que les comportements des usagers face au produit puissent être en décalage avec ce qui était attendu</li>
-								<li>Je ne m’approprie pas le produit pour en faire ce qu'il me plairait, je ne me substitue pas aux usagers</li>
-								<li>Je modère l'expression des opinions et goûts personnels des membres de l'équipe projet.</li>
-								<li>Je n'abandonne pas les usagers aux possibilités de paramétrage dont les outils disposent et vise à leur proposer un produit adapté.</li>
-								<li>Je suppose que les usagers ont autre chose à faire que de lire de la documentation ou suivre des tutoriaux</li>
-								<li>Je ne cherche pas à tromper les usagers pour obtenir des profits courts termes mais travaille à développer une relation de confiance durable</li>
-								<li>Je prends soin des usagers en me souciant de l'impact des choix de conception sur leur bien-être</li>
-								<li>Je reconnais la dimension éthique du design</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '2')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Ethique</span></p>
 						</div>
@@ -162,20 +157,13 @@ header('charset=utf-8');
 							<h4>La valeur d’usage comme projet économique</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>Je crois que c'est la qualité du service rendu à l'usager qui permet d'asseoir la pérennité d'une production numérique.</li>
-								<li>Je pense que l'échec de beaucoup de produits numériques est prévisible si leur utilité et leur désirabilité n'ont pas été questionnées auprès des usagers.</li>
-								<li>Je pense qu'aujourd'hui le principal moteur de croissance c'est le produit et plus les forces de ventes et le marketing.</li>
-								<li>Je lutte contre une stratégie produit réduite à l'accumulation de fonctionnalités en affirmant que ce n’est ni la somme de celles-ci, ni le temps consacré à les développer qui fait la valeur du produit.</li>
-								<li>Je recherche la simplicité comme un objectif en soi</li>
-								<li>Je refuse que la faisabilité technique, même à moindre coût, décide de l'évolution du produit.</li>
-								<li>Je constate que fixer des échéances de livraison du produit a priori trahit le plus souvent un manque de vision produit.</li>
-								<li>Je ne crois pas que la tenue des délais de livraison soit une fin en soi.</li>
-								<li>Je ne suis pas un suiveur de tendances.</li>
-								<li>Je ne confonds pas nouveauté et innovation.</li>
-								<li>Je crois que la volonté de se distinguer de la concurrence n'est pas une bonne motivation pour innover.</li>							
-								<li>Je pense qu'à copier les concurrents, on met en danger la compétitivité des produits dont on a la charge.</li>
-								<li>Je crois que la démonstration technologique spectaculaire intéresse davantage les forces de ventes que les usagers.</li>
-								<li>Je pense que l'industrialisation de la chaîne de production ne devrait jamais se faire au détriment de la capacité à répondre aux besoins des usagers.</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '3')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
 						</div>
@@ -185,15 +173,13 @@ header('charset=utf-8');
 							<h4>Mesurer les résultats</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>Je pense que les bénéfices apportés aux usagers par un service numérique se mesurent.</li>
-								<li>Je mets systématiquement en place une démarche et des outils de captation des retours d’expérience</li>
-								<li>Je pense qu'une bonne stratégie produit s'accompagne nécessairement d'indicateurs permettant d'en mesurer la pertinence.</li>
-								<li>Je mesure la pertinence des orientations prises aux bénéfices perceptibles par les usagers.</li>							
-								<li>Je pense qu'une conception réussie sert des objectifs qu'on se fixe au départ.</li>
-								<li>Je ne considère pas que le travail soit terminé lorsqu'une fonctionalité est publiée à moins d'un engagement durable et effectif des usagers à l'utiliser.</li>
-								<li>J'organise la chaîne de production pour diffuser en continu les évolutions du produit afin d'apprendre au plus tôt des réactions des usagers.</li>
-								<li>Je pense que la facilité de compréhension et de prise en main d'un produit numérique est un avantage concurrentiel majeur.</li>
-								<li>Je pense que la satisfaction et la confiance des usagers sont des conditions nécessaires à leur fidélisation et à l'éventualité qu'ils recommandent le service.</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '4')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Expérience utilisateur</span> <span class="badge badge-default">Appropriation</span> <span class="badge badge-default">Satisfaction</span> <span class="badge badge-default">Productivité</span></p>							
 						</div>
@@ -208,18 +194,13 @@ header('charset=utf-8');
 							<h4>Collaborer pour l'efficacité économique</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>Je pense que le partage d'une vision commune entre les protagonistes du projet est un facteur clé de réussite.</li>
-								<li>Je ne stigmatise pas a priori comme improductifs les temps d'échange.</li>
-								<li>Je refuse le jargon et j'ai le soucis que tous les membres de l'équipe parlent le même langage.</li>							
-								<li>Je n'ai pas le goût des débats d'experts</li>
-								<li>Je mobilise toute mon énergie à l'amélioration du produit livré aux usagers.</li>
-								<li>Je ne suis pas attaché à ma propre position d'expert et privilégie la collaboration à la juxtaposition d'avis.</li>
-								<li>Je pense que les activités de tous les contributeurs du projet doivent être planifiées de manière cohérente, sans discrimination.</li>
-								<li>Je crois aux vertus de la planification.</li>
-								<li>Je travaille à la résolution des conflits d’intérêts plutôt qu'à leur exploitation à des fins politiques.</li>
-								<li>Je fais la chasse aux livrables inutiles et privilégie l'échange à la documentation.</li>
-								<li>Je considère de mon devoir de répondre aux demandes des usagers.</li>
-								<li>Je m'attache à ce que chaque membre de l'équipe se sente responsable de la réussite du projet.</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '5')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Collaboration</span> <span class="badge badge-default">Planification</span> <span class="badge badge-default">Agilité</span></p>								
 						</div>
@@ -229,14 +210,13 @@ header('charset=utf-8');
 							<h4>Collaborer pour la créativité et l'innovation</h4>
 							<p>Moi usocrate...</p>
 							<ul>
-								<li>Je m’assure que tous les participants au projet se sentent légitimes dans leur rôle contributif.</li>
-								<li>Je travaille à casser les silos cloisonnant les différents métiers de l'entreprise au service des usagers.</li>
-								<li>Je crois que les meilleures solutions émanent d'équipes pluridisciplinaires.</li>
-								<li>Je suis convaincu qu'une phase d'exploration, d'ouverture à des domaines connexes, d'acculturation est nécessaire à toute démarche d'innovation. Je valorise et organise de telles phases de recherche.</li>
-								<li>Je valorise l'expérimentation.</li>
-								<li>Je fais la promotion de la culture design.</li>
-								<li>Je pense qu'un dispositif de cocréation favorise l'efficacité en alignant tous les membres du projets sur les objectifs des usagers.</li>
-								<li>J'essaie de faire preuve d’humilité, je respecte les autres membres du projet, leur point de vue.</li>
+								<?php
+									foreach ($quotes as $q) {
+										if (strcmp($q['set_id'], '6')==0) {
+											echo '<li>'.htmlentities($q['content']).'</li>';
+										}
+									}
+								?>
 							</ul>
 							<p><span class="badge badge-default">Créativité</span> <span class="badge badge-default">Expérimentation</span></p>
 						</div>
@@ -310,13 +290,13 @@ header('charset=utf-8');
 		</section>
 	</div>
 	
-	<?php if ($system->hasGoogleAnalyticsKey()): ?>
+	<?php if ($env->hasGoogleAnalyticsKey()): ?>
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', '<?php echo $system->getGoogleAnalyticsKey() ?>', 'auto');
+	  ga('create', '<?php echo $env->getGoogleAnalyticsKey() ?>', 'auto');
 	  ga('send', 'pageview');
 	</script>
 	<?php endif; ?>

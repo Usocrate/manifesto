@@ -14,14 +14,7 @@ $output = array();
 if (isset($_POST['cmd'])) {
     switch ($_POST['cmd']) {
         case 'subscription' :
-            $statement = $env->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
-            $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);
-            $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
-            if ($statement->execute()) {
-                $output['success'] = true;
-                $output['message'] = 'Bienvenue camarade usocrate.';
-            }
-            break;
+            $output  = $env->registerSubscription($_POST['id'],$_POST['mail']);
     }
 }
 header('Content-type: text/plain; charset=UTF-8');
