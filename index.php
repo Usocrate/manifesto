@@ -275,6 +275,7 @@ header('charset=utf-8');
 								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak (Create passionate users)</a></li>
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
+								<li><a href="https://youtu.be/-aMGT4DMiFY">L’avenir des interactions Hommes-Données</a><small>(Caroline Goulard)</small><br/>Compréhension / Interaction / Attention / Responsabilisation / Adhésion</li>
 								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
 								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a> <small>(Jerrod Larson and Daan Lindhout)</small></li>
