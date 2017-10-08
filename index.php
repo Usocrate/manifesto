@@ -53,7 +53,7 @@ header('charset=utf-8');
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.</p>
 				<p>
-					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à la transformation actuelle.<br>
+					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à cette transformation.<br>
 					Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 				</p>
 				<p>
@@ -62,14 +62,14 @@ header('charset=utf-8');
 				<p>
 					Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
 					Professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
-					Il te propose de partager une vision.
 				</p>
 			</section>
 			
 			<section id="method">
 				<h2>1 Méthode</h2>
 				<div class="area">
-					<p>Placer les usagers au coeur de la démarche de conception.</p>
+					<p style="display:none">La <strong>valeur d’usage</strong> comme objectif et critère de performance.</p>
+					<p><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée utilisateur</a></p>
 				</div>
 			</section>
 
@@ -101,7 +101,7 @@ header('charset=utf-8');
 									Pour notre compétitivité, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bons produits</strong>.<br>
 									Il s'agit de garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
 								</li>
-								<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des services numériques développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
+								<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des produits développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
 								<li>Etre à l'écoute des usagers est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût.</li>
 							</ul>
 							<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
@@ -112,7 +112,7 @@ header('charset=utf-8');
 
 			<section id="commitment">
 				<h2>3 Engagements</h2>
-				<h3>1- Porter toute l'attention aux usagers</h3>
+				<h3>1- Porter toute l’attention aux usagers</h3>
 				<blockquote style="display:none">Focus on the user and all else will follow (Google)<br/>Make things people want vs Make people want things.</blockquote>
 				<div class="row">
 					<div class="col-md-6">
@@ -123,7 +123,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '1')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
@@ -139,12 +139,12 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '2')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Ethique</span></p>
+							<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Considération</span> <span class="badge badge-default">Ethique</span></p>
 						</div>
 					</div>
 				</div>
@@ -160,7 +160,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '3')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
@@ -170,13 +170,13 @@ header('charset=utf-8');
 					</div>
 					<div class="col-md-6">
 						<div class="area">
-							<h4>Mesurer les résultats</h4>
+							<h4>Mesurer la qualité de l’expérience</h4>
 							<p>Moi usocrate...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '4')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
@@ -197,7 +197,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '5')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
@@ -207,13 +207,13 @@ header('charset=utf-8');
 					</div>
 					<div class="col-md-6">
 						<div class="area">
-							<h4>Collaborer pour la créativité et l'innovation</h4>
+							<h4>Collaborer pour la créativité</h4>
 							<p>Moi usocrate...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '6')==0) {
-											echo '<li>'.htmlentities($q['content']).'</li>';
+											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
 										}
 									}
 								?>
@@ -255,7 +255,7 @@ header('charset=utf-8');
 				</div>
 			</section>
 
-			<section id="socialSpreadArea">
+			<section id="socialSpreadArea" style="display:none">
 				<div class="text-center">
 						<a class="twitter-share-button"
 					  href="https://twitter.com/intent/tweet?text=Hello%20world"
@@ -271,11 +271,12 @@ header('charset=utf-8');
 						<div>
 							<ul>
 								<li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li>
-								<li><a href="http://www.gartner.com/smarterwithgartner/improve-user-experience-by-reducing-features/">Improve-user-experience-by-reducing-features, curing featuritis (Gartner)</a></li>
-								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak (Create passionate users)</a></li>
+								<li><a href="https://www.ted.com/talks/david_kelley_on_human_centered_design?language=fr">David Kelley parle du design centré sur l’humain</a> <small>(David Kelley)</small>
+								<li><a href="http://www.gartner.com/smarterwithgartner/improve-user-experience-by-reducing-features/">Improve-user-experience-by-reducing-features, curing featuritis</a> <small>(Gartner)</small></li>
+								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak</a> <small>(Create passionate users)</small></li>
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
-								<li><a href="https://youtu.be/-aMGT4DMiFY">L’avenir des interactions Hommes-Données</a><small>(Caroline Goulard)</small><br/>Compréhension / Interaction / Attention / Responsabilisation / Adhésion</li>
+								<li><a href="https://youtu.be/-aMGT4DMiFY">L’avenir des interactions Hommes-Données</a> <small>(Caroline Goulard)</small><br/>Compréhension / Interaction / Attention / Responsabilisation / Adhésion</li>
 								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
 								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a> <small>(Jerrod Larson and Daan Lindhout)</small></li>

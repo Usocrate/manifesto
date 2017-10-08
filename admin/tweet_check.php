@@ -32,10 +32,12 @@ header('charset=utf-8');
 		<ul>
 		<?php 
 			foreach ($quotes as $q) {
-				$output = str_replace('[quote]', $q['content'], $pattern);
+				$output = mb_eregi_replace('\[quote\]', $q['content'], $pattern);
 				echo '<li>';
-				echo htmlentities($output);
-				echo strlen($output)>140 ? ' <span class="badge badge-danger">+'.(strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-strlen($output)).'</span>';
+				echo '<h1>'.ucfirst(htmlentities($output));
+				echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
+				echo '</h1>';
+				echo '<p>'.htmlentities($q['comment']).'</p>';
 				echo '</li>';
 			}
 		?>
