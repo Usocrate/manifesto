@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	background-image: url("images/bg.gif");
+	background-color: #ece6e0;
 }
 
 a {
@@ -18,17 +18,11 @@ h1 {
 h2 {
 	text-align: center;
 	/*
-	background-color: #8ea4bc;
-
-	background-color: #211c22;
-	color:#fff;
-
-	*/
-	
 	border-width: 1px 1px 0 1px;
-	border-color: #03712f;
+	border-color: #4d636b;
 	border-style: dotted;
-	color: #03712f;	
+	*/
+	color:#4d636b;
 
 	margin-top: 2em;
 	line-height: 2em;
@@ -38,8 +32,8 @@ h3 {
 	text-align: center;
 }
 
-section {
-	margin: 2em 0;
+#manifesto {
+	padding : 0 1em;
 }
 
 #method {
@@ -50,22 +44,24 @@ section {
 
 .container, .container-fluid {
 	background-color:#fff;
+	padding: 1em;
 }
 
 .badge-default {
-	/* background-color: #C9462C; */
-	background-color: #b20c16;
+	background-color: #ae6761;
 }
 
 .jumbotron > div {
 	background-color: #fff;
-	padding: 1em;	
+	padding: 1em;
 	margin: 1em 0;
 }
 
 .area {
-	background-color: #f5f5f5;
-	border: 1px solid #e5e5e5;
+	/*
+	background-color: #ece6e0;
+	border: 1px solid #d4c6b8;
+	*/
 	padding: 1em;
 	margin: 1em .5em;
 }
@@ -73,13 +69,13 @@ section {
 /* Bootstrap */
 .btn-primary, .btn-primary:hover {
 	color:#fff;
-	background-color: #03712f;
-	border-color: #03712f;
+	background-color: #839ca1;
+	border:none;
 }
 
 @media ( min-width : 962px) {
 	.jumbotron {
-		background-image: url('images/usocrate.png') !important;
+		background-image: url('images/smilingPeople.png') !important;
 		padding: 100px 0 20px 0 !important;
 	}
 	.jumbotron > div {

@@ -54,7 +54,7 @@ header('charset=utf-8');
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.</p>
 				<p>
 					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à cette transformation.<br>
-					Nous avons besoin d'une renaissance numérique qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
+					Nous avons besoin pour le numérique, d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
 				</p>
 				<p>
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
@@ -67,10 +67,7 @@ header('charset=utf-8');
 			
 			<section id="method">
 				<h2>1 Méthode</h2>
-				<div class="area">
-					<p style="display:none">La <strong>valeur d’usage</strong> comme objectif et critère de performance.</p>
-					<p><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée utilisateur</a></p>
-				</div>
+				<h3><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée utilisateur</a></h3>
 			</section>
 
 			<section id="purpose">
@@ -233,8 +230,8 @@ header('charset=utf-8');
 								<div class="card-text">
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
 									<ul>
-										<li>Je partage la vision, je souhaite donner du poids à ce discours</li>
-										<li>J'ai conscience de ma responsabilité individuelle et je témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
+										<li>Je partage la vision et souhaite donner du poids à ce discours</li>
+										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
 									</ul>
 						            <form id="subscription_form">
 						            	<div class="form-group ">
@@ -264,18 +261,19 @@ header('charset=utf-8');
 				</div>
 			</section>
 
-			<section id="references">
+			<section id="references" style="display:none">
 				<div class="area">
 					<strong>Références</strong>
 					<div class="row">
 						<div>
 							<ul>
 								<li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li>
-								<li><a href="https://www.ted.com/talks/david_kelley_on_human_centered_design?language=fr">David Kelley parle du design centré sur l’humain</a> <small>(David Kelley)</small>
+								<li><a href="https://www.ted.com/talks/david_kelley_on_human_centered_design?language=fr">David Kelley parle du design centré sur l’humain</a> <small>(David Kelley)</small></li>
 								<li><a href="http://www.gartner.com/smarterwithgartner/improve-user-experience-by-reducing-features/">Improve-user-experience-by-reducing-features, curing featuritis</a> <small>(Gartner)</small></li>
 								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak</a> <small>(Create passionate users)</small></li>
 								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
 								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
+								<li><a href="https://www.microsoft.com/en-us/design/inclusive">Inclusive Design at Microsoft</a> <small>(Microsoft)</small></li>
 								<li><a href="https://youtu.be/-aMGT4DMiFY">L’avenir des interactions Hommes-Données</a> <small>(Caroline Goulard)</small><br/>Compréhension / Interaction / Attention / Responsabilisation / Adhésion</li>
 								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
 								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
@@ -324,6 +322,5 @@ header('charset=utf-8');
 			});
 		});
 	</script>
-	
 </body>
 </html>
