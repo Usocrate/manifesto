@@ -24,7 +24,8 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="skin/home.css" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sigmar+One" rel="stylesheet">
+	<link href="skin/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div class="container">
@@ -32,7 +33,7 @@ header('charset=utf-8');
 			<header>
 				<div class="jumbotron">
 					<div>
-						<h1>Usocrate.fr</h1>
+						<h1 class="brand">Usocrate<small>.fr</small></h1>
 						<p>Usus magister est optimus</p>
 						<dl>
 							<dt>Technocrate / tɛk.nɔ.kʁat</dt>
@@ -54,7 +55,7 @@ header('charset=utf-8');
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.</p>
 				<p>
 					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à cette transformation.<br>
-					Nous avons besoin pour le numérique, d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
+					Nous avons besoin pour le numérique, d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
@@ -67,7 +68,7 @@ header('charset=utf-8');
 			
 			<section id="method">
 				<h2>1 Méthode</h2>
-				<h3><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée utilisateur</a></h3>
+				<h3><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée Utilisateur</a></h3>
 			</section>
 
 			<section id="purpose">
@@ -75,7 +76,7 @@ header('charset=utf-8');
 				<div class="row">
 					<div class="col-md-6">
 						<div class="area">
-							<h4>Humaniste</h4>
+							<h3>Humaniste</h3>
 							<ul>
 								<li><strong>Améliorer la vie des gens</strong>, impacter notamment leurs conditions de travail en construisant des outils numériques adaptés, efficaces et libérant les potentiels individuels.</li>
 								<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong>, refuser d’en faire un vecteur d’aliénation et de déshumanisation.</li>
@@ -92,7 +93,7 @@ header('charset=utf-8');
 					</div>
 					<div class="col-md-6">
 						<div class="area">
-							<h4>Economique</h4>
+							<h3>Economique</h3>
 							<ul>
 								<li>
 									Pour notre compétitivité, il est urgent de rompre avec l'apathie généralisée face à la nécessité de <strong>faire de bons produits</strong>.<br>
@@ -151,7 +152,7 @@ header('charset=utf-8');
 				<div class="row">
 					<div class="col-md-6">
 						<div class="area">
-							<h4>La valeur d’usage comme projet économique</h4>
+							<h4>La valeur d’usage comme objectif</h4>
 							<p>Moi usocrate...</p>
 							<ul>
 								<?php
@@ -226,12 +227,12 @@ header('charset=utf-8');
 		         	<div class="col-xs-12 col-md-8">
 						<div class="card">
 							<div class="card-block">
-				       			<h3 class="text-center card-title">Je suis Usocrate !</h3>
+				       			<h3 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h3>
 								<div class="card-text">
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
 									<ul>
 										<li>Je partage la vision et souhaite donner du poids à ce discours</li>
-										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté à mettre en oeuvre les principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
+										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté de mise en oeuvre des principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
 									</ul>
 						            <form id="subscription_form">
 						            	<div class="form-group ">

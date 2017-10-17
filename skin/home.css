@@ -2,44 +2,51 @@
 
 body {
 	background-color: #ece6e0;
+	font-size:1.2em;
 }
 
-a {
-	color : #b20c16;
+a, a:hover {
+	color : #9F3723;
+}
+
+h1, h2, h3 {
+	text-align: center;	
+}
+
+h1 a, h2 a, h3 a {
+	color:inherit;
 }
 
 h1 {
-	color: #000;
-	border-color: #000;
-	border-style: solid;
-	border-width: 0 0 1px 0;
+	color: #C9462C;
+	font-family: 'Sigmar One', cursive;	
+}
+h1 small{
+	color: #0098B6;
+}
+
+.brand {
+	font-family: 'Sigmar One', cursive;	
+	color:#0098B6;
+}
+.brand small {
+	color:#C9462C;
 }
 
 h2 {
-	text-align: center;
-	/*
-	border-width: 1px 1px 0 1px;
-	border-color: #4d636b;
-	border-style: dotted;
-	*/
-	color:#4d636b;
-
+	border-top: 1px solid #0098B6;
+	font-family: 'Sigmar One', cursive;
+	color:#0098B6;
 	margin-top: 2em;
 	line-height: 2em;
 }
 
-h3 {
-	text-align: center;
+ul {
+	padding:0;	
 }
-
-#manifesto {
-	padding : 0 1em;
-}
-
-#method {
-	width:60%;
-	margin-left: auto;
-	margin-right: auto;
+li {
+	margin:1em 0;
+	display:block;
 }
 
 .container, .container-fluid {
@@ -48,13 +55,32 @@ h3 {
 }
 
 .badge-default {
-	background-color: #ae6761;
+	background-color: #0098B6;
+}
+
+.jumbotron {
+	background-color: #fff;
+	padding:0;
+	margin:0;
 }
 
 .jumbotron > div {
 	background-color: #fff;
 	padding: 1em;
 	margin: 1em 0;
+}
+
+.card {
+	border :1px solid #0098B6;
+}
+
+
+#manifesto {
+	padding : 0 1em;
+}
+
+#intro {
+	margin: 2em 0;
 }
 
 .area {
@@ -69,18 +95,26 @@ h3 {
 /* Bootstrap */
 .btn-primary, .btn-primary:hover {
 	color:#fff;
-	background-color: #839ca1;
+	background-color: #0098B6;
 	border:none;
 }
 
 @media ( min-width : 962px) {
 	.jumbotron {
 		background-image: url('images/smilingPeople.png') !important;
-		padding: 100px 0 20px 0 !important;
+		margin-bottom:2em;
 	}
 	.jumbotron > div {
 		width: 40%;
-		margin: 0;
+		margin-top: auto;
+		margin-left: auto;
+		margin-right:0;
+		margin-bottom:0;
 		background-color: rgba(255, 255, 255, 0.8);
 	}
+	#method {
+		width:60%;
+		margin-left: auto;
+		margin-right: auto;
+	}	
 }
