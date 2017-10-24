@@ -52,10 +52,10 @@ header('charset=utf-8');
 			<section id="intro">
 				<p>
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
-					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production ou la manière dont nous nous représentons le monde.</p>
+					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
 				<p>
 					Les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels liés à cette transformation.<br>
-					Nous avons besoin pour le numérique, d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
+					Le numérique a aujourd’hui besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
@@ -68,7 +68,10 @@ header('charset=utf-8');
 			
 			<section id="method">
 				<h2>1 Méthode</h2>
-				<h3><a href="https://www.iso.org/fr/standard/52075.html" >Conception Centrée Utilisateur</a></h3>
+				<h3>Conception Centrée Utilisateur</h3>
+				<div>
+					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210:2010</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210: Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
+				</div>
 			</section>
 
 			<section id="purpose">
@@ -116,7 +119,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>Aller sur le terrain, aimer le réel</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
@@ -132,7 +135,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>Respecter les usagers</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
@@ -153,7 +156,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>La valeur d’usage comme objectif</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
@@ -169,7 +172,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>Mesurer la qualité de l’expérience</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
@@ -190,7 +193,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>Collaborer pour l'efficacité économique</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {
@@ -206,7 +209,7 @@ header('charset=utf-8');
 					<div class="col-md-6">
 						<div class="area">
 							<h4>Collaborer pour la créativité</h4>
-							<p>Moi usocrate...</p>
+							<p>Moi <span class="brand">usocrate</span>...</p>
 							<ul>
 								<?php
 									foreach ($quotes as $q) {

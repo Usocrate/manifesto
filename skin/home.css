@@ -84,6 +84,11 @@ ul li {
 	margin: 2em 0;
 }
 
+#method > div {
+	background-color: #F5F5F5;
+    padding: 1em;
+    margin: 1em 0;
+}
 .area {
 	/*padding: 1em;*/
 	margin: 1em .5em 3em .5em;
