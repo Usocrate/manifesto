@@ -54,7 +54,7 @@ header('charset=utf-8');
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Aujourd’hui, les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
+					Le constat est simple: les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
