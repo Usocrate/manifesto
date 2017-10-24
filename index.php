@@ -32,7 +32,7 @@ header('charset=utf-8');
 		<section id="usocrateDef">
 			<header>
 				<div class="jumbotron">
-					<div>
+					<div style="display:none">
 						<h1 class="brand">Usocrate<small>.fr</small></h1>
 						<p>Usus magister est optimus</p>
 						<dl>
@@ -230,10 +230,10 @@ header('charset=utf-8');
 				       			<h3 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h3>
 								<div class="card-text">
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
-									<ul>
+									<ol>
 										<li>Je partage la vision et souhaite donner du poids à ce discours</li>
 										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté de mise en oeuvre des principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
-									</ul>
+									</ol>
 						            <form id="subscription_form">
 						            	<div class="form-group ">
 											<label>Je me présente</label>

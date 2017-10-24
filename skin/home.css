@@ -44,9 +44,10 @@ h2 {
 ul {
 	padding:0;	
 }
-li {
-	margin:1em 0;
-	display:block;
+ul li {
+	margin:1em .4em;
+	list-style-type: square;
+	/*display:block;*/
 }
 
 .container, .container-fluid {
@@ -84,12 +85,8 @@ li {
 }
 
 .area {
-	/*
-	background-color: #ece6e0;
-	border: 1px solid #d4c6b8;
-	*/
-	padding: 1em;
-	margin: 1em .5em;
+	/*padding: 1em;*/
+	margin: 1em .5em 3em .5em;
 }
 
 /* Bootstrap */
@@ -103,14 +100,18 @@ li {
 	.jumbotron {
 		background-image: url('images/smilingPeople.png') !important;
 		margin-bottom:2em;
+		height:541px;
 	}
 	.jumbotron > div {
+		display:none;
+		/*
 		width: 40%;
 		margin-top: auto;
 		margin-left: auto;
 		margin-right:0;
 		margin-bottom:0;
 		background-color: rgba(255, 255, 255, 0.8);
+		*/
 	}
 	#method {
 		width:60%;

@@ -10,7 +10,7 @@ function __autoload($class_name) {
 $env = new Environment ( '../config/host.json' );
 $m = new Manifesto($env);
 $quotes = $m->getQuotes();
-$pattern = '[quote] #usocrate https://usocrate.fr';
+$pattern = '[quote] #usocrate https://usocrate.fr/manifesto';
 
 header('charset=utf-8');
 ?>
