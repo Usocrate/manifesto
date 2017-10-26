@@ -9,6 +9,21 @@ a, a:hover {
 	color : #9F3723;
 }
 
+.brand {
+	font-family: 'Sigmar One', cursive;	
+	color:#0098B6;
+}
+
+.brand small {
+	color:#C9462C;
+}
+
+.btn-primary, .btn-primary:hover {
+	color:#fff;
+	background-color: #0098B6;
+	border:none;
+}
+
 h1, h2, h3 {
 	text-align: center;	
 }
@@ -21,33 +36,38 @@ h1 {
 	color: #C9462C;
 	font-family: 'Sigmar One', cursive;	
 }
+
 h1 small{
 	color: #0098B6;
 }
 
-.brand {
-	font-family: 'Sigmar One', cursive;	
-	color:#0098B6;
-}
-.brand small {
-	color:#C9462C;
-}
-
 h2 {
-	border-top: 1px solid #0098B6;
+	border-top: 3px dashed #dfdfdf;
 	font-family: 'Sigmar One', cursive;
-	color:#0098B6;
+	color: #0098B6;
 	margin-top: 2em;
 	line-height: 2em;
+}
+h2 em {
+	font-variant: normal;
+	font-style: normal;
+	color: #C9462C;
+}
+
+h3 {
+	background-color: #0098B6;
+	color:#fff;
+	font-size: 1em;
+	padding:.4em;
 }
 
 ul {
 	padding:0;	
 }
+
 ul li {
 	margin:1em .4em;
 	list-style-type: square;
-	/*display:block;*/
 }
 
 .container, .container-fluid {
@@ -72,9 +92,8 @@ ul li {
 }
 
 .card {
-	border :1px solid #0098B6;
+	border: 3px dashed #dfdfdf;
 }
-
 
 #manifesto {
 	padding : 0 1em;
@@ -85,20 +104,11 @@ ul li {
 }
 
 #method > div {
-	background-color: #F5F5F5;
     padding: 1em;
-    margin: 1em 0;
-}
-.area {
-	/*padding: 1em;*/
-	margin: 1em .5em 3em .5em;
 }
 
-/* Bootstrap */
-.btn-primary, .btn-primary:hover {
-	color:#fff;
-	background-color: #0098B6;
-	border:none;
+.area {
+	margin: 1em .5em 3em .5em;
 }
 
 @media ( min-width : 962px) {

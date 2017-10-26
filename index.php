@@ -54,7 +54,7 @@ header('charset=utf-8');
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Le constat est simple: les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
+					Le constat est simple: les anciens modes de production industriels ne sont pas à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
@@ -67,15 +67,15 @@ header('charset=utf-8');
 			</section>
 			
 			<section id="method">
-				<h2>1 Méthode</h2>
+				<h2><em>1</em> Méthode</h2>
 				<h3>Conception Centrée Utilisateur</h3>
 				<div>
-					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210:2010</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210: Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
+					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210: Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
 				</div>
 			</section>
 
 			<section id="purpose">
-				<h2>2 Ambitions</h2>
+				<h2><em>2</em> Ambitions</h2>
 				<div class="row">
 					<div class="col-md-6">
 						<div class="area">
@@ -112,7 +112,7 @@ header('charset=utf-8');
 			</section>
 
 			<section id="commitment">
-				<h2>3 Engagements</h2>
+				<h2><em>3</em> Engagements</h2>
 				<h3>1- Porter toute l’attention aux usagers</h3>
 				<blockquote style="display:none">Focus on the user and all else will follow (Google)<br/>Make things people want vs Make people want things.</blockquote>
 				<div class="row">
@@ -230,7 +230,7 @@ header('charset=utf-8');
 		         	<div class="col-xs-12 col-md-8">
 						<div class="card">
 							<div class="card-block">
-				       			<h3 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h3>
+				       			<h1 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h1>
 								<div class="card-text">
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
 									<ol>
