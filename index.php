@@ -31,20 +31,7 @@ header('charset=utf-8');
 	<div class="container">
 		<section id="usocrateDef">
 			<header>
-				<div class="jumbotron">
-					<div style="display:none">
-						<h1 class="brand">Usocrate<small>.fr</small></h1>
-						<p>Usus magister est optimus</p>
-						<dl>
-							<dt>Technocrate / tɛk.nɔ.kʁat</dt>
-							<dd>Homme, femme politique ou haut fonctionnaire qui fait prévaloir les données techniques ou économiques sur les facteurs humains.</dd>
-							<dt>Démocrate / de.mɔ.kʁat</dt>
-							<dd>Partisan d'un régime politique dans lequel l’ensemble du peuple dispose du pouvoir souverain.</dd>
-							<dt>Usocrate / u.zɔ.kʁat</dt>
-							<dd>Concepteur de produits ou services qui fait de l'adéquation aux besoins réels des usagers le vecteur principal du progrès et de l'innovation</dd>
-						</dl>
-					</div>
-				</div>
+				<div class="jumbotron"></div>
 			</header>
 		</section>
 		<section id="manifesto">
@@ -54,7 +41,7 @@ header('charset=utf-8');
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Le constat est simple: les anciens modes de production industriels ne sont pas à la mesure des enjeux collectifs et individuels de cette transformation.<br>
+					Le constat est simple: les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
@@ -65,7 +52,28 @@ header('charset=utf-8');
 					Professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
 				</p>
 			</section>
-			
+			<section id="definition">
+				<div class="row">
+					<div class="col-md-4">
+						<dl>
+							<dt>Technocrate / tɛk.nɔ.kʁat</dt>
+							<dd>Homme, femme politique ou haut fonctionnaire qui fait prévaloir les données techniques ou économiques sur les facteurs humains.</dd>
+						</dl>
+					</div>
+					<div class="col-md-4">
+						<dl>
+							<dt>Démocrate / de.mɔ.kʁat</dt>
+							<dd>Partisan d'un régime politique dans lequel l’ensemble du peuple dispose du pouvoir souverain.</dd>
+						</dl>
+					</div>
+					<div class="col-md-4">
+						<dl>
+							<dt>Usocrate / u.zɔ.kʁat</dt>
+							<dd>Concepteur de produits ou services qui fait de l'adéquation aux besoins réels des usagers le vecteur principal du progrès et de l'innovation</dd>
+						</dl>
+					</div>
+				</div>
+			</section>			
 			<section id="method">
 				<h2><em>1</em> Méthode</h2>
 				<h3>Conception Centrée Utilisateur</h3>
@@ -292,6 +300,9 @@ header('charset=utf-8');
 				</div>
 			</section>
 		</section>
+		<footer>
+			<span class="brand monochrome">Usocrate.fr</span> - 2017 - Usus magister est optimus
+		</footer>
 	</div>
 	
 	<?php if ($env->hasGoogleAnalyticsKey()): ?>

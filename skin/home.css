@@ -70,9 +70,21 @@ ul li {
 	list-style-type: square;
 }
 
+dl {
+	background-color:#dfdfdf;
+	margin:0;
+	padding:1em;
+}
+
 .container, .container-fluid {
 	background-color:#fff;
 	padding: 1em;
+}
+
+footer {
+	text-align:center;
+	margin:3em 0 0 0;
+	color:#999;
 }
 
 .badge-default {
@@ -107,30 +119,26 @@ ul li {
     padding: 1em;
 }
 
+#method > h2 {
+    border:none;
+}
+
 .area {
 	margin: 1em .5em 3em .5em;
 }
 
 @media ( min-width : 962px) {
+	dl {
+		height:250px;
+	}
 	.jumbotron {
 		background-image: url('images/smilingPeople.png') !important;
 		margin-bottom:2em;
 		height:541px;
 	}
-	.jumbotron > div {
-		display:none;
-		/*
-		width: 40%;
-		margin-top: auto;
-		margin-left: auto;
-		margin-right:0;
-		margin-bottom:0;
-		background-color: rgba(255, 255, 255, 0.8);
-		*/
-	}
 	#method {
 		width:60%;
 		margin-left: auto;
 		margin-right: auto;
-	}	
+	}
 }
