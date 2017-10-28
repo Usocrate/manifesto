@@ -8,13 +8,14 @@ function __autoload($class_name) {
 	}
 }
 $env = new Environment ( './config/host.json' );
+$m = new Manifesto($env);
 
 $output = array();
 
 if (isset($_POST['cmd'])) {
     switch ($_POST['cmd']) {
         case 'subscription' :
-            $output  = $env->registerSubscription($_POST['id'],$_POST['mail']);
+            $output  = $m->registerSubscription($_POST['id'],$_POST['mail']);
     }
 }
 header('Content-type: text/plain; charset=UTF-8');
