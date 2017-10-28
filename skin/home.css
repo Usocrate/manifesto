@@ -34,7 +34,8 @@ h1 a, h2 a, h3 a {
 
 h1 {
 	color: #C9462C;
-	font-family: 'Sigmar One', cursive;	
+	font-family: 'Sigmar One', cursive;
+	margin: 0 0 1em 0;
 }
 
 h1 small{
@@ -45,7 +46,8 @@ h2 {
 	border-top: 3px dashed #dfdfdf;
 	font-family: 'Sigmar One', cursive;
 	color: #0098B6;
-	margin-top: 2em;
+	margin-top: 1em;
+	padding-top: 1em;
 	line-height: 2em;
 }
 h2 em {
@@ -107,14 +109,6 @@ footer {
 	border: 3px dashed #dfdfdf;
 }
 
-#manifesto {
-	padding : 0 1em;
-}
-
-#intro {
-	margin: 2em 0;
-}
-
 #method > div {
     padding: 1em;
 }
@@ -131,9 +125,30 @@ footer {
 	dl {
 		height:250px;
 	}
-	#method {
-		width:60%;
+	.container {
+		padding-top:0;
+	}
+
+	.jumbotron {
+		background-image: url('images/relaxUser_1110x740.png') !important;
+		margin-bottom:2em;
+		height:740px;
+		border-top: 0;
+	}
+	
+	#manifesto {
+		padding : 0 1em;
+	}
+	
+	#intro, #method {
+		width:80%;
 		margin-left: auto;
-		margin-right: auto;
+		margin-right: auto;		
+	}
+	
+	#intro {
+		padding:2em;
+		margin-top:-250px;
+		background-color:#fff;
 	}
 }
