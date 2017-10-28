@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 body {
-	background-color: #ece6e0;
+	background-color: #efefef;
 	font-size:1.2em;
 }
 
@@ -131,10 +131,14 @@ footer {
 	dl {
 		height:250px;
 	}
+	.container {
+		padding-top:0;
+	}
 	.jumbotron {
-		background-image: url('images/smilingPeople.png') !important;
+		background-image: url('images/relaxUser_1110x740.png') !important;
 		margin-bottom:2em;
-		height:541px;
+		height:740px;
+		border-top: 0;
 	}
 	#method {
 		width:60%;

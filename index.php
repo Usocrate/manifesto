@@ -78,7 +78,7 @@ header('charset=utf-8');
 				<h2><em>1</em> Méthode</h2>
 				<h3>Conception Centrée Utilisateur</h3>
 				<div>
-					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210: Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
+					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210:<br>Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
 				</div>
 			</section>
 
@@ -241,10 +241,10 @@ header('charset=utf-8');
 				       			<h1 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h1>
 								<div class="card-text">
 									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
-									<ol>
+									<ul>
 										<li>Je partage la vision et souhaite donner du poids à ce discours</li>
 										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté de mise en oeuvre des principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
-									</ol>
+									</ul>
 						            <form id="subscription_form">
 						            	<div class="form-group ">
 											<label>Je me présente</label>
