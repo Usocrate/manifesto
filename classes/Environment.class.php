@@ -83,6 +83,9 @@ class Environment {
                         case 'host_purpose':
                             $this->host_purpose = $value;
                             break;
+                        case 'ga_key':
+                            $this->ga_key = $value;
+                            break;
                     }
                 }
             } else {
