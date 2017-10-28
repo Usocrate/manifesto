@@ -131,15 +131,6 @@ footer {
 	dl {
 		height:250px;
 	}
-	.container {
-		padding-top:0;
-	}
-	.jumbotron {
-		background-image: url('images/relaxUser_1110x740.png') !important;
-		margin-bottom:2em;
-		height:740px;
-		border-top: 0;
-	}
 	#method {
 		width:60%;
 		margin-left: auto;

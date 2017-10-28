@@ -29,7 +29,6 @@ header('charset=utf-8');
 </head>
 <body>
 	<div class="container">
-		<div class="jumbotron"></div>
 		<section id="manifesto">
 			<h1>Manifeste<br><small>Pour une usocratie numérique</small></h1>
 			<section id="intro">
