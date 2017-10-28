@@ -43,7 +43,7 @@ header('charset=utf-8');
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 				</p>
 				<p>
-					Ce manifeste veut contribuer à lever certains archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
+					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
 					Professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
 				</p>
 			</section>
@@ -108,7 +108,7 @@ header('charset=utf-8');
 								<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des produits développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
 								<li>Etre à l'écoute des usagers est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût.</li>
 							</ul>
-							<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
+							<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétitivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
 						</div>				
 					</div>
 				</div>
