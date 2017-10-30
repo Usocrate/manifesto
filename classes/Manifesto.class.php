@@ -16,6 +16,12 @@ class Manifesto {
         return $statement->fetchAll();
     }
     
+    public function getReferences() {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM reference');
+        $statement->execute();
+        return $statement->fetchAll();
+    }    
+    
     public function registerSubscription($id, $mail) {
         $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET usocrate_id=:id, mail=:mail');
         $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);

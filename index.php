@@ -24,13 +24,12 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans|Sigmar+One" rel="stylesheet">
 	<link href="skin/home.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body id="manifesto-doc">
 	<div class="container">
 		<div class="jumbotron"></div>
-		<section id="manifesto">
+		<main>
 			<section id="intro">
 				<h1>Manifeste<br><small>Pour une usocratie numérique</small></h1>
 				<p>
@@ -72,12 +71,8 @@ header('charset=utf-8');
 			</section>			
 			<section id="method">
 				<h2><em>1</em> Méthode</h2>
-				<h3>Conception Centrée Utilisateur</h3>
-				<div>
-					<p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210:<br>Conception centrée sur l'opérateur humain pour les systèmes interactifs</p>
-				</div>
+				<div><p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210<br><em>Conception centrée sur l'opérateur humain pour les systèmes interactifs</em></p></div>
 			</section>
-
 			<section id="purpose">
 				<h2><em>2</em> Ambitions</h2>
 				<div class="row">
@@ -114,7 +109,6 @@ header('charset=utf-8');
 					</div>
 				</div>
 			</section>
-
 			<section id="commitment">
 				<h2><em>3</em> Engagements</h2>
 				<h3>1- Porter toute l’attention aux usagers</h3>
@@ -133,7 +127,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Co-conception</span> <span class="badge badge-default">Principe de réalité</span> <span class="badge badge-default">#IRL</span></p>
+							<p><span class="badge badge-pill badge-default">Co-conception</span> <span class="badge badge-pill badge-default">Principe de réalité</span> <span class="badge badge-pill badge-default">#IRL</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -149,7 +143,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Ecoute</span> <span class="badge badge-default">Considération</span> <span class="badge badge-default">Ethique</span></p>
+							<p><span class="badge badge-pill badge-default">Ecoute</span> <span class="badge badge-pill badge-default">Considération</span> <span class="badge badge-pill badge-default">Ethique</span></p>
 						</div>
 					</div>
 				</div>
@@ -170,7 +164,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Valeur d'usage</span> <span class="badge badge-default">Service</span> <span class="badge badge-default">Bénéfice</span></p>								
+							<p><span class="badge badge-pill badge-default">Valeur d'usage</span> <span class="badge badge-pill badge-default">Service</span> <span class="badge badge-pill badge-default">Bénéfice</span></p>								
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -186,7 +180,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Expérience utilisateur</span> <span class="badge badge-default">Appropriation</span> <span class="badge badge-default">Satisfaction</span> <span class="badge badge-default">Productivité</span></p>							
+							<p><span class="badge badge-pill badge-default">Expérience utilisateur</span> <span class="badge badge-pill badge-default">Appropriation</span> <span class="badge badge-pill badge-default">Satisfaction</span> <span class="badge badge-pill badge-default">Productivité</span></p>							
 						</div>
 					</div>
 				</div>
@@ -207,7 +201,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Collaboration</span> <span class="badge badge-default">Planification</span> <span class="badge badge-default">Agilité</span></p>								
+							<p><span class="badge badge-pill badge-default">Collaboration</span> <span class="badge badge-pill badge-default">Planification</span> <span class="badge badge-pill badge-default">Agilité</span></p>								
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -223,12 +217,11 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-default">Créativité</span> <span class="badge badge-default">Expérimentation</span></p>
+							<p><span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Expérimentation</span></p>
 						</div>
 					</div>
 				</div>
 			</section>
-
 			<section id="subscriptionArea">
 				<div class="row justify-content-md-center">
 		         	<div class="col-xs-12 col-md-8">
@@ -259,7 +252,6 @@ header('charset=utf-8');
 		          	</div>
 				</div>
 			</section>
-
 			<section id="socialSpreadArea" style="display:none">
 				<div class="text-center">
 						<a class="twitter-share-button"
@@ -268,34 +260,7 @@ header('charset=utf-8');
 					Tweet</a>
 				</div>
 			</section>
-
-			<section id="references" style="display:none">
-				<div class="area">
-					<strong>Références</strong>
-					<div class="row">
-						<div>
-							<ul>
-								<li><a href="https://leblog.wcie.fr/2017/05/23/bauhaus-une-ethique-moderne-de-la-modernite/#.WSUcC0AQAW0.twitter">Bauhaus, une éthique moderne de la modernité</a></li>
-								<li><a href="https://www.ted.com/talks/david_kelley_on_human_centered_design?language=fr">David Kelley parle du design centré sur l’humain</a> <small>(David Kelley)</small></li>
-								<li><a href="http://www.gartner.com/smarterwithgartner/improve-user-experience-by-reducing-features/">Improve-user-experience-by-reducing-features, curing featuritis</a> <small>(Gartner)</small></li>
-								<li><a href="http://headrush.typepad.com/creating_passionate_users/2005/06/featuritis_vs_t.html">Featuritis vs. the Happy User Peak</a> <small>(Create passionate users)</small></li>
-								<li><a href="https://journal.thriveglobal.com/how-technology-hijacks-peoples-minds-from-a-magician-and-google-s-design-ethicist-56d62ef5edf3">How Technology is Hijacking Your Mind</a> <small>(Tristan Harris)</small></li>
-								<li><a href="http://www.timewellspent.io/">timewellspent.io</a> <small>(Tristan Harris)</small></li>
-								<li><a href="https://www.microsoft.com/en-us/design/inclusive">Inclusive Design at Microsoft</a> <small>(Microsoft)</small></li>
-								<li><a href="https://youtu.be/-aMGT4DMiFY">L’avenir des interactions Hommes-Données</a> <small>(Caroline Goulard)</small><br/>Compréhension / Interaction / Attention / Responsabilisation / Adhésion</li>
-								<li><a href="https://deardesignstudent.com/tagged/ethics">Ethics @deardesignstudent.com</a></li>
-								<li><a href="https://mixpanel.com/">Mixpanel</a></li>
-								<li><a href="http://boxesandarrows.com/monitoring-user-experience-through-product-usage-metrics/">Monitoring User Experience Through Product Usage Metrics</a> <small>(Jerrod Larson and Daan Lindhout)</small></li>
-								<li><a href="http://blog.popcornmetrics.com/5-user-engagement-metrics-for-growth/">User Engagement: 5 Awesome Metrics for Growth</a></li>
-								<li><a href="http://www.uxmatters.com/mt/archives/2014/06/choosing-the-right-metrics-for-user-experience.php">Choosing the Right Metrics for User Experience</a> <small>(Pamela Pavliscak)</small></li>
-								<li><a href="https://library.gv.com/how-to-choose-the-right-ux-metrics-for-your-product-5f46359ab5be">How to choose the right ux metrics for your product</a> <small>(Kerry Rodden)</small></li>
-								<li><a href="https://static1.squarespace.com/static/57c6b79629687fde090a0fdd/t/589911ba3a04117857abca73/1486426561759/dschool+operator%27s+handbook+G+Kembel+edit.pdf">George Kembel's "d.school Operator's Handbook"</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-		</section>
+		</main>
 		<footer>
 			<span class="brand monochrome">Usocrate.fr</span> - 2017 - Usus magister est optimus
 		</footer>
