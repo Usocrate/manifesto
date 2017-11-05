@@ -17,7 +17,7 @@ header('charset=utf-8');
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">	
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 	<meta name="description" content="<?php echo htmlentities($env->getProjectDescription()) ?>" />
 	<title><?php echo htmlentities($env->getProjectName()) ?></title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -71,7 +71,7 @@ header('charset=utf-8');
 			</section>			
 			<section id="method">
 				<h2><em>1</em> Méthode</h2>
-				<div><p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</strong></a><br>Ergonomie de l'interaction homme-système -- Partie 210<br><em>Conception centrée sur l'opérateur humain pour les systèmes interactifs</em></p></div>
+				<div><p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</a></strong><br>Ergonomie de l'interaction homme-système -- Partie 210<br><em>Conception centrée sur l'opérateur humain pour les systèmes interactifs</em></p></div>
 			</section>
 			<section id="purpose">
 				<h2><em>2</em> Ambitions</h2>
@@ -237,13 +237,13 @@ header('charset=utf-8');
 						            <form id="subscription_form">
 						            	<div class="form-group ">
 											<label>Je me présente</label>
-											<input class="form-control input-lg" id="" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="text">
+											<input class="form-control input-lg" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="text">
 					                  	</div>
 										<div class="form-group ">
 											<label>Un email ?</label>
-											<input required="" class="form-control input-lg" id="" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
+											<input required="" class="form-control input-lg" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
 							            </div>
-							            <input name="cmd" value="subscription" type="hidden"></input>
+							            <input name="cmd" value="subscription" type="hidden">
 							            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
 							        </form>
 								</div>
