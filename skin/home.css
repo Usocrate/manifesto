@@ -161,9 +161,13 @@ footer {
 	}
 	
 	#intro {
-		padding:2em;
+		padding:2em 2em 0 2em;
 		margin-top:-250px;
+		margin-bottom: 4em;
 		background-color:#fff;
+		border-style: dashed;
+		border-color: #dfdfdf;
+		border-width: 3px 3px 0 3px;
 	}
 	
 	#method {

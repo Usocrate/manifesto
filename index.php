@@ -36,15 +36,15 @@ header('charset=utf-8');
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Le constat est simple: les anciens modes de production industriels ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
+					Le constat est simple: les modes de production industriels anciens ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 				</p>
 				<p>
-					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans la conception de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
-					Professionnel du secteur numérique qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
+					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans le développement de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
+					Professionnel qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
 				</p>
 			</section>
 			<section id="definition">
@@ -87,8 +87,6 @@ header('charset=utf-8');
 							<p>
 								<span class="badge badge-pill badge-default">Utilité</span>
 								<span class="badge badge-pill badge-default">Progrès</span>
-								<span class="badge badge-pill badge-default">Intégration</span>
-								<span class="badge badge-pill badge-default">Société</span>
 								<span class="badge badge-pill badge-default">Ethique</span>
 							</p>
 						</div>
@@ -104,8 +102,11 @@ header('charset=utf-8');
 								<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des produits développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
 								<li>Etre à l'écoute des usagers est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût.</li>
 							</ul>
-							<p><span class="badge badge-pill badge-default">Rationalité</span> <span class="badge badge-pill badge-default">Créativité</span> <span class="badge badge-pill badge-default">Valeur ajoutée</span> <span class="badge badge-pill badge-default">Compétitivité</span> <span class="badge badge-pill badge-default">Innovation</span> <span class="badge badge-pill badge-default">Agilité</span></p>
-						</div>				
+							<p>
+								<span class="badge badge-pill badge-default">Créativité</span> 
+								<span class="badge badge-pill badge-default">Valeur ajoutée</span> 
+								<span class="badge badge-pill badge-default">Compétitivité</span>
+							</p>
 					</div>
 				</div>
 			</section>
@@ -127,7 +128,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-pill badge-default">Co-conception</span> <span class="badge badge-pill badge-default">Principe de réalité</span> <span class="badge badge-pill badge-default">#IRL</span></p>
+							<p><span class="badge badge-pill badge-default">Co-conception</span> <span class="badge badge-pill badge-default">Principe de réalité</span> <span class="badge badge-pill badge-default">IRL</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
@@ -164,7 +165,7 @@ header('charset=utf-8');
 									}
 								?>
 							</ul>
-							<p><span class="badge badge-pill badge-default">Valeur d'usage</span> <span class="badge badge-pill badge-default">Service</span> <span class="badge badge-pill badge-default">Bénéfice</span></p>								
+							<p><span class="badge badge-pill badge-default">Valeur d'usage</span> <span class="badge badge-pill badge-default">Service</span> <span class="badge badge-pill badge-default">Bénéfice</span></p>
 						</div>
 					</div>
 					<div class="col-md-6">
