@@ -20,10 +20,10 @@ header('charset=utf-8');
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 	<meta name="description" content="<?php echo htmlentities($env->getProjectDescription()) ?>" />
 	<title><?php echo htmlentities($env->getProjectName()) ?></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 	<link href="skin/home.css" rel="stylesheet" type="text/css">
 </head>
 <body id="manifesto-doc">
@@ -31,7 +31,7 @@ header('charset=utf-8');
 		<div class="jumbotron"></div>
 		<main>
 			<section id="intro">
-				<h1>Manifeste<br><small>Pour une usocratie numérique</small></h1>
+				<h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1>
 				<p>
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
@@ -48,22 +48,16 @@ header('charset=utf-8');
 				</p>
 			</section>
 			<section id="definition">
-				<div class="row">
-					<div class="col-md-4">
+				<div class="row justify-content-md-center">
+					<div class="col-md-6 col-lg-5">
 						<dl>
-							<dt>Technocrate / tɛk.nɔ.kʁat</dt>
+							<dt><span class="brand monochrome">Technocrate</span> / tɛk.nɔ.kʁat</dt>
 							<dd>Homme, femme politique ou haut fonctionnaire qui fait prévaloir les données techniques ou économiques sur les facteurs humains.</dd>
 						</dl>
 					</div>
-					<div class="col-md-4">
+					<div class="col-md-6 col-lg-5">
 						<dl>
-							<dt>Démocrate / de.mɔ.kʁat</dt>
-							<dd>Partisan d'un régime politique dans lequel l’ensemble du peuple dispose du pouvoir souverain.</dd>
-						</dl>
-					</div>
-					<div class="col-md-4">
-						<dl>
-							<dt>Usocrate / u.zɔ.kʁat</dt>
+							<dt><span class="brand monochrome">Usocrate</span> / u.zɔ.kʁat</dt>
 							<dd>Concepteur de produits ou services qui fait de l'adéquation aux besoins réels des usagers le vecteur principal du progrès et de l'innovation</dd>
 						</dl>
 					</div>
@@ -226,28 +220,26 @@ header('charset=utf-8');
 			<section id="subscriptionArea">
 				<div class="row justify-content-md-center">
 		         	<div class="col-xs-12 col-md-8">
-						<div class="card">
-							<div class="card-block">
-				       			<h1 class="text-center card-title brand"><small>Je suis</small> Usocrate <small>!</small></h1>
-								<div class="card-text">
-									<p>Peut-on vous compter parmi les rangs usocrates ?</p>
-									<ul>
-										<li>Je partage la vision et souhaite donner du poids à ce discours</li>
-										<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté de mise en oeuvre des principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
-									</ul>
-						            <form id="subscription_form">
-						            	<div class="form-group ">
-											<label>Je me présente</label>
-											<input class="form-control input-lg" id="id_i" name="id" value="" placeholder="un profil web Twitter, LinkedIn,..." type="text">
-					                  	</div>
-										<div class="form-group ">
-											<label>Un email ?</label>
-											<input required="" class="form-control input-lg" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
-							            </div>
-							            <input name="cmd" value="subscription" type="hidden">
-							            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
-							        </form>
-								</div>
+						<div class="subscriptionCard">
+			       			<h1 class="text-center brand"><small>Je suis</small> Usocrate <small>!</small></h1>
+							<div>
+								<p>Peut-on vous compter parmi les rangs usocrates ?</p>
+								<ul>
+									<li>Je partage la vision et souhaite donner du poids à ce discours</li>
+									<li>J'ai conscience de ma responsabilité individuelle et témoigne de ma volonté de mise en oeuvre des principes du manifeste dans mes pratiques professionnelles quotidiennes</li>
+								</ul>
+					            <form id="subscription_form">
+					            	<div class="form-group ">
+										<label>Je me présente</label>
+										<input type="text" class="form-control input-lg" id="id_i" name="id" placeholder="un profil Twitter, LinkedIn,...">
+				                  	</div>
+									<div class="form-group ">
+										<label>Un email ?</label>
+										<input class="form-control input-lg" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
+						            </div>
+						            <input name="cmd" value="subscription" type="hidden">
+						            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
+						        </form>
 							</div>
 						</div>
 		          	</div>
@@ -255,7 +247,7 @@ header('charset=utf-8');
 			</section>
 		</main>
 		<footer>
-			<span class="brand monochrome">Usocrate.fr</span> - 2017 - Usus magister est optimus
+			<span class="brand">Usocrate.fr</span> - 2017 - Usus magister est optimus
 		</footer>
 	</div>
 	
