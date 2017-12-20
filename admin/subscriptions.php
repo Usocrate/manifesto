@@ -8,6 +8,7 @@ function __autoload($class_name) {
 	}
 }
 $env = new Environment ( '../config/host.json' );
+$h = new HtmlFactory($env);
 $m = new Manifesto($env);
 $subscriptions = $m->getSubscriptions();
 
@@ -36,13 +37,11 @@ header('charset=utf-8');
 				echo '<h2>'.htmlentities($s[usocrate_id]);
 				if (!empty($s[mail])) echo ' <small>('.htmlentities($s[mail]).')</small>';
 				echo '</h2>';
-				echo '<p>Devenu Usocrate le '.$s[timestamp].'</p>';
+				echo '<p>Usocrate depuis le '.$s[timestamp].'</p>';
 			}
 			?>
 		</main>
-		<footer>
-			<span class="brand monochrome">Usocrate.fr</span> - 2017 - Usus magister est optimus
-		</footer>
+		<?php echo $h->getFooterTag() ?>
 	</div>
 	
 	<?php if ($env->hasGoogleAnalyticsKey()): ?>
@@ -56,9 +55,6 @@ header('charset=utf-8');
 	</script>
 	<?php endif; ?>
 	
-	<script>
-		$(document).ready(function(){
-		});
-	</script>
+	<script>$(document).ready(function(){});</script>
 </body>
 </html>

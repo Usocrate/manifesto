@@ -8,6 +8,7 @@ function __autoload($class_name) {
 	}
 }
 $env = new Environment ( './config/host.json' );
+$h = new HtmlFactory($env);
 $m = new Manifesto($env);
 $references = $m->getReferences();
 
@@ -29,6 +30,7 @@ header('charset=utf-8');
 <body id="references-doc">
 	<div class="container">
 		<h1>Les références</h1>
+		<main>
 		<ul>
 		<?php 
 			foreach ($references as $r) {
@@ -44,6 +46,8 @@ header('charset=utf-8');
 			}
 		?>
 		</ul>
+		</main>
+		<?php echo $h->getFooterTag() ?>
 	</div>
 </body>
 </html>

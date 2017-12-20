@@ -28,6 +28,10 @@ em {
 	color:#C9462C;
 }
 
+FOOTER .brand {
+	color:#000;
+}
+
 .monochrome {
 	color: inherit !important;
 }

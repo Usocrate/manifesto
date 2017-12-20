@@ -13,9 +13,11 @@ class Environment {
     
     private $project_url;
     private $project_name;
+    private $project_punchline;
     private $project_description;
     private $project_publisher;
     private $project_creator;
+    private $project_launch_year;
     
     public $host_purpose;
     
@@ -71,6 +73,9 @@ class Environment {
                         case 'project_name':
                             $this->project_name = $value;
                             break;
+                        case 'project_punchline':
+                            $this->project_punchline = $value;
+                            break;                            
                         case 'project_description':
                             $this->project_description = $value;
                             break;
@@ -80,6 +85,9 @@ class Environment {
                         case 'project_creator':
                             $this->project_creator = $value;
                             break;
+                        case 'project_launch_year':
+                            $this->project_launch_year = $value;
+                            break;                            
                         case 'host_purpose':
                             $this->host_purpose = $value;
                             break;
@@ -118,9 +126,21 @@ class Environment {
         return $this->project_name;
     }
     
+    public function getProjectPunchline() {
+        return $this->project_punchline;
+    }    
+    
     public function getProjectDescription() {
         return $this->project_description;
     }
+    
+    public function getProjectUrl() {
+        return $this->project_url;
+    }
+    
+    public function getProjectLaunchYear() {
+        return $this->project_launch_year;
+    }    
     
     public function getGoogleAnalyticsKey() {
         return $this->ga_key;

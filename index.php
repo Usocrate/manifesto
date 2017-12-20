@@ -8,6 +8,7 @@ function __autoload($class_name) {
 	}
 }
 $env = new Environment ( './config/host.json' );
+$h = new HtmlFactory($env);
 $m = new Manifesto($env);
 $quotes = $m->getQuotes();
 
@@ -101,6 +102,7 @@ header('charset=utf-8');
 								<span class="badge badge-pill badge-default">Valeur ajoutée</span> 
 								<span class="badge badge-pill badge-default">Compétitivité</span>
 							</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -246,9 +248,7 @@ header('charset=utf-8');
 				</div>
 			</section>
 		</main>
-		<footer>
-			<span class="brand">Usocrate.fr</span> - 2017 - Usus magister est optimus
-		</footer>
+		<?php echo $h->getFooterTag() ?>
 	</div>
 	
 	<?php if ($env->hasGoogleAnalyticsKey()): ?>

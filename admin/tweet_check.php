@@ -8,6 +8,7 @@ function __autoload($class_name) {
 	}
 }
 $env = new Environment ( '../config/host.json' );
+$h = new HtmlFactory($env);
 $m = new Manifesto($env);
 $quotes = $m->getQuotes();
 $pattern = '[quote] #usocrate https://usocrate.fr';
@@ -25,23 +26,27 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<link href="skin/home.css" rel="stylesheet" type="text/css">
+	<link href="../skin/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 	<div class="container">
-		<ul>
-		<?php 
-			foreach ($quotes as $q) {
-				$output = mb_eregi_replace('\[quote\]', $q['content'], $pattern);
-				echo '<li>';
-				echo '<h1>'.ucfirst(htmlentities($output));
-				echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
-				echo '</h1>';
-				echo '<p>'.htmlentities($q['comment']).'</p>';
-				echo '</li>';
-			}
-		?>
-		</ul>
+		<h1>140 caractères ?</h1>
+		<main>
+			<ul>
+			<?php 
+				foreach ($quotes as $q) {
+					$output = mb_eregi_replace('\[quote\]', $q['content'], $pattern);
+					echo '<li>';
+					echo '<h2>'.ucfirst(htmlentities($output));
+					echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
+					echo '</h2>';
+					echo '<p>'.htmlentities($q['comment']).'</p>';
+					echo '</li>';
+				}
+			?>
+			</ul>
+		</main>
+		<?php echo $h->getFooterTag() ?>
 	</div>
 	<script>$(document).ready(function(){});</script>
 </body>
