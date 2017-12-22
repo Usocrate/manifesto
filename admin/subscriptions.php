@@ -29,8 +29,17 @@ header('charset=utf-8');
 </head>
 <body id="subscriptions-doc">
 	<div class="container">
+		<header>
+			<nav aria-label="breadcrumb" role="navigation">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
+					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Souscriptions</li>
+				</ol>
+			</nav>
+			<h1>Usocrates</h1>
+		</header>
 		<main>
-		<h1>Usocrates</h1>
 			<?php
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {

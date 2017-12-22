@@ -11,7 +11,14 @@ class HtmlFactory {
     }
     
     public function getFooterTag() {
-        return '<footer><a href="'.$this->env->getProjectUrl().'"><span class="brand">'.htmlentities($this->env->getProjectName()).'</span></a> - '.htmlentities($this->env->getProjectLaunchYear()).' - '.htmlentities($this->env->getProjectPunchline()).'</footer>';
+        $tags = array();
+        $tags['brand'] = '<a href="'.$this->env->getProjectUrl().'"><span class="brand">'.htmlentities($this->env->getProjectName()).'</span></a>';
+        $tags['launchYear'] = htmlentities($this->env->getProjectLaunchYear());
+        $tags['punchline'] = htmlentities($this->env->getProjectPunchline());
+        if (isset($_SESSION['extended'])) {
+            $tags['admin'] = '<a href="'.$this->env->getProjectUrl().'/admin">Admin</a>';
+        }
+        return '<footer>'.implode(' - ', $tags).'</footer>';
     }
 }
 

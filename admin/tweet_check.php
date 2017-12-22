@@ -30,7 +30,16 @@ header('charset=utf-8');
 </head>
 <body>
 	<div class="container">
-		<h1>140 caractères ?</h1>
+		<header>
+			<nav aria-label="breadcrumb" role="navigation">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
+					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
+					<li class="breadcrumb-item active" aria-current="page">140 caractères ?</li>
+				</ol>
+			</nav>
+			<h1>140 caractères ?</h1>
+		</header>		
 		<main>
 			<ul>
 			<?php 

@@ -7,6 +7,12 @@ function __autoload($class_name) {
 		include_once $path . $class_name . '.interface.php';
 	}
 }
+session_start();
+
+if (isset($_REQUEST['extended'])) {
+	$_SESSION['extended'] = $_REQUEST['extended'];
+}
+
 $env = new Environment ( './config/host.json' );
 $h = new HtmlFactory($env);
 $m = new Manifesto($env);
@@ -25,7 +31,7 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-	<link href="skin/home.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="skin/home.css" />
 </head>
 <body id="manifesto-doc">
 	<div class="container">
@@ -119,7 +125,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '1')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>
@@ -135,7 +141,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '2')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>
@@ -156,7 +162,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '3')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>
@@ -172,7 +178,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '4')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>
@@ -193,7 +199,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '5')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>
@@ -209,7 +215,7 @@ header('charset=utf-8');
 								<?php
 									foreach ($quotes as $q) {
 										if (strcmp($q['set_id'], '6')==0) {
-											echo '<li>'.ucfirst(htmlentities($q['content'])).'</li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q['id'].'">'.ucfirst(htmlentities($q['content'])).'</a></li>' : '<li>'.ucfirst(htmlentities($q['content'])).'</a></li>';
 										}
 									}
 								?>

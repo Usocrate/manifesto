@@ -38,5 +38,12 @@ class Manifesto {
         }
         return $output;     
     }
+    
+    public function getQuote($id) {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM quote WHERE id = ?');
+        $statement->execute(array($id));
+        $data = $statement->fetch();
+        return new Quote($data);
+    }
 }
 ?>

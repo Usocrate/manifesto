@@ -7,6 +7,9 @@ function __autoload($class_name) {
 		include_once $path . $class_name . '.interface.php';
 	}
 }
+
+//session_start();
+
 $env = new Environment ( './config/host.json' );
 $m = new Manifesto($env);
 

@@ -1,13 +1,13 @@
 <?php
 function __autoload($class_name) {
-	$path = './classes/';
+	$path = '../classes/';
 	if (is_file ( $path . $class_name . '.class.php' )) {
 		include_once $path . $class_name . '.class.php';
 	} elseif ($path . $class_name . '.interface.php') {
 		include_once $path . $class_name . '.interface.php';
 	}
 }
-$env = new Environment ( './config/host.json' );
+$env = new Environment ( '../config/host.json' );
 $h = new HtmlFactory($env);
 $m = new Manifesto($env);
 $references = $m->getReferences();
@@ -25,11 +25,20 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="skin/home.css" />
+	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 </head>
 <body id="references-doc">
 	<div class="container">
-		<h1>Les références</h1>
+		<header>
+			<nav aria-label="breadcrumb" role="navigation">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
+					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Références</li>
+				</ol>
+			</nav>
+			<h1>Les références</h1>
+		</header>
 		<main>
 		<ul>
 		<?php 

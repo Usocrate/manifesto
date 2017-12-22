@@ -137,7 +137,7 @@ class Environment {
     public function getProjectUrl() {
         return $this->project_url;
     }
-    
+
     public function getProjectLaunchYear() {
         return $this->project_launch_year;
     }    
