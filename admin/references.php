@@ -64,7 +64,7 @@ header('charset=utf-8');
 		<?php 
 			foreach ($references as $r) {
 				echo '<li>';
-				echo '<h2><a href="'.urlencode(htmlentities($r['url'])).'">'.htmlentities($r['title']).'</a></h2>';
+				echo '<h2><a href="'.$r['url'].'" target="_blank">'.htmlentities($r['title']).'</a></h2>';
 				if ( strlen($r['author'])>0 ) {
 					echo ' <small>('.htmlentities($r['author']).'</small>)';
 				}
