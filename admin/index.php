@@ -18,7 +18,7 @@ $env = new Environment ( '../config/host.json' );
     	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
     </head>    
     <body>
@@ -36,7 +36,7 @@ $env = new Environment ( '../config/host.json' );
                 <ul>
                     <li><a href="<?php echo $env->getProjectUrl() ?>/index.php?extended">Le manifeste en mode augmenté</a> (test des fonctionnalités non ouvertes au public)</li>
                     <li><a href="./references.php">La liste des références</a></li>
-                    <li><a href="./subscription.php">La liste des souscriptions</a></li>
+                    <li><a href="./subscriptions.php">La liste des souscriptions</a></li>
                     <li><a href="./tweet_check.php">Contrôle de la longueur des déclarations</a> (pour Twitter)</li>
                 </ul>
             </main>

@@ -26,6 +26,20 @@ class Manifesto {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM subscription');
         $statement->execute();
         return $statement->fetchAll();
+    }
+
+    public function registerReference(Reference $r) {
+        //print_r($r);
+        $statement = $this->env->getPdo()->prepare('INSERT INTO reference SET title=:title, url=:url, comment=:comment, author=:author');
+        $statement->bindValue(':title', $r->getTitle(), PDO::PARAM_STR);
+        $statement->bindValue(':url', $r->getUrl(), PDO::PARAM_STR);
+        $statement->bindValue(':comment', $r->getComment(), PDO::PARAM_STR);
+        $statement->bindValue(':author', $r->getAuthor(), PDO::PARAM_STR);
+        if ($statement->execute()) {
+            return 'Référence "'.$r->getTitle().'" enregistrée';
+        } else {
+            return 'Référence "'.$r->getTitle().'" non enregistrée';
+        }
     }    
     
     public function registerSubscription($id) {

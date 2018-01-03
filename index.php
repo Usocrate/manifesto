@@ -245,7 +245,7 @@ header('charset=utf-8');
 										<label>Un email ?</label>
 										<input class="form-control input-lg" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
 						            </div>
-						            <input name="cmd" value="subscription" type="hidden">
+						            <input name="cmd" value="registerSubscription" type="hidden">
 						            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
 						        </form>
 							</div>
@@ -276,7 +276,7 @@ header('charset=utf-8');
 				ga('send', 'event', {'eventCategory':'engagement','eventAction':'souscription','eventLabel':'nouvel usocrate','eventValue':$("#id_i").val()});
 				
 				$.ajax({
-				    url: "subscription.api.php",
+				    url: "api.php",
 				    data: $( "#subscription_form" ).serialize(),
 				    type: "POST",
 				    dataType : "json",

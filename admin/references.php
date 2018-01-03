@@ -9,8 +9,21 @@ function __autoload($class_name) {
 }
 $env = new Environment ( '../config/host.json' );
 $h = new HtmlFactory($env);
-$m = new Manifesto($env);
-$references = $m->getReferences();
+$manifesto = new Manifesto($env);
+
+$alerts = array();
+
+if (isset($_POST['cmd'])) {
+	switch ($_POST['cmd']) {
+        case 'registerReference' :
+            $alerts[]  = $manifesto->registerReference(new Reference($_POST));
+            break;            
+        default:
+        	$alerts[] = 'commande inconnue';
+    }
+}
+
+$references = $manifesto->getReferences();
 
 header('charset=utf-8');
 ?>
@@ -24,7 +37,7 @@ header('charset=utf-8');
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 </head>
 <body id="references-doc">
@@ -40,6 +53,13 @@ header('charset=utf-8');
 			<h1>Les références</h1>
 		</header>
 		<main>
+		<?php 
+			if (count($alerts)>0) {
+				foreach($alerts as $a) {
+					echo '<div class="alert">'.htmlentities($a).'</div>';
+				}
+			}
+		?>
 		<ul>
 		<?php 
 			foreach ($references as $r) {
@@ -55,6 +75,27 @@ header('charset=utf-8');
 			}
 		?>
 		</ul>
+		<h2>Nouvelle référence</h2>
+		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+			<input type="hidden" name="cmd" value="registerReference" />
+			<div class="form-group">
+				<label for="title_i">Intitulé</label>
+				<input id="title_i"type="text" name="title" class="form-control"></input>
+			</div>
+			<div class="form-group">
+				<label for="url_i">Url</label>
+				<input id="url_i" type="url" name="url" class="form-control"></input>
+			</div>
+			<div class="form-group">
+				<label for="comment_i">Commentaire</label>
+				<input id="comment_i" type="text" name="comment" class="form-control"></input>
+			</div>
+			<div class="form-group">
+				<label for="author_i">Auteur</label>
+				<input id="author_i" type="text" name="author" class="form-control"></input>
+			</div>
+			<button type="submit" class="btn btn-primary">Enregistrer</input>
+		</form>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>

@@ -17,8 +17,13 @@ $output = array();
 
 if (isset($_POST['cmd'])) {
     switch ($_POST['cmd']) {
-        case 'subscription' :
+        case 'registerSubscription' :
             $output  = $m->registerSubscription($_POST['id'],$_POST['mail']);
+            break;
+        case 'registerReference' :
+        	$reference = new Reference($_POST);
+            $output  = $m->registerReference($reference);
+            break;            
     }
 }
 header('Content-type: text/plain; charset=UTF-8');
