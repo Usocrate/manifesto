@@ -22,10 +22,8 @@ header('charset=utf-8');
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="description" content="<?php echo htmlentities($env->getProjectDescription()) ?>" />
 	<title><?php echo htmlentities($env->getProjectName()) ?></title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="../skin/home.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -44,12 +42,12 @@ header('charset=utf-8');
 			<ul>
 			<?php 
 				foreach ($quotes as $q) {
-					$output = mb_eregi_replace('\[quote\]', $q['content'], $pattern);
+					$output = mb_eregi_replace('\[quote\]', $q->getContent(), $pattern);
 					echo '<li>';
 					echo '<h2>'.ucfirst(htmlentities($output));
 					echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
 					echo '</h2>';
-					echo '<p>'.htmlentities($q['comment']).'</p>';
+					echo '<p>'.htmlentities($q->getComment()).'</p>';
 					echo '</li>';
 				}
 			?>

@@ -25,6 +25,5 @@ class Quote {
     public function getComment() {
         return isset($this->comment) ? $this->comment : null;
     }
-    
 }
 ?>

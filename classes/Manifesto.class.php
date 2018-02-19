@@ -13,13 +13,38 @@ class Manifesto {
     public function getQuotes() {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM quote');
         $statement->execute();
-        return $statement->fetchAll();
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[] = new Quote($data);
+        }
+        return $output;
     }
+    
+    public function getQuote($id) {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM quote WHERE id = ?');
+        $statement->execute(array($id));
+        $data = $statement->fetch();
+        return new Quote($data);
+    }    
     
     public function getReferences() {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM reference');
         $statement->execute();
-        return $statement->fetchAll();
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[] = new Reference($data);
+        }
+        return $output;
+    }
+    
+    public function getQuoteReferences(Quote $q) {
+        $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.reference_id=?');
+        $statement->execute(array($q->getId()));
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[] = new Reference($data);
+        }
+        return $output;        
     }
 
     public function getSubscriptions() {
@@ -51,13 +76,6 @@ class Manifesto {
             $output['message'] = 'Bienvenue camarade usocrate.';
         }
         return $output;     
-    }
-    
-    public function getQuote($id) {
-        $statement = $this->env->getPdo()->prepare('SELECT * FROM quote WHERE id = ?');
-        $statement->execute(array($id));
-        $data = $statement->fetch();
-        return new Quote($data);
     }
 }
 ?>
