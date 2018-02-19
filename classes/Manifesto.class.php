@@ -37,6 +37,13 @@ class Manifesto {
         return $output;
     }
     
+    public function getReference($id) {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM reference WHERE id = ?');
+        $statement->execute(array($id));
+        $data = $statement->fetch();
+        return new Reference($data);
+    }
+    
     public function getQuoteReferences(Quote $q) {
         $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.reference_id=?');
         $statement->execute(array($q->getId()));
@@ -55,7 +62,12 @@ class Manifesto {
 
     public function registerReference(Reference $r) {
         //print_r($r);
-        $statement = $this->env->getPdo()->prepare('INSERT INTO reference SET title=:title, url=:url, comment=:comment, author=:author');
+        if ($r->hasId()) {
+            $statement = $this->env->getPdo()->prepare('UPDATE reference SET title=:title, url=:url, comment=:comment, author=:author WHERE id=:id');
+            $statement->bindValue(':id', $r->getId(), PDO::PARAM_INT);
+        } else {
+            $statement = $this->env->getPdo()->prepare('INSERT INTO reference SET title=:title, url=:url, comment=:comment, author=:author');   
+        }
         $statement->bindValue(':title', $r->getTitle(), PDO::PARAM_STR);
         $statement->bindValue(':url', $r->getUrl(), PDO::PARAM_STR);
         $statement->bindValue(':comment', $r->getComment(), PDO::PARAM_STR);

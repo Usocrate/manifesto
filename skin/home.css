@@ -76,6 +76,10 @@ h2 small {
 	font-weight: normal;
 }
 
+h2 small i {
+	color:#ccc;
+}
+
 h3 {
 	background-color: #0098B6;
 	color:#fff;

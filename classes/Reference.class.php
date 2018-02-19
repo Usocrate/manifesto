@@ -19,6 +19,10 @@ class Reference {
     public function getId() {
         return isset($this->id) ? $this->id : null;
     }
+
+    public function hasId() {
+        return !empty($this->id);
+    }
     
     public function getTitle() {
         return isset($this->title) ? $this->title : null;

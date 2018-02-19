@@ -25,5 +25,9 @@ class Quote {
     public function getComment() {
         return isset($this->comment) ? $this->comment : null;
     }
+    
+    public function getSetId() {
+        return isset($this->set_id) ? $this->set_id : null;
+    }
 }
 ?>
