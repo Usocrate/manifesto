@@ -35,6 +35,7 @@ $env = new Environment ( '../config/host.json' );
                     <li><a href="./references.php">La liste des références</a></li>
                     <li><a href="./subscriptions.php">La liste des souscriptions</a></li>
                     <li><a href="./tweet_check.php">Contrôle de la longueur des déclarations</a> (pour Twitter)</li>
+                    <li><a href="./php_info.php">phpinfo</a></li>
                 </ul>
             </main>
         </div>

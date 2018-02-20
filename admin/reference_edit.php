@@ -10,7 +10,29 @@ function __autoload($class_name) {
 $env = new Environment ( '../config/host.json' );
 $h = new HtmlFactory($env);
 $manifesto = new Manifesto($env);
+
+$alerts = array();
+
 $reference = $manifesto->getReference($_REQUEST['id']);
+$quotes = $manifesto->getReferenceQuotes($reference);
+
+if (isset($_POST['cmd'])) {
+	switch ($_POST['cmd']) {
+        case 'registerQuoteList':
+        	$toAttach = array_diff($_POST['quote_id'],array_keys($quotes));
+        	foreach ($toAttach as $id) {
+        		$manifesto->attachQuoteToReference( $reference, new Quote( array('id'=>$id) ) );	
+        	}
+        	$toDetach = array_diff(array_keys($quotes),$_POST['quote_id']);
+        	foreach ($toDetach as $id) {
+        		$manifesto->detachQuoteFromReference( $reference, new Quote( array('id'=>$id) ) );	
+        	}
+        	$quotes = $manifesto->getReferenceQuotes($reference);
+            break;
+        default:
+        	$alerts[] = 'commande inconnue';
+    }
+}
 
 header('charset=utf-8');
 ?>
@@ -38,9 +60,16 @@ header('charset=utf-8');
 			<h1><?php echo htmlentities($reference->getTitle()) ?></h1>
 		</header>
 		<main>
+		<?php 
+			if (count($alerts)>0) {
+				foreach($alerts as $a) {
+					echo '<div class="alert">'.htmlentities($a).'</div>';
+				}
+			}
+		?>
 		<form method="post" action="references.php">
 			<input type="hidden" name="cmd" value="registerReference" />
-			<input type="hidden" name="reference_id" value="<? echo $reference->getId() ?>" />
+			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
 			<div class="form-group">
 				<label for="title_i">Intitulé</label>
 				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo $reference->getTitle() ?>"></input>
@@ -57,7 +86,28 @@ header('charset=utf-8');
 				<label for="author_i">Auteur</label>
 				<input id="author_i" type="text" name="author" class="form-control" value="<?php echo $reference->getAuthor() ?>"></input>
 			</div>
-			<button type="submit" class="btn btn-primary">Enregistrer</input>
+			<button type="submit" class="btn btn-primary">Enregistrer</button>
+		</form>
+		<h2>Associer à</h2>
+		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
+			<input type="hidden" name="cmd" value="registerQuoteList" />
+			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
+			<div class="form-group">
+			<?php
+				$attr = array();
+				foreach ($manifesto->getQuotes() as $q) {
+					echo '<div class="custom-control custom-checkbox">';
+					echo '<input type="checkbox" class="custom-control-input" name="quote_id[]" id="q'.$q->getId().'" value="'.$q->getId().'"';
+					if ( in_array( $q->getId(), array_keys($quotes) ) ) {
+						echo ' checked';
+					}
+					echo '>';
+					echo '<label class="custom-control-label" for="q'.$q->getId().'">'.htmlentities($q->getContent()).'</label>';
+					echo '</div>';
+				}
+			?>
+			</div>
+			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
 		</main>
 		<?php echo $h->getFooterTag() ?>

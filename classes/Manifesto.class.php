@@ -44,12 +44,36 @@ class Manifesto {
         return new Reference($data);
     }
     
+    public function getReferenceQuotes(Reference $r) {
+        $statement = $this->env->getPdo()->prepare('SELECT quote.* FROM quote_reference LEFT JOIN quote ON (quote_reference.quote_id = quote.id) WHERE quote_reference.reference_id=?');
+        $statement->execute(array($r->getId()));
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[$data['id']] = new Quote($data);
+        }
+        return $output;
+    }
+    
+    public function attachQuoteToReference(Reference $r, Quote $q) {
+        $statement = $this->env->getPdo()->prepare('INSERT INTO quote_reference SET reference_id=:r_id, quote_id=:q_id');
+        $statement->bindValue(':r_id', $r->getId(), PDO::PARAM_INT);
+        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+        return $statement->execute();
+    }
+    
+    public function detachQuoteFromReference(Reference $r, Quote $q) {
+        $statement = $this->env->getPdo()->prepare('DELETE FROM quote_reference WHERE reference_id=:r_id AND quote_id=:q_id');
+        $statement->bindValue(':r_id', $r->getId(), PDO::PARAM_INT);
+        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+        return $statement->execute();
+    }    
+    
     public function getQuoteReferences(Quote $q) {
-        $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.reference_id=?');
+        $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.quote_id=?');
         $statement->execute(array($q->getId()));
         $output = array();
         foreach ($statement->fetchAll() as $data) {
-            $output[] = new Reference($data);
+            $output[$data['id']] = new Reference($data);
         }
         return $output;        
     }

@@ -12,10 +12,10 @@ session_start();
 
 $env = new Environment ( './config/host.json' );
 $h = new HtmlFactory($env);
-$m = new Manifesto($env);
+$manifesto = new Manifesto($env);
 
 if (isset ($_REQUEST['id'])) {
-	$quote = $m->getQuote($_REQUEST['id']);
+	$quote = $manifesto->getQuote($_REQUEST['id']);
 } else {
 	header ( 'Location:' . $env->getProjectUrl() );
 	exit ();	
@@ -46,6 +46,25 @@ header('charset=utf-8');
 		<h1><?php echo htmlentities($quote->getContent()) ?></h1>
 		<main>
 			<p><?php echo htmlentities($quote->getComment()) ?></p>
+			<?php
+				$references = $manifesto->getQuoteReferences($quote);
+				if (count($references)>0) {
+					echo '<h2>Références</h2>';
+					echo '<ul>';
+					foreach ($references as $r) {
+						echo '<li>';
+						echo '<a href="'.$r->getUrl().'" target="_blank"><strong>'.htmlentities($r->getTitle()).'</strong></a>';
+						if ( strlen($r->getAuthor()) > 0 ) {
+							echo ' <small>('.htmlentities($r->getAuthor()).')</small>';
+						}
+						if ( strlen($r->getComment())>0 ) {
+							echo '<br>'.htmlentities($r->getComment());
+						}
+						echo '</li>';
+					}
+					echo '</ul>';
+				}
+			?>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
