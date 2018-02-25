@@ -13,8 +13,8 @@ $manifesto = new Manifesto($env);
 
 $alerts = array();
 
-$reference = $manifesto->getReference($_REQUEST['id']);
-$quotes = $manifesto->getReferenceQuotes($reference);
+$reference = empty($_REQUEST['id']) ? new Reference : $manifesto->getReference($_REQUEST['id']);
+$quotes = empty($_REQUEST['id']) ? array() : $manifesto->getReferenceQuotes($reference);
 
 if (isset($_POST['cmd'])) {
 	

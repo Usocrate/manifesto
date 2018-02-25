@@ -15,7 +15,7 @@ class Manifesto {
         $statement->execute();
         $output = array();
         foreach ($statement->fetchAll() as $data) {
-            $output[] = new Quote($data);
+            $output[$data['id']] = new Quote($data);
         }
         return $output;
     }
@@ -32,7 +32,17 @@ class Manifesto {
         $statement->execute();
         $output = array();
         foreach ($statement->fetchAll() as $data) {
-            $output[] = new Reference($data);
+            $output[$data['id']] = new Reference($data);
+        }
+        return $output;
+    }
+    
+    public function getDetachedReferences() {
+        $statement = $this->env->getPdo()->prepare('SELECT r.* FROM reference AS r LEFT OUTER JOIN quote_reference ON (quote_reference.reference_id = r.id) WHERE quote_reference.reference_id IS NULL');
+        $statement->execute();
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[$data['id']] = new Reference($data);
         }
         return $output;
     }

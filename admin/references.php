@@ -27,6 +27,8 @@ if (isset($_POST['cmd'])) {
 }
 
 $references = $manifesto->getReferences();
+$detachedReferences = $manifesto->getDetachedReferences();
+$doc_title = 'Les références';
 
 header('charset=utf-8');
 ?>
@@ -47,10 +49,10 @@ header('charset=utf-8');
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Références</li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
 				</ol>
 			</nav>
-			<h1>Les références</h1>
+			<h1><?php echo htmlspecialchars($doc_title) ?></h1>
 		</header>
 		<main>
 		<?php 
@@ -64,7 +66,14 @@ header('charset=utf-8');
 		<?php 
 			foreach ($references as $r) {
 				echo '<li>';
-				echo '<h2>'.htmlspecialchars($r->getTitle()).' <small><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i></a></small></h2>';
+				echo '<h2>';
+				echo htmlspecialchars( $r->getTitle() );
+				
+				if (in_array( $r->getId(), array_keys($detachedReferences) )) {
+					echo ' <small><span class="badge badge-warning"><a href="reference_edit.php?id='.$r->getId().'">à associer</a></span></small>';
+				}
+				echo '</h2>';
+				
 				if ( strlen($r->getAuthor()) > 0 ) {
 					echo ' <p>'.htmlspecialchars($r->getAuthor()).'</p>';
 				}
@@ -72,31 +81,14 @@ header('charset=utf-8');
 				if ( strlen($r->getComment())>0 ) {
 					echo ' <p>'.htmlspecialchars($r->getComment()).'</p>';
 				}
+				echo '<div><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i> éditer</a></div>';
 				echo '</li>';
 			}
 		?>
 		</ul>
-		<h2>Nouvelle référence</h2>
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-			<input type="hidden" name="cmd" value="registerReference" />
-			<div class="form-group">
-				<label for="title_i">Intitulé</label>
-				<input id="title_i"type="text" name="title" class="form-control"></input>
-			</div>
-			<div class="form-group">
-				<label for="url_i">Url</label>
-				<input id="url_i" type="url" name="url" class="form-control"></input>
-			</div>
-			<div class="form-group">
-				<label for="comment_i">Commentaire</label>
-				<textarea id="comment_i" name="comment" class="form-control"></textarea>
-			</div>
-			<div class="form-group">
-				<label for="author_i">Auteur</label>
-				<input id="author_i" type="text" name="author" class="form-control"></input>
-			</div>
-			<button type="submit" class="btn btn-primary">Enregistrer</input>
-		</form>
+
+		<?php echo '<p><a href="reference_edit.php"></a></p>' ?>
+		
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
