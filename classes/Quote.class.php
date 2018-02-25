@@ -13,6 +13,10 @@ class Quote {
         }
         //var_dump($this);
     }
+    
+    public function hasId() {
+        return !empty($this->id);
+    }
 
     public function getId() {
         return isset($this->id) ? $this->id : null;

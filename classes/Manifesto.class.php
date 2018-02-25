@@ -102,6 +102,24 @@ class Manifesto {
             return 'Référence "'.$r->getTitle().'" non enregistrée';
         }
     }    
+
+    public function registerQuote(Quote $q) {
+        //print_r($r);
+        if ($q->hasId()) {
+            $statement = $this->env->getPdo()->prepare('UPDATE quote SET content=:content, comment=:comment, set_id=:set_id WHERE id=:id');
+            $statement->bindValue(':id', $q->getId(), PDO::PARAM_INT);
+        } else {
+            $statement = $this->env->getPdo()->prepare('INSERT INTO quote SET content=:content, comment=:comment, set_id=:set_id');   
+        }
+        $statement->bindValue(':content', $q->getContent(), PDO::PARAM_STR);
+        $statement->bindValue(':comment', $q->getComment(), PDO::PARAM_STR);
+        $statement->bindValue(':set_id', $q->getSetId(), PDO::PARAM_INT);
+        if ($statement->execute()) {
+            return 'Déclaration "'.$q->getContent().'" enregistrée';
+        } else {
+            return 'Déclaration "'.$q->getContent().'" non enregistrée';
+        }
+    }
     
     public function registerSubscription($id) {
         $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET usocrate_id=:id, mail=:mail');
@@ -114,4 +132,3 @@ class Manifesto {
         return $output;     
     }
 }
-?>

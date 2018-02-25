@@ -32,9 +32,9 @@ $env = new Environment ( '../config/host.json' );
             <main>
                 <ul>
                     <li><a href="<?php echo $env->getProjectUrl() ?>/index.php?extended">Le manifeste en mode augmenté</a> (test des fonctionnalités non ouvertes au public)</li>
-                    <li><a href="./references.php">La liste des références</a></li>
-                    <li><a href="./subscriptions.php">La liste des souscriptions</a></li>
-                    <li><a href="./tweet_check.php">Contrôle de la longueur des déclarations</a> (pour Twitter)</li>
+                    <li><a href="./quotes.php">Les déclarations</a></li>
+                    <li><a href="./references.php">Les références</a></li>
+                    <li><a href="./subscriptions.php">Les souscriptions</a></li>
                     <li><a href="./php_info.php">phpinfo</a></li>
                 </ul>
             </main>

@@ -16,6 +16,9 @@ $m = new Manifesto($env);
 $output = array();
 
 if (isset($_POST['cmd'])) {
+    
+    ToolBox::formatUserPost($_POST);
+    
     switch ($_POST['cmd']) {
         case 'registerSubscription' :
             $output  = $m->registerSubscription($_POST['id'],$_POST['mail']);

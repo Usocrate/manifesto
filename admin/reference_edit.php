@@ -17,6 +17,9 @@ $reference = $manifesto->getReference($_REQUEST['id']);
 $quotes = $manifesto->getReferenceQuotes($reference);
 
 if (isset($_POST['cmd'])) {
+	
+	ToolBox::formatUserPost($_POST);
+	
 	switch ($_POST['cmd']) {
         case 'registerQuoteList':
         	$toAttach = array_diff($_POST['quote_id'],array_keys($quotes));
@@ -41,8 +44,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlentities($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlentities($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
+	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 </head>
@@ -53,17 +56,17 @@ header('charset=utf-8');
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
-					<li class="breadcrumb-item"><a href="references.php">Références</a></li>
-					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlentities($reference->getTitle()) ?></li>
+					<li class="breadcrumb-item"><a href="references.php">Les références</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($reference->getTitle()) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlentities($reference->getTitle()) ?></h1>
+			<h1><?php echo htmlspecialchars($reference->getTitle()) ?></h1>
 		</header>
 		<main>
 		<?php 
 			if (count($alerts)>0) {
 				foreach($alerts as $a) {
-					echo '<div class="alert">'.htmlentities($a).'</div>';
+					echo '<div class="alert">'.htmlspecialchars($a).'</div>';
 				}
 			}
 		?>
@@ -72,7 +75,7 @@ header('charset=utf-8');
 			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
 			<div class="form-group">
 				<label for="title_i">Intitulé</label>
-				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo $reference->getTitle() ?>"></input>
+				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo htmlspecialchars($reference->getTitle()) ?>"></input>
 			</div>
 			<div class="form-group">
 				<label for="url_i">Url</label>
@@ -80,7 +83,7 @@ header('charset=utf-8');
 			</div>
 			<div class="form-group">
 				<label for="comment_i">Commentaire</label>
-				<input id="comment_i" type="text" name="comment" class="form-control" value="<?php echo $reference->getComment() ?>"></input>
+				<textarea id="comment_i" name="comment" class="form-control"><?php echo htmlspecialchars($reference->getComment()) ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="author_i">Auteur</label>
@@ -102,7 +105,9 @@ header('charset=utf-8');
 						echo ' checked';
 					}
 					echo '>';
-					echo '<label class="custom-control-label" for="q'.$q->getId().'">'.htmlentities($q->getContent()).'</label>';
+					echo '<label class="custom-control-label" for="q'.$q->getId().'">'.htmlspecialchars(ucfirst($q->getContent()));
+					echo ' <small><a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a></small>';
+					echo '</label>';
 					echo '</div>';
 				}
 			?>

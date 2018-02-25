@@ -13,20 +13,18 @@ $manifesto = new Manifesto($env);
 
 $alerts = array();
 
+$quote = $manifesto->getQuote($_REQUEST['id']);
+$doc_title = ucfirst($quote->getContent());
+
 if (isset($_POST['cmd'])) {
 	
 	ToolBox::formatUserPost($_POST);
 	
 	switch ($_POST['cmd']) {
-        case 'registerReference' :
-            $alerts[]  = $manifesto->registerReference(new Reference($_POST));
-            break;
         default:
         	$alerts[] = 'commande inconnue';
     }
 }
-
-$references = $manifesto->getReferences();
 
 header('charset=utf-8');
 ?>
@@ -47,59 +45,42 @@ header('charset=utf-8');
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
-					<li class="breadcrumb-item active" aria-current="page">Références</li>
+					<li class="breadcrumb-item"><a href="quotes.php">Les déclarations</a></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
 				</ol>
 			</nav>
-			<h1>Les références</h1>
+			<h1><?php echo htmlspecialchars($doc_title) ?></h1>
 		</header>
 		<main>
-		<?php 
+		<?php
+			//print_r($quote);
+			
 			if (count($alerts)>0) {
 				foreach($alerts as $a) {
 					echo '<div class="alert">'.htmlspecialchars($a).'</div>';
 				}
 			}
 		?>
-		<ul>
-		<?php 
-			foreach ($references as $r) {
-				echo '<li>';
-				echo '<h2>'.htmlspecialchars($r->getTitle()).' <small><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i></a></small></h2>';
-				if ( strlen($r->getAuthor()) > 0 ) {
-					echo ' <p>'.htmlspecialchars($r->getAuthor()).'</p>';
-				}
-				echo '<p><a href="'.$r->getUrl().'" target="_blank">'.$r->getUrl().'</a><p>';
-				if ( strlen($r->getComment())>0 ) {
-					echo ' <p>'.htmlspecialchars($r->getComment()).'</p>';
-				}
-				echo '</li>';
-			}
-		?>
-		</ul>
-		<h2>Nouvelle référence</h2>
-		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
-			<input type="hidden" name="cmd" value="registerReference" />
+		<form method="post" action="quotes.php">
+			<input type="hidden" name="cmd" value="registerQuote" />
+			<input type="hidden" name="id" value="<?php echo $quote->getId() ?>" />
 			<div class="form-group">
-				<label for="title_i">Intitulé</label>
-				<input id="title_i"type="text" name="title" class="form-control"></input>
-			</div>
-			<div class="form-group">
-				<label for="url_i">Url</label>
-				<input id="url_i" type="url" name="url" class="form-control"></input>
+				<label for="content_i">Contenu</label>
+				<textarea id="content_i" name="content" class="form-control" cols="140" rows="1"><?php echo htmlspecialchars($quote->getContent()) ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="comment_i">Commentaire</label>
-				<textarea id="comment_i" name="comment" class="form-control"></textarea>
+				<textarea id="comment_i" name="comment" class="form-control" rows="20"><?php echo htmlspecialchars($quote->getComment()) ?></textarea>
 			</div>
 			<div class="form-group">
-				<label for="author_i">Auteur</label>
-				<input id="author_i" type="text" name="author" class="form-control"></input>
-			</div>
-			<button type="submit" class="btn btn-primary">Enregistrer</input>
+				<label for="set_id_i">Groupe</label>
+				<input id="set_id_i" type="tet" name="set_id" class="form-control" value="<?php echo $quote->getSetId() ?>"></input>
+			</div>			
+			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>	
 </body>
 </html>
