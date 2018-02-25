@@ -58,7 +58,11 @@ header('charset=utf-8');
 				foreach ($quotes as $q) {
 					$output = mb_eregi_replace('\[quote\]', $q->getContent(), $pattern);
 					echo '<li>';
-					echo '<h2>'.ucfirst(htmlspecialchars($output)).' <small><a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a></small></h2>';
+					echo '<h2>'.ucfirst(htmlspecialchars($output));
+					echo ' <small>';
+					echo '<a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a>';
+					echo '<a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a>';
+					echo '</small></h2>';
 					echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
 					echo '</h2>';
 					echo '<p>'.nl2br(htmlspecialchars($q->getComment())).'</p>';

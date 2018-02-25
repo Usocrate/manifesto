@@ -49,7 +49,14 @@ header('charset=utf-8');
 					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlspecialchars($doc_title) ?></h1>
+			<h1>
+				<?php
+					echo htmlspecialchars($doc_title);
+					if ($quote->hasId()) {
+						echo ' <small><a href="../quote.php?id='.$quote->getId().'"><i class="fa fa-eye"></i></a></small>';
+					}
+				?>
+			</h1>
 		</header>
 		<main>
 		<?php
@@ -81,6 +88,6 @@ header('charset=utf-8');
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
-	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>	
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

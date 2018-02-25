@@ -16,10 +16,12 @@ $manifesto = new Manifesto($env);
 
 if (isset ($_REQUEST['id'])) {
 	$quote = $manifesto->getQuote($_REQUEST['id']);
+	$doc_title = ucfirst($quote->getContent());
 } else {
 	header ( 'Location:' . $env->getProjectUrl() );
 	exit ();	
 }
+
 header('charset=utf-8');
 ?>
 <!doctype html>
@@ -39,8 +41,8 @@ header('charset=utf-8');
 	<div class="container">
 		<nav aria-label="breadcrumb" role="navigation">
 		  <ol class="breadcrumb">
-		     <li class="breadcrumb-item"><a href="index.php">Manifesto</a></li>
-		    <li class="breadcrumb-item active" aria-current="page">Déclaration <?php echo htmlspecialchars($quote->getId()) ?></li>
+			<li class="breadcrumb-item"><a href="index.php">Manifesto</a></li>
+		    <li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($quote->getContent()) ?></li>
 		  </ol>
 		</nav>
 		<h1><?php echo htmlspecialchars($quote->getContent()) ?></h1>

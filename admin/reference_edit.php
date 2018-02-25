@@ -105,8 +105,11 @@ header('charset=utf-8');
 						echo ' checked';
 					}
 					echo '>';
-					echo '<label class="custom-control-label" for="q'.$q->getId().'">'.htmlspecialchars(ucfirst($q->getContent()));
-					echo ' <small><a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a></small>';
+					echo '<label class="custom-control-label" for="q'.$q->getId().'">';
+					echo '<a href="quote_edit.php?id='.$q->getId().'">';
+					echo htmlspecialchars(ucfirst($q->getContent()));
+					echo '</a>';
+					echo ' <small><a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a> <a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a></small>';
 					echo '</label>';
 					echo '</div>';
 				}
