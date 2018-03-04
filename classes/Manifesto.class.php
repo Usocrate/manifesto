@@ -10,8 +10,17 @@ class Manifesto {
         $this->env = $env;
     }
     
-    public function getQuotes() {
-        $statement = $this->env->getPdo()->prepare('SELECT * FROM quote');
+    public function getQuotes($criteria = null, $sort = null) {
+        
+        $sql = 'SELECT * FROM quote';
+        
+        switch ($sort) {
+            case 'Oldest edition first':
+                $sql.= ' ORDER BY lastedition ASC';
+                break;
+        }
+
+        $statement = $this->env->getPdo()->prepare($sql);
         $statement->execute();
         $output = array();
         foreach ($statement->fetchAll() as $data) {

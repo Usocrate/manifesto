@@ -4,6 +4,7 @@ class Quote {
     private $content;
     private $comment;
     private $set_id;
+    private $lastedition;
     
     public function __construct($data=null) {
         if (isset($data) && is_array($data)) {
@@ -32,6 +33,10 @@ class Quote {
     
     public function getSetId() {
         return isset($this->set_id) ? $this->set_id : null;
+    }
+    
+    public function getLastEdition() {
+        return isset($this->lastedition) ? $this->lastedition : null;
     }
 }
 ?>

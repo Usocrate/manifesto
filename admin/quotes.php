@@ -24,7 +24,7 @@ if (isset($_POST['cmd'])) {
     }
 }
 
-$quotes = $manifesto->getQuotes();
+$quotes = $manifesto->getQuotes(null, 'Oldest edition first');
 $pattern = '[quote] #usocrate https://usocrate.fr';
 
 header('charset=utf-8');
@@ -56,16 +56,21 @@ header('charset=utf-8');
 			<ul>
 			<?php 
 				foreach ($quotes as $q) {
-					$output = mb_eregi_replace('\[quote\]', $q->getContent(), $pattern);
 					echo '<li>';
-					echo '<h2>'.ucfirst(htmlspecialchars($output));
+					echo '<h2>'.ucfirst(htmlspecialchars($q->getContent()));
 					echo ' <small>';
 					echo '<a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a>';
 					echo '<a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a>';
 					echo '</small></h2>';
-					echo mb_strlen($output)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($output)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($output)).'</span>';
-					echo '</h2>';
+					echo '<div>';
 					echo '<p>'.nl2br(htmlspecialchars($q->getComment())).'</p>';
+					echo '</div>';
+					echo '<div>';
+					$tweet = mb_eregi_replace('\[quote\]', $q->getContent(), $pattern);
+					echo '<small>'.ucfirst(htmlspecialchars($tweet)).'</small>';
+					echo mb_strlen($tweet)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($tweet)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($tweet)).'</span>';
+					echo '</div>';
+					echo '<div><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small><div>';					
 					echo '</li>';
 				}
 			?>
