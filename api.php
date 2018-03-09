@@ -25,7 +25,8 @@ if (isset($_POST['cmd'])) {
             break;
         case 'registerReference' :
         	$reference = new Reference($_POST);
-            $output  = $m->registerReference($reference);
+            $feedback  = $m->registerReference($reference);
+            $output = $feedback->getMessage();
             break;            
     }
 }

@@ -13,16 +13,21 @@ $manifesto = new Manifesto($env);
 
 $alerts = array();
 
-if (isset($_POST['cmd'])) {
+if (isset($_REQUEST['cmd'])) {
 	
-	ToolBox::formatUserPost($_POST);
+	ToolBox::formatUserPost($_REQUEST);
 	
-	switch ($_POST['cmd']) {
+	switch ($_REQUEST['cmd']) {
         case 'registerReference' :
-            $alerts[]  = $manifesto->registerReference(new Reference($_POST));
+        	$feedback = $manifesto->registerReference(new Reference($_REQUEST));
+            $alerts[$feedback->getType()][]  = $feedback->getMessage();
+            break;
+        case 'deleteReference' :
+        	$feedback = $manifesto->deleteReference($_REQUEST['id']);
+        	$alerts[$feedback->getType()][]  = $feedback->getMessage();
             break;
         default:
-        	$alerts[] = 'commande inconnue';
+        	$alerts['warning'] = 'commande inconnue';
     }
 }
 
@@ -56,9 +61,25 @@ header('charset=utf-8');
 		</header>
 		<main>
 		<?php 
+			//print_r($alerts);
 			if (count($alerts)>0) {
-				foreach($alerts as $a) {
-					echo '<div class="alert">'.htmlspecialchars($a).'</div>';
+				foreach($alerts as $type=>$messages) {
+					$classes = array('alert');
+					switch ($type) {
+						case 'success' :
+							$classes[] = 'alert-success';
+							break;
+						case 'warning' :
+							$classes[] = 'alert-warning';
+							break;
+						default :
+							$classes[] = 'alert-info';
+					}
+					echo '<div class="'.implode(' ',$classes).'">';
+					foreach ($messages as $m) {
+						echo htmlspecialchars($m).'<br>';
+					}
+					echo '</div>';
 				}
 			}
 		?>
@@ -81,7 +102,7 @@ header('charset=utf-8');
 				if ( strlen($r->getComment())>0 ) {
 					echo ' <p>'.htmlspecialchars($r->getComment()).'</p>';
 				}
-				echo '<div><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i> éditer</a></div>';
+				echo '<div class="cmdbar"><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i> éditer</a> <a href="references.php?cmd=deleteReference&id='.$r->getId().'"><i class="fa fa-trash"></i> retirer</a></div>';
 				echo '</li>';
 			}
 		?>

@@ -17,7 +17,8 @@ if (isset($_POST['cmd'])) {
 	
 	switch ($_POST['cmd']) {
         case 'registerQuote' :
-            $alerts[]  = $manifesto->registerQuote(new Quote($_POST));
+        	$feedback = $manifesto->registerQuote(new Quote($_POST));
+            $alerts[]  = $feedback->getMessage();
             break;
         default:
         	$alerts[] = 'commande inconnue';

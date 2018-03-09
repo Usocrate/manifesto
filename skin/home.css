@@ -162,6 +162,14 @@ footer {
 	padding:1em;
 }
 
+.cmdbar A {
+	color : #555;
+}
+
+.cmdbar A:hover {
+	text-decoration: none;
+}
+
 #method > div {
     padding: 1em;
 }

@@ -65,7 +65,11 @@ class Manifesto {
     
     public function deleteReference($id) {
         $statement = $this->env->getPdo()->prepare('DELETE FROM reference WHERE id = ?');
-        return $statement->execute(array($id));
+        if ($statement->execute(array($id))) {
+            return new Feedback('référence retirée', 'success');
+        } else {
+            return new Feedback('la référence n\'a pu être supprimée', 'warning');
+        }
     }      
     
     public function getReferenceQuotes(Reference $r) {
@@ -121,9 +125,9 @@ class Manifesto {
         $statement->bindValue(':comment', $r->getComment(), PDO::PARAM_STR);
         $statement->bindValue(':author', $r->getAuthor(), PDO::PARAM_STR);
         if ($statement->execute()) {
-            return 'Référence "'.$r->getTitle().'" enregistrée';
+            return new Feedback('Référence "'.$r->getTitle().'" enregistrée', 'success');
         } else {
-            return 'Référence "'.$r->getTitle().'" non enregistrée';
+            return new Feedback('Référence "'.$r->getTitle().'" non enregistrée', 'warning');
         }
     }    
 
@@ -139,7 +143,7 @@ class Manifesto {
         $statement->bindValue(':comment', $q->getComment(), PDO::PARAM_STR);
         $statement->bindValue(':set_id', $q->getSetId(), PDO::PARAM_INT);
         if ($statement->execute()) {
-            return 'Déclaration "'.$q->getContent().'" enregistrée';
+            return new Feedback('Déclaration "'.$q->getContent().'" enregistrée', 'success');
         } else {
             return 'Déclaration "'.$q->getContent().'" non enregistrée';
         }
