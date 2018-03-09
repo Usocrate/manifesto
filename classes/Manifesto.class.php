@@ -34,7 +34,7 @@ class Manifesto {
         $statement->execute(array($id));
         $data = $statement->fetch();
         return new Quote($data);
-    }    
+    }
     
     public function getReferences() {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM reference');
@@ -62,6 +62,11 @@ class Manifesto {
         $data = $statement->fetch();
         return new Reference($data);
     }
+    
+    public function deleteReference($id) {
+        $statement = $this->env->getPdo()->prepare('DELETE FROM reference WHERE id = ?');
+        return $statement->execute(array($id));
+    }      
     
     public function getReferenceQuotes(Reference $r) {
         $statement = $this->env->getPdo()->prepare('SELECT quote.* FROM quote_reference LEFT JOIN quote ON (quote_reference.quote_id = quote.id) WHERE quote_reference.reference_id=?');
