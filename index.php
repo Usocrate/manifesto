@@ -117,32 +117,36 @@ header('charset=utf-8');
 					<blockquote style="display:none">Focus on the user and all else will follow (Google)<br/>Make things people want vs Make people want things.</blockquote>
 					<div class="row">
 						<div class="col-md-6">
-							<h4>Aller sur le terrain, aimer le réel</h4>
-							<p>Moi <span class="brand">usocrate</span>...</p>
-							<ul>
-								<?php
-									foreach ($quotes as $q) {
-										if (strcmp($q->getSetId(), '1')==0) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+							<div class="area">
+								<h4>Aller sur le terrain, aimer le réel</h4>
+								<p>Moi <span class="brand">usocrate</span>...</p>
+								<ul>
+									<?php
+										foreach ($quotes as $q) {
+											if (strcmp($q->getSetId(), '1')==0) {
+												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											}
 										}
-									}
-								?>
-							</ul>
-							<p><span class="badge badge-pill badge-default">Co-conception</span> <span class="badge badge-pill badge-default">Principe de réalité</span> <span class="badge badge-pill badge-default">IRL</span></p>
+									?>
+								</ul>
+								<p><span class="badge badge-pill badge-default">Co-conception</span> <span class="badge badge-pill badge-default">Principe de réalité</span> <span class="badge badge-pill badge-default">IRL</span></p>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<h4>Respecter les usagers</h4>
-							<p>Moi <span class="brand">usocrate</span>...</p>
-							<ul>
-								<?php
-									foreach ($quotes as $q) {
-										if (strcmp($q->getSetId(), '2')==0) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+							<div class="area">
+								<h4>Respecter les usagers</h4>
+								<p>Moi <span class="brand">usocrate</span>...</p>
+								<ul>
+									<?php
+										foreach ($quotes as $q) {
+											if (strcmp($q->getSetId(), '2')==0) {
+												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											}
 										}
-									}
-								?>
-							</ul>
-							<p><span class="badge badge-pill badge-default">Ecoute</span> <span class="badge badge-pill badge-default">Considération</span> <span class="badge badge-pill badge-default">Ethique</span></p>
+									?>
+								</ul>
+								<p><span class="badge badge-pill badge-default">Ecoute</span> <span class="badge badge-pill badge-default">Considération</span> <span class="badge badge-pill badge-default">Ethique</span></p>
+							<div class="area">
 						</div>
 					</div>
 				</div>
@@ -152,32 +156,36 @@ header('charset=utf-8');
 					<blockquote style="display:none">Le numérique rend obsolète l'ancien modèle de production industriel.</blockquote>
 					<div class="row">
 						<div class="col-md-6">
-							<h4>La valeur d’usage comme objectif</h4>
-							<p>Moi <span class="brand">usocrate</span>...</p>
-							<ul>
-								<?php
-									foreach ($quotes as $q) {
-										if (strcmp($q->getSetId(), '3')==0) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+							<div class="area">
+								<h4>La valeur d’usage comme objectif</h4>
+								<p>Moi <span class="brand">usocrate</span>...</p>
+								<ul>
+									<?php
+										foreach ($quotes as $q) {
+											if (strcmp($q->getSetId(), '3')==0) {
+												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											}
 										}
-									}
-								?>
-							</ul>
-							<p><span class="badge badge-pill badge-default">Valeur d'usage</span> <span class="badge badge-pill badge-default">Service</span> <span class="badge badge-pill badge-default">Bénéfice</span></p>
+									?>
+								</ul>
+								<p><span class="badge badge-pill badge-default">Valeur d'usage</span> <span class="badge badge-pill badge-default">Service</span> <span class="badge badge-pill badge-default">Bénéfice</span></p>
+							</div>
 						</div>
 						<div class="col-md-6">
-							<h4>Mesurer la qualité de l’expérience</h4>
-							<p>Moi <span class="brand">usocrate</span>...</p>
-							<ul>
-								<?php
-									foreach ($quotes as $q) {
-										if (strcmp($q->getSetId(), '4')==0) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+							<div class="area">
+								<h4>Mesurer la qualité de l’expérience</h4>
+								<p>Moi <span class="brand">usocrate</span>...</p>
+								<ul>
+									<?php
+										foreach ($quotes as $q) {
+											if (strcmp($q->getSetId(), '4')==0) {
+												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											}
 										}
-									}
-								?>
-							</ul>
-							<p><span class="badge badge-pill badge-default">Expérience utilisateur</span> <span class="badge badge-pill badge-default">Appropriation</span> <span class="badge badge-pill badge-default">Satisfaction</span> <span class="badge badge-pill badge-default">Productivité</span></p>							
+									?>
+								</ul>
+								<p><span class="badge badge-pill badge-default">Expérience utilisateur</span> <span class="badge badge-pill badge-default">Appropriation</span> <span class="badge badge-pill badge-default">Satisfaction</span> <span class="badge badge-pill badge-default">Productivité</span></p>							
+							</div>
 						</div>
 					</div>
 				</div>
@@ -187,7 +195,7 @@ header('charset=utf-8');
 					<blockquote style="display:none">Etre usocrate c'est être un organisateur et un facilitateur.<br/>C'est viser à régler les dysfonctionnements internes de l'entreprise pour que toute l'énergie mobilisable le soit au profit des utilisateurs, sans dissipation.<br/>C'est s'engager dans la rationalisation la chaîne de production et la promotion radicale de la collaboration entre les différents acteurs du projet. Leadership, vision collective et agilité.</blockquote>
 					<div class="row">
 						<div class="col-md-6">
-							<div>
+							<div class="area">
 								<h4>Collaborer pour l'efficacité économique</h4>
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
@@ -203,7 +211,7 @@ header('charset=utf-8');
 							</div>
 						</div>
 						<div class="col-md-6">
-							<div>
+							<div class="area">
 								<h4>Collaborer pour la créativité</h4>
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
