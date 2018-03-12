@@ -32,11 +32,11 @@ $env = new Environment ( '../config/host.json' );
             <main>
                 <ul>
                     <li><a href="<?php echo $env->getProjectUrl() ?>/index.php?extended">Le manifeste en mode augmenté</a> (test des fonctionnalités non ouvertes au public)</li>
-                    <li><a href="./quotes.php">Les déclarations</a></li>
-                    <li><a href="./references.php">Les références</a></li>
-                    <li><a href="./reference_edit.php">Nouvelle référence</a></li>
-                    <li><a href="./subscriptions.php">Les souscriptions</a></li>
-                    <li><a href="./php_info.php">phpinfo</a></li>
+                    <li><a href="quotes.php">Les déclarations</a></li>
+                    <li><a href="references.php">Les références</a></li>
+                    <li><a href="reference_edit.php">Nouvelle référence</a></li>
+                    <li><a href="subscriptions.php">Les souscriptions</a></li>
+                    <li><a href="php_info.php">phpinfo</a></li>
                 </ul>
             </main>
         </div>

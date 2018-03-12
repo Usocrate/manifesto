@@ -57,7 +57,7 @@ header('charset=utf-8');
 					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlspecialchars($doc_title) ?></h1>
+			<h1><?php echo htmlspecialchars($doc_title) ?> <small><a href="reference_edit.php"><i class="fa fa-plus"></i></a></small></h1>
 		</header>
 		<main>
 		<?php 

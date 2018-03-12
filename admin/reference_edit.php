@@ -91,6 +91,7 @@ header('charset=utf-8');
 			</div>
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
+		<?php if ($reference->hasId()): ?>
 		<h2>Associer à</h2>
 		<form method="post" action="<?php echo $_SERVER['PHP_SELF'] ?>">
 			<input type="hidden" name="cmd" value="registerQuoteList" />
@@ -117,6 +118,8 @@ header('charset=utf-8');
 			</div>
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
+		<?php endif; ?>
+		
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
