@@ -11,17 +11,23 @@ $env = new Environment ( '../config/host.json' );
 $h = new HtmlFactory($env);
 $manifesto = new Manifesto($env);
 
-if (isset($_POST['cmd'])) {
+$alerts = array();
+
+if (isset($_REQUEST['cmd'])) {
 	
-	ToolBox::formatUserPost($_POST);
+	ToolBox::formatUserPost($_REQUEST);
 	
-	switch ($_POST['cmd']) {
+	switch ($_REQUEST['cmd']) {
         case 'registerQuote' :
-        	$feedback = $manifesto->registerQuote(new Quote($_POST));
-            $alerts[]  = $feedback->getMessage();
+        	$feedback = $manifesto->registerQuote(new Quote($_REQUEST));
+            $alerts[$feedback->getType()][]  = $feedback->getMessage();
             break;
+        case 'deleteQuote' :
+        	$feedback = $manifesto->deleteQuote($_REQUEST['id']);
+            $alerts[$feedback->getType()][]  = $feedback->getMessage();
+            break;            
         default:
-        	$alerts[] = 'commande inconnue';
+        	$alerts['warning'][] = 'commande inconnue';
     }
 }
 
@@ -54,6 +60,29 @@ header('charset=utf-8');
 			<h1>Les déclarations</h1>
 		</header>		
 		<main>
+			<?php 
+				//print_r($alerts);
+				if (count($alerts)>0) {
+					foreach($alerts as $type=>$messages) {
+						$classes = array('alert');
+						switch ($type) {
+							case 'success' :
+								$classes[] = 'alert-success';
+								break;
+							case 'warning' :
+								$classes[] = 'alert-warning';
+								break;
+							default :
+								$classes[] = 'alert-info';
+						}
+						echo '<div class="'.implode(' ',$classes).'">';
+						foreach ($messages as $m) {
+							echo htmlspecialchars($m).'<br>';
+						}
+						echo '</div>';
+					}
+				}
+			?>			
 			<ul>
 			<?php 
 				foreach ($quotes as $q) {
@@ -75,7 +104,8 @@ header('charset=utf-8');
 					echo mb_strlen($tweet)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($tweet)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($tweet)).'</span>';
 					echo '</p>';
 					echo '</div>';
-					echo '<div><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small><div>';					
+					echo '<div><p><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small></p><div>';
+					echo '<div class="cmdbar"><a href="quotes.php?cmd=deleteQuote&id='.$q->getId().'"><i class="fa fa-trash"></i> <span>retirer</span></a></div>';
 					echo '</li>';
 				}
 			?>

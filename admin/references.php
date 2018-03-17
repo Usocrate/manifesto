@@ -102,7 +102,7 @@ header('charset=utf-8');
 				if ( strlen($r->getComment())>0 ) {
 					echo ' <p>'.htmlspecialchars($r->getComment()).'</p>';
 				}
-				echo '<div class="cmdbar"><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i> éditer</a> <a href="references.php?cmd=deleteReference&id='.$r->getId().'"><i class="fa fa-trash"></i> retirer</a></div>';
+				echo '<div class="cmdbar"><a href="reference_edit.php?id='.$r->getId().'"><i class="fa fa-edit"></i> <span>éditer</span></a> <a href="references.php?cmd=deleteReference&id='.$r->getId().'"><i class="fa fa-trash"></i> <span>retirer</span></a></div>';
 				echo '</li>';
 			}
 		?>

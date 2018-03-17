@@ -162,8 +162,13 @@ footer {
 	padding:1em;
 }
 
-.cmdbar A {
+.cmdbar a i {
+	color : #333;
+}
+
+.cmdbar a span {
 	color : #555;
+	font-size: .8em;	
 }
 
 .cmdbar A:hover {

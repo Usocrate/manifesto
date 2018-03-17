@@ -242,12 +242,12 @@ header('charset=utf-8');
 								</ul>
 					            <form id="subscription_form">
 					            	<div class="form-group ">
-										<label>Je me présente</label>
-										<input type="text" class="form-control input-lg" id="id_i" name="id" placeholder="un profil Twitter, LinkedIn,...">
+										<label for="id_i">Je me présente</label>
+										<input type="text" id="id_i" name="id" class="form-control input-lg" placeholder="un profil Twitter, LinkedIn,...">
 				                  	</div>
 									<div class="form-group ">
-										<label>Un email ?</label>
-										<input class="form-control input-lg" name="mail" value="" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr" type="email">
+										<label for="mail_i">Un email ?</label>
+										<input type="email" id="mail_i" name="mail" class="form-control input-lg" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr">
 						            </div>
 						            <input name="cmd" value="registerSubscription" type="hidden">
 						            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>

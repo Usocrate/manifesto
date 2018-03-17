@@ -70,7 +70,7 @@ class Manifesto {
         } else {
             return new Feedback('la référence n\'a pu être supprimée', 'warning');
         }
-    }      
+    }
     
     public function getReferenceQuotes(Reference $r) {
         $statement = $this->env->getPdo()->prepare('SELECT quote.* FROM quote_reference LEFT JOIN quote ON (quote_reference.quote_id = quote.id) WHERE quote_reference.reference_id=?');
@@ -148,6 +148,15 @@ class Manifesto {
             return 'Déclaration "'.$q->getContent().'" non enregistrée';
         }
     }
+    
+    public function deleteQuote($id) {
+        $statement = $this->env->getPdo()->prepare('DELETE FROM quote WHERE id = ?');
+        if ($statement->execute(array($id))) {
+            return new Feedback('déclaration retirée', 'success');
+        } else {
+            return new Feedback('la déclaration n\'a pu être supprimée', 'warning');
+        }
+    }    
     
     public function registerSubscription($id) {
         $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET usocrate_id=:id, mail=:mail');
