@@ -25,7 +25,7 @@ if (isset($_REQUEST['cmd'])) {
         case 'deleteQuote' :
         	$feedback = $manifesto->deleteQuote($_REQUEST['id']);
             $alerts[$feedback->getType()][]  = $feedback->getMessage();
-            break;            
+            break;
         default:
         	$alerts['warning'][] = 'commande inconnue';
     }
@@ -60,29 +60,7 @@ header('charset=utf-8');
 			<h1>Les déclarations</h1>
 		</header>		
 		<main>
-			<?php 
-				//print_r($alerts);
-				if (count($alerts)>0) {
-					foreach($alerts as $type=>$messages) {
-						$classes = array('alert');
-						switch ($type) {
-							case 'success' :
-								$classes[] = 'alert-success';
-								break;
-							case 'warning' :
-								$classes[] = 'alert-warning';
-								break;
-							default :
-								$classes[] = 'alert-info';
-						}
-						echo '<div class="'.implode(' ',$classes).'">';
-						foreach ($messages as $m) {
-							echo htmlspecialchars($m).'<br>';
-						}
-						echo '</div>';
-					}
-				}
-			?>			
+			<?php echo $h->getAlertsTag($alerts) ?>	
 			<ul>
 			<?php 
 				foreach ($quotes as $q) {

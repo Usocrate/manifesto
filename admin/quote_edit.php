@@ -21,8 +21,12 @@ if (isset($_POST['cmd'])) {
 	ToolBox::formatUserPost($_POST);
 	
 	switch ($_POST['cmd']) {
+        case 'registerQuote' :
+        	$feedback = $manifesto->registerQuote(new Quote($_REQUEST));
+            $alerts[$feedback->getType()][]  = $feedback->getMessage();
+            break;
         default:
-        	$alerts[] = 'commande inconnue';
+        	$alerts['warning'] = 'commande inconnue';
     }
 }
 
@@ -59,16 +63,8 @@ header('charset=utf-8');
 			</h1>
 		</header>
 		<main>
-		<?php
-			//print_r($quote);
-			
-			if (count($alerts)>0) {
-				foreach($alerts as $a) {
-					echo '<div class="alert">'.htmlspecialchars($a).'</div>';
-				}
-			}
-		?>
-		<form method="post" action="quotes.php">
+		<?php echo $h->getAlertsTag($alerts) ?>
+		<form method="post" action="quote_edit.php">
 			<input type="hidden" name="cmd" value="registerQuote" />
 			<input type="hidden" name="id" value="<?php echo $quote->getId() ?>" />
 			<div class="form-group">

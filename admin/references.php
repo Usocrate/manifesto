@@ -60,29 +60,7 @@ header('charset=utf-8');
 			<h1><?php echo htmlspecialchars($doc_title) ?> <small><a href="reference_edit.php"><i class="fa fa-plus"></i></a></small></h1>
 		</header>
 		<main>
-		<?php 
-			//print_r($alerts);
-			if (count($alerts)>0) {
-				foreach($alerts as $type=>$messages) {
-					$classes = array('alert');
-					switch ($type) {
-						case 'success' :
-							$classes[] = 'alert-success';
-							break;
-						case 'warning' :
-							$classes[] = 'alert-warning';
-							break;
-						default :
-							$classes[] = 'alert-info';
-					}
-					echo '<div class="'.implode(' ',$classes).'">';
-					foreach ($messages as $m) {
-						echo htmlspecialchars($m).'<br>';
-					}
-					echo '</div>';
-				}
-			}
-		?>
+		<?php echo $h->getAlertsTag($alerts) ?>
 		<ul>
 		<?php 
 			foreach ($references as $r) {

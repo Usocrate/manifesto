@@ -33,7 +33,7 @@ if (isset($_POST['cmd'])) {
         	$quotes = $manifesto->getReferenceQuotes($reference);
             break;
         default:
-        	$alerts[] = 'commande inconnue';
+        	$alerts['warning'] = 'commande inconnue';
     }
 }
 
@@ -63,13 +63,7 @@ header('charset=utf-8');
 			<h1><?php echo htmlspecialchars($reference->getTitle()) ?></h1>
 		</header>
 		<main>
-		<?php 
-			if (count($alerts)>0) {
-				foreach($alerts as $a) {
-					echo '<div class="alert">'.htmlspecialchars($a).'</div>';
-				}
-			}
-		?>
+		<?php echo $h->getAlertsTag($alerts) ?>
 		<form method="post" action="references.php">
 			<input type="hidden" name="cmd" value="registerReference" />
 			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
