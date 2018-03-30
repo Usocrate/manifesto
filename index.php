@@ -150,6 +150,8 @@ header('charset=utf-8');
 						</div>
 					</div>
 				</div>
+					</div>
+				</div>
 				
 				<div class="area">
 					<h3>2- Contribuer à changer les indicateurs de réussite des projets</h3>
