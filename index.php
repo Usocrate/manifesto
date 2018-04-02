@@ -48,7 +48,7 @@ header('charset=utf-8');
 					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 				</p>
 				<p>
-					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans le développement de services numériques pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
+					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans la conception de services numériques; pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
 					Professionnel qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
 				</p>
 			</section>

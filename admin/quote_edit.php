@@ -13,9 +13,6 @@ $manifesto = new Manifesto($env);
 
 $alerts = array();
 
-$quote = $manifesto->getQuote($_REQUEST['id']);
-$doc_title = ucfirst($quote->getContent());
-
 if (isset($_POST['cmd'])) {
 	
 	ToolBox::formatUserPost($_POST);
@@ -24,11 +21,23 @@ if (isset($_POST['cmd'])) {
         case 'registerQuote' :
         	$feedback = $manifesto->registerQuote(new Quote($_REQUEST));
             $alerts[$feedback->getType()][]  = $feedback->getMessage();
+            $quote = $feedback->getDatum('registredQuote');
             break;
         default:
         	$alerts['warning'] = 'commande inconnue';
     }
 }
+
+
+if (!isset($quote)) {
+	if (!empty($_REQUEST['id'])) {
+		$quote = $manifesto->getQuote($_REQUEST['id']);
+	} else {
+		$quote = new Quote;
+	}	
+}
+
+$doc_title = $quote->hasId() ? ucfirst($quote->getContent()) : 'Nouvelle déclaration';
 
 header('charset=utf-8');
 ?>

@@ -57,7 +57,7 @@ header('charset=utf-8');
 					<li class="breadcrumb-item active" aria-current="page">Les déclarations</li>
 				</ol>
 			</nav>
-			<h1>Les déclarations</h1>
+			<h1>Les déclarations <small><a href="quote_edit.php"><i class="fa fa-plus"></i></a></small></h1>
 		</header>		
 		<main>
 			<?php echo $h->getAlertsTag($alerts) ?>	
@@ -88,6 +88,8 @@ header('charset=utf-8');
 				}
 			?>
 			</ul>
+			
+			<?php echo '<div class="cmdbar"><a href="quote_edit.php"><i class="fa fa-plus"></i> <span>Nouvelle déclaration<span></a></div>' ?>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>

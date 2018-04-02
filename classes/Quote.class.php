@@ -1,6 +1,7 @@
 <?php
 class Quote {
     
+    private $id;
     private $content;
     private $comment;
     private $set_id;
@@ -21,6 +22,10 @@ class Quote {
 
     public function getId() {
         return isset($this->id) ? $this->id : null;
+    }
+    
+    public function setId($id) {
+        $this->id = $id;
     }
     
     public function getContent() {

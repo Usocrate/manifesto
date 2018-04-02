@@ -86,7 +86,7 @@ header('charset=utf-8');
 		?>
 		</ul>
 
-		<?php echo '<p><a href="reference_edit.php"></a></p>' ?>
+		<?php echo '<div class="cmdbar"><a href="reference_edit.php"><i class="fa fa-plus"></i> <span>Nouvelle référence</span></a></div>' ?>
 		
 		</main>
 		<?php echo $h->getFooterTag() ?>

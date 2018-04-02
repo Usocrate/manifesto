@@ -143,7 +143,10 @@ class Manifesto {
         $statement->bindValue(':comment', $q->getComment(), PDO::PARAM_STR);
         $statement->bindValue(':set_id', $q->getSetId(), PDO::PARAM_INT);
         if ($statement->execute()) {
-            return new Feedback('Déclaration "'.$q->getContent().'" enregistrée', 'success');
+            if (!$q->hasId()) {
+                $q->setId($this->env->getPdo()->lastInsertId());
+            }
+            return new Feedback('Déclaration "'.$q->getContent().'" enregistrée', 'success', array('registredQuote' => $q));
         } else {
             return 'Déclaration "'.$q->getContent().'" non enregistrée';
         }
@@ -156,7 +159,7 @@ class Manifesto {
         } else {
             return new Feedback('la déclaration n\'a pu être supprimée', 'warning');
         }
-    }    
+    }
     
     public function registerSubscription($id) {
         $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET usocrate_id=:id, mail=:mail');
@@ -166,6 +169,6 @@ class Manifesto {
             $output['success'] = true;
             $output['message'] = 'Bienvenue camarade usocrate.';
         }
-        return $output;     
+        return $output;
     }
 }
