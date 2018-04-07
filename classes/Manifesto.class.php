@@ -46,6 +46,16 @@ class Manifesto {
         return $output;
     }
     
+    public function getCommitments() {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM commitment');
+        $statement->execute();
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[$data['id']] = new Commitment($data);
+        }
+        return $output;
+    }
+    
     public function getDetachedReferences() {
         $statement = $this->env->getPdo()->prepare('SELECT r.* FROM reference AS r LEFT OUTER JOIN quote_reference ON (quote_reference.reference_id = r.id) WHERE quote_reference.reference_id IS NULL');
         $statement->execute();
@@ -82,6 +92,7 @@ class Manifesto {
         return $output;
     }
     
+    
     public function attachQuoteToReference(Reference $r, Quote $q) {
         $statement = $this->env->getPdo()->prepare('INSERT INTO quote_reference SET reference_id=:r_id, quote_id=:q_id');
         $statement->bindValue(':r_id', $r->getId(), PDO::PARAM_INT);
@@ -94,8 +105,40 @@ class Manifesto {
         $statement->bindValue(':r_id', $r->getId(), PDO::PARAM_INT);
         $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
         return $statement->execute();
-    }    
+    }
     
+    public function attachQuoteToCommitment(Quote $q, Commitment $c) {
+        try {  
+            //$this->env->getPdo()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            
+            $this->env->getPdo()->beginTransaction();
+    
+            // on supprime les associations préexistantes
+            $statement = $this->env->getPdo()->prepare('DELETE FROM commitment_quote WHERE quote_id=?');
+            $statement->execute(array($q->getId()));
+    
+            // on associe la déclaration à un engagement
+            $statement = $this->env->getPdo()->prepare('INSERT INTO commitment_quote SET commitment_id=:c_id, quote_id=:q_id');
+            $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+            $statement->execute();
+            
+            $this->env->getPdo()->commit();
+            
+            return new Feedback('La déclaration est associée à l\'engagement '.$c->getTitle().'.', 'success');
+            
+        } catch (Exception $e) {
+          $this->env->getPdo()->rollBack();
+          trigger_error($e->getMessage());
+        }
+    }
+
+    public function getQuoteCommitment(Quote $q) {
+        $statement = $this->env->getPdo()->prepare('SELECT commitment.* FROM commitment_quote INNER JOIN commitment ON (commitment_quote.commitment_id = commitment.id) WHERE commitment_quote.quote_id=?');
+        $statement->execute(array($q->getId()));
+        return new Commitment($statement->fetch());
+    }
+
     public function getQuoteReferences(Quote $q) {
         $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.quote_id=?');
         $statement->execute(array($q->getId()));
@@ -103,7 +146,7 @@ class Manifesto {
         foreach ($statement->fetchAll() as $data) {
             $output[$data['id']] = new Reference($data);
         }
-        return $output;        
+        return $output;
     }
 
     public function getSubscriptions() {

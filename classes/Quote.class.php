@@ -39,7 +39,7 @@ class Quote {
     public function getSetId() {
         return isset($this->set_id) ? $this->set_id : null;
     }
-    
+
     public function getLastEdition() {
         return isset($this->lastedition) ? $this->lastedition : null;
     }

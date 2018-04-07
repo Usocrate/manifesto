@@ -13,15 +13,26 @@ $manifesto = new Manifesto($env);
 
 $alerts = array();
 
-if (isset($_POST['cmd'])) {
+if (isset($_REQUEST['cmd'])) {
 	
-	ToolBox::formatUserPost($_POST);
+	ToolBox::formatUserPost($_REQUEST);
+	//print_r($_REQUEST);
 	
 	switch ($_POST['cmd']) {
+		
         case 'registerQuote' :
+        	// enregistrement des données de la déclaration
         	$feedback = $manifesto->registerQuote(new Quote($_REQUEST));
             $alerts[$feedback->getType()][]  = $feedback->getMessage();
             $quote = $feedback->getDatum('registredQuote');
+            
+            // association à un engagement
+            if (isset($_REQUEST['commitment_id'])) {
+            	$c = new Commitment();
+            	$c->setId($_REQUEST['commitment_id']);
+				$feedback = $manifesto->attachQuoteToCommitment($quote, $c);
+				$alerts[$feedback->getType()][]  = $feedback->getMessage();
+            }
             break;
         default:
         	$alerts['warning'] = 'commande inconnue';
@@ -86,8 +97,21 @@ header('charset=utf-8');
 			</div>
 			<div class="form-group">
 				<label for="set_id_i">Groupe</label>
-				<input id="set_id_i" type="tet" name="set_id" class="form-control" value="<?php echo $quote->getSetId() ?>"></input>
-			</div>			
+				<input id="set_id_i" type="text" name="set_id" class="form-control" value="<?php echo $quote->getSetId() ?>"></input>
+			</div>
+			<div class="form-group">
+				<label for="commitment_id_i">Engagement lié</label>
+				<select id="commitment_id_i" name="commitment_id" class="form-control">
+					<?php
+						$valueToSelect = $manifesto->getQuoteCommitment($quote)->getId();
+						foreach ($manifesto->getCommitments() as $c) {
+							echo strcmp($c->getId(), $valueToSelect)==0 ? '<option value="'.$c->getId().'" selected>' : '<option value="'.$c->getId().'">';
+							echo htmlspecialchars($c->getTitle());
+							echo '</option>';
+						}
+					?>
+				</select>
+			</div>				
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
 		</main>
