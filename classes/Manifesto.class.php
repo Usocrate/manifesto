@@ -29,6 +29,29 @@ class Manifesto {
         return $output;
     }
     
+    public function getCommitmentQuotes(Commitment $c, $criteria = null, $sort = null) {
+        
+        $sql = 'SELECT quote.* FROM commitment_quote INNER JOIN quote ON (commitment_quote.quote_id = quote.id) WHERE commitment_quote.commitment_id=?';
+        
+        switch ($sort) {
+            case 'Oldest edition first':
+                $sql.= ' ORDER BY quote.lastedition ASC';
+                break;
+            default :
+                $sql.= ' ORDER BY commitment_quote.position ASC';
+                break;                
+        }
+
+        $statement = $this->env->getPdo()->prepare($sql);
+        $statement->execute(array($c->getId()));
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[$data['id']] = new Quote($data);
+        }
+        return $output;
+    }
+
+
     public function getQuote($id) {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM quote WHERE id = ?');
         $statement->execute(array($id));
@@ -138,6 +161,19 @@ class Manifesto {
         $statement->execute(array($q->getId()));
         return new Commitment($statement->fetch());
     }
+    
+    public function getDetachedQuotes() {
+        
+        $sql = 'SELECT quote.* FROM quote LEFT OUTER JOIN commitment_quote ON (quote.id = commitment_quote.quote_id) WHERE commitment_quote.commitment_id IS NULL';
+
+        $statement = $this->env->getPdo()->prepare($sql);
+        $statement->execute();
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[$data['id']] = new Quote($data);
+        }
+        return $output;
+    }    
 
     public function getQuoteReferences(Quote $q) {
         $statement = $this->env->getPdo()->prepare('SELECT reference.* FROM quote_reference LEFT JOIN reference ON (quote_reference.reference_id = reference.id) WHERE quote_reference.quote_id=?');

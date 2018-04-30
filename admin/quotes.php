@@ -32,6 +32,7 @@ if (isset($_REQUEST['cmd'])) {
 }
 
 $quotes = $manifesto->getQuotes(null, 'Oldest edition first');
+$detachedQuotes = $manifesto->getDetachedQuotes();
 $pattern = '[quote] #usocrate https://usocrate.fr';
 
 header('charset=utf-8');
@@ -69,7 +70,11 @@ header('charset=utf-8');
 					echo ' <small>';
 					echo '<a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a>';
 					echo '<a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a>';
-					echo '</small></h2>';
+					echo '</small>';
+					if (in_array( $q->getId(), array_keys($detachedQuotes) )) {
+						echo '<br><small><span class="badge badge-warning"><a href="quote_edit.php?id='.$q->getId().'">à associer</a></span></small>';
+					}					
+					echo '</h2>';
 					echo '<div>';
 					echo '<p>'.nl2br(htmlspecialchars($q->getComment())).'</p>';
 					echo '</div>';
@@ -82,13 +87,16 @@ header('charset=utf-8');
 					echo mb_strlen($tweet)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($tweet)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($tweet)).'</span>';
 					echo '</p>';
 					echo '</div>';
-					echo '<div><p><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small></p><div>';
-					echo '<div class="cmdbar"><a href="quotes.php?cmd=deleteQuote&id='.$q->getId().'"><i class="fa fa-trash"></i> <span>retirer</span></a></div>';
+					if(!empty($q->getLastEdition())) {
+						'<div><p><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small></p><div>';
+					}
+					echo '<div class="cmdbar">';
+					echo '<a href="quotes.php?cmd=deleteQuote&id='.$q->getId().'"><i class="fa fa-trash"></i> <span>retirer</span></a>';
+					echo '</div>';
 					echo '</li>';
 				}
 			?>
 			</ul>
-			
 			<?php echo '<div class="cmdbar"><a href="quote_edit.php"><i class="fa fa-plus"></i> <span>Nouvelle déclaration<span></a></div>' ?>
 		</main>
 		<?php echo $h->getFooterTag() ?>

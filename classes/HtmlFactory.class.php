@@ -39,7 +39,8 @@ class HtmlFactory {
 				}
 				$html.= '<div class="'.implode(' ',$classes).'">';
 				foreach ($messages as $m) {
-					$html.=  htmlspecialchars($m).'<br>';
+					//$html.=  htmlspecialchars($m).'<br>';
+					$html.=  $m.'<br>';
 				}
 				$html.= '</div>';
 			}

@@ -96,11 +96,7 @@ header('charset=utf-8');
 				<textarea id="comment_i" name="comment" class="form-control" rows="20"><?php echo htmlspecialchars($quote->getComment()) ?></textarea>
 			</div>
 			<div class="form-group">
-				<label for="set_id_i">Groupe</label>
-				<input id="set_id_i" type="text" name="set_id" class="form-control" value="<?php echo $quote->getSetId() ?>"></input>
-			</div>
-			<div class="form-group">
-				<label for="commitment_id_i">Engagement lié</label>
+				<label for="commitment_id_i">Engagement</label>
 				<select id="commitment_id_i" name="commitment_id" class="form-control">
 					<?php
 						$valueToSelect = $manifesto->getQuoteCommitment($quote)->getId();
