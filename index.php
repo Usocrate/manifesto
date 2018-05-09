@@ -16,7 +16,8 @@ if (isset($_REQUEST['extended'])) {
 $env = new Environment ( './config/host.json' );
 $h = new HtmlFactory($env);
 $m = new Manifesto($env);
-$quotes = $m->getQuotes();
+$commitments = $m->getCommitments();
+//print_r($commitments);
 
 header('charset=utf-8');
 ?>
@@ -118,14 +119,15 @@ header('charset=utf-8');
 					<div class="row">
 						<div class="col-md-6">
 							<div class="area">
-								<h4>Aller sur le terrain, aimer le réel</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[1]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[1]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '1')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -134,14 +136,15 @@ header('charset=utf-8');
 						</div>
 						<div class="col-md-6">
 							<div class="area">
-								<h4>Respecter les usagers</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[2]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[2]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '2')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -159,14 +162,15 @@ header('charset=utf-8');
 					<div class="row">
 						<div class="col-md-6">
 							<div class="area">
-								<h4>La valeur d’usage comme objectif</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[3]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[3]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '3')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -175,14 +179,15 @@ header('charset=utf-8');
 						</div>
 						<div class="col-md-6">
 							<div class="area">
-								<h4>Mesurer la qualité de l’expérience</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[4]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[4]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '4')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -198,14 +203,15 @@ header('charset=utf-8');
 					<div class="row">
 						<div class="col-md-6">
 							<div class="area">
-								<h4>Collaborer pour l'efficacité économique</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[5]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[5]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '5')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -214,14 +220,15 @@ header('charset=utf-8');
 						</div>
 						<div class="col-md-6">
 							<div class="area">
-								<h4>Collaborer pour la créativité</h4>
+								<?php
+									$quotes = $m->getCommitmentQuotes($commitments[6]);
+									echo '<h4>'.ucfirst(htmlspecialchars($commitments[6]->getTitle())).'</h4>';
+								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											if (strcmp($q->getSetId(), '6')==0) {
-												echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
-											}
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>

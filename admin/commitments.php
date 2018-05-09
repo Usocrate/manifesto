@@ -65,7 +65,7 @@ header('charset=utf-8');
 					if (count($quotes)>0) {
 						echo '<ol>';
 						foreach ($quotes as $q) {
-							echo '<li>'.htmlspecialchars($q->getContent()).'</li>';
+							echo '<li><a href="quote_edit.php?id='.$q->getId().'">'.htmlspecialchars($q->getContent()).'</a></li>';
 						}
 						echo '</ol>';
 					}

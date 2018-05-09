@@ -33,7 +33,8 @@ if (isset($_REQUEST['cmd'])) {
 				$feedback = $manifesto->attachQuoteToCommitment($quote, $c);
 				$alerts[$feedback->getType()][]  = $feedback->getMessage();
             }
-            break;
+            header('Location:./quotes.php');
+            exit;
         default:
         	$alerts['warning'] = 'commande inconnue';
     }
