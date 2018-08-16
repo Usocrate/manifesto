@@ -48,6 +48,12 @@ header('charset=utf-8');
 		<h1><?php echo htmlspecialchars($quote->getContent()) ?></h1>
 		<main>
 			<p><?php echo htmlspecialchars($quote->getComment()) ?></p>
+			<?php 
+				$tweets = $manifesto->getQuoteTweets($quote);
+				foreach ($tweets as $t) {
+					echo $t->getOEmbedHtml();
+				}
+			?>
 			<?php
 				$references = $manifesto->getQuoteReferences($quote);
 				if (count($references)>0) {
@@ -60,7 +66,7 @@ header('charset=utf-8');
 							echo ' <small>('.htmlspecialchars($r->getAuthor()).')</small>';
 						}
 						if ( strlen($r->getComment())>0 ) {
-							echo '<br>'.htmlspecialchars($r->getComment());
+							echo '<br>'.nl2br(htmlspecialchars($r->getComment()));
 						}
 						echo '</li>';
 					}
@@ -70,5 +76,7 @@ header('charset=utf-8');
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
+	
+<script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
 </body>
 </html>

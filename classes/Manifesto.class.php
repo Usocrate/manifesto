@@ -184,6 +184,16 @@ class Manifesto {
         }
         return $output;
     }
+    
+    public function getQuoteTweets(Quote $q) {
+        $statement = $this->env->getPdo()->prepare('SELECT tweet_url FROM quote_tweet WHERE quote_id=?');
+        $statement->execute(array($q->getId()));
+        $output = array();
+        foreach ($statement->fetchAll() as $data) {
+            $output[] = new Tweet($data['tweet_url']);
+        }
+        return $output;
+    }    
 
     public function getSubscriptions() {
         $statement = $this->env->getPdo()->prepare('SELECT * FROM subscription');
