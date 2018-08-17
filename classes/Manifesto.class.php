@@ -155,6 +155,13 @@ class Manifesto {
           trigger_error($e->getMessage());
         }
     }
+    
+    public function attachTweetToQuote(Tweet $t, Quote $q) {
+        $statement = $this->env->getPdo()->prepare('INSERT INTO quote_tweet SET quote_id=:q_id, tweet_url=:t_url');
+        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+        $statement->bindValue(':t_url', $t->getUrl(), PDO::PARAM_INT);
+        return $statement->execute();
+    }    
 
     public function getQuoteCommitment(Quote $q) {
         $statement = $this->env->getPdo()->prepare('SELECT commitment.* FROM commitment_quote INNER JOIN commitment ON (commitment_quote.commitment_id = commitment.id) WHERE commitment_quote.quote_id=?');

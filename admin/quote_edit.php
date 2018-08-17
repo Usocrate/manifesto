@@ -111,6 +111,13 @@ header('charset=utf-8');
 			</div>				
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
+		<div>
+		<?php
+			$tweets = $manifesto->getQuoteTweets($quote);
+			$label = count($tweets) > 0 ? count($tweets).' tweet(s)' : 'Associer un tweet';
+			echo '<a href="quote_tweets.php?quote_id='.$quote->getId().'">'.htmlspecialchars($label).'</a>';
+		?>
+		</div>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
