@@ -108,16 +108,25 @@ header('charset=utf-8');
 						}
 					?>
 				</select>
-			</div>				
+			</div>
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>
-		<div>
+		<section>
+		<p>
 		<?php
 			$tweets = $manifesto->getQuoteTweets($quote);
-			$label = count($tweets) > 0 ? count($tweets).' tweet(s)' : 'Associer un tweet';
+			if (count($tweets) > 0) {
+				$label = count($tweets).' tweet';
+				if (count($tweets) > 1) {
+					$label.= 's';
+				}
+			} else {
+				$label = 'Associer un tweet';	
+			}
 			echo '<a href="quote_tweets.php?quote_id='.$quote->getId().'">'.htmlspecialchars($label).'</a>';
 		?>
-		</div>
+		</p>
+		</section>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>

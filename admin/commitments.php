@@ -18,6 +18,28 @@ if (isset($_REQUEST['cmd'])) {
 	ToolBox::formatUserPost($_REQUEST);
 	
 	switch ($_REQUEST['cmd']) {
+		case 'quoteUp';
+			//$alerts['info'][] = 'Une déclaration à remonter';
+			if (!empty($_REQUEST['q_id']) && !empty($_REQUEST['t_id']) && !empty($_REQUEST['c_id'])) {
+				$q = $manifesto->getQuote($_REQUEST['q_id']);
+				$t = $manifesto->getQuote($_REQUEST['t_id']);					
+				$c = $manifesto->getCommitment($_REQUEST['c_id']);
+				$fb = $manifesto->placeQuoteBeforeAnotherInCommitment($q, $t, $c);
+				if (is_a($fb, 'Feedback')) {
+					$alerts[$fb->getType()][] = $fb->getMessage();
+				}
+			}
+			break;
+		case 'placeQuote';
+			if (!empty($_REQUEST['q_id']) && !empty($_REQUEST['c_id'])) {
+				$q = $manifesto->getQuote($_REQUEST['q_id']);
+				$c = $manifesto->getCommitment($_REQUEST['c_id']);
+				$fb = $manifesto->placeQuoteInCommitment($q, $c);
+				if (is_a($fb, 'Feedback')) {
+					$alerts[$fb->getType()][] = $fb->getMessage();
+				}
+			}
+			break;
         default:
         	$alerts['warning'][] = 'commande inconnue';
     }
@@ -62,11 +84,41 @@ header('charset=utf-8');
 					echo '<li>';
 					echo '<h2>'.ucfirst(htmlspecialchars($c->getTitle())).'</h2>';
 					$quotes = $manifesto->getCommitmentQuotes($c);
+					
+					$toPlace = array();
+					$placed = array();
+					
+					foreach ($quotes as $q) {
+						$p = $manifesto->getQuotePositionInCommitment($q, $c);
+						if (empty($p)) {
+							$toPlace[] = $q;
+						} else {
+							$placed[] = $q;
+						}
+					}
+					
 					if (count($quotes)>0) {
 						echo '<ol>';
-						foreach ($quotes as $q) {
-							echo '<li><a href="quote_edit.php?id='.$q->getId().'">'.htmlspecialchars($q->getContent()).'</a></li>';
+						// d'abord les déclarations déjà positionnées						
+						for ($i=0; $i<count($placed); $i++) {
+							if ($i>0) {
+								$previous = $placed[$i-1];
+							}
+							echo '<li>';
+							echo '<a href="quote_edit.php?id='.$placed[$i]->getId().'">'.htmlspecialchars($placed[$i]->getContent()).'</a>';
+							if (isset($previous)) {
+								echo ' <small><a href="'.$_SERVER['PHP_SELF'].'?cmd=quoteUp&q_id='.$placed[$i]->getId().'&t_id='.$previous->getId().'&c_id='.$c->getId().'"><i class="fa fa-arrow-alt-circle-up"></i></a></small>';
+							}
+							echo '</li>';
 						}
+						
+						// on affiche les déclarations à positionner à la fin
+						foreach ($toPlace as $q) {
+							echo '<li><a href="quote_edit.php?id='.$q->getId().'">'.htmlspecialchars($q->getContent()).'</a>';
+							echo ' <span class="badge badge-warning"><a href="'.$_SERVER['PHP_SELF'].'?cmd=placeQuote&q_id='.$q->getId().'&c_id='.$c->getId().'">à positionner</a></span>';
+							echo '</li>';
+						}
+						
 						echo '</ol>';
 					}
 					echo '</li>';

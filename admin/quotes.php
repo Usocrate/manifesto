@@ -87,6 +87,23 @@ header('charset=utf-8');
 					echo mb_strlen($tweet)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($tweet)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($tweet)).'</span>';
 					echo '</p>';
 					echo '</div>';
+					
+					// tweets
+					echo '<div>';
+					echo '<p>';
+					$tweets = $manifesto->getQuoteTweets($q);
+					if (count($tweets) > 0) {
+						$label = count($tweets).' tweet';
+						if (count($tweets) > 1) {
+							$label.= 's';
+						}
+					} else {
+						$label = 'Associer un tweet';	
+					}
+					echo '<a href="quote_tweets.php?quote_id='.$q->getId().'">'.htmlspecialchars($label).'</a>';
+					echo '</p>';
+					echo '<div>';
+					
 					if(!empty($q->getLastEdition())) {
 						'<div><p><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small></p><div>';
 					}

@@ -24,14 +24,14 @@ class Manifesto {
         $statement->execute();
         $output = array();
         foreach ($statement->fetchAll() as $data) {
-            $output[$data['id']] = new Quote($data);
+            $output[] = new Quote($data);
         }
         return $output;
     }
     
     public function getCommitmentQuotes(Commitment $c, $criteria = null, $sort = null) {
         
-        $sql = 'SELECT quote.* FROM commitment_quote INNER JOIN quote ON (commitment_quote.quote_id = quote.id) WHERE commitment_quote.commitment_id=?';
+        $sql = 'SELECT quote.*, commitment_quote.position FROM commitment_quote INNER JOIN quote ON (commitment_quote.quote_id = quote.id) WHERE commitment_quote.commitment_id=?';
         
         switch ($sort) {
             case 'Oldest edition first':
@@ -46,7 +46,11 @@ class Manifesto {
         $statement->execute(array($c->getId()));
         $output = array();
         foreach ($statement->fetchAll() as $data) {
-            $output[$data['id']] = new Quote($data);
+            $output[] = new Quote($data);
+            /*
+            $position = empty($data['position']) ? 0 : $data['position']; 
+            $output[$position] = is_array($output[$position]) ? array_push($output[$position], new Quote($data)) : new Quote($data);
+            */
         }
         return $output;
     }
@@ -57,6 +61,13 @@ class Manifesto {
         $statement->execute(array($id));
         $data = $statement->fetch();
         return new Quote($data);
+    }
+
+    public function getCommitment($id) {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM commitment WHERE id = ?');
+        $statement->execute(array($id));
+        $data = $statement->fetch();
+        return new Commitment($data);
     }
     
     public function getReferences() {
@@ -140,10 +151,15 @@ class Manifesto {
             $statement = $this->env->getPdo()->prepare('DELETE FROM commitment_quote WHERE quote_id=?');
             $statement->execute(array($q->getId()));
     
+            // on fixe la position à laquelle insérer la déclaration
+            $lastposition = $this->getMaxQuotePositionInCommitment($c);
+            $targetposition = empty($lastposition) ? 1 : ($lastposition + 1);
+            
             // on associe la déclaration à un engagement
-            $statement = $this->env->getPdo()->prepare('INSERT INTO commitment_quote SET commitment_id=:c_id, quote_id=:q_id');
+            $statement = $this->env->getPdo()->prepare('INSERT INTO commitment_quote SET commitment_id=:c_id, quote_id=:q_id, position=:=position');
             $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
             $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':position', $targetposition, PDO::PARAM_INT);
             $statement->execute();
             
             $this->env->getPdo()->commit();
@@ -151,8 +167,182 @@ class Manifesto {
             return new Feedback('La déclaration est associée à l\'engagement '.$c->getTitle().'.', 'success');
             
         } catch (Exception $e) {
-          $this->env->getPdo()->rollBack();
-          trigger_error($e->getMessage());
+            $this->env->getPdo()->rollBack();
+            trigger_error($e->getMessage());
+        }
+    }
+    
+    public function placeQuoteInCommitment(Quote $q, Commitment $c) {
+        try {
+            $position = $this->getQuotePositionInCommitment($q, $c);
+            if (empty($position)) {
+                $max = $this->getMaxQuotePositionInCommitment($c);
+        
+                $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:position WHERE commitment_id=:c_id AND quote_id=:q_id');
+                $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+                $statement->bindValue(':position', ($max+1), PDO::PARAM_INT);
+                $statement->execute();
+                
+                return new Feedback('La déclaration est ajoutée en position '.($max+1).'.', 'success');
+            } else {
+                return new Feedback('La déclaration est déjà en position '.$position.'.', 'info');
+            }
+        } catch (Exception $e) {
+            $this->env->getPdo()->rollBack();
+            trigger_error($e->getMessage());
+        }
+    }
+    
+    public function placeQuoteBeforeAnotherInCommitment(Quote $q, Quote $target, Commitment $c) {
+        try {
+            $target_position = $this->getQuotePositionInCommitment($target, $c);
+            $position = $this->getQuotePositionInCommitment($q, $c);
+            
+            if (empty($target_position)) {
+
+                if (empty($position)) {
+                    // on en profite pour fixer une position par défaut pour les deux déclarations concernées
+                    try {
+                        $this->env->getPdo()->beginTransaction();
+                        
+                        $max = $this->getMaxQuotePositionInCommitment($c);
+                        $targetposition = empty($max) ? 1 : ($max + 1);
+                        
+                        // décalage des positions des déclarations suivantes, en réservant également une place à la déclaration cible qu'on place juste derrière la déclaration
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=(position+2) WHERE commitment_id=:c_id AND position>=:position');
+                        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', $targetposition, PDO::PARAM_INT);
+                        $statement->execute();
+                        //var_dump($statement);
+                        
+                        // enregistrement de la position de la déclaration
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:position WHERE commitment_id=:c_id AND quote_id=:q_id');
+                        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', $targetposition, PDO::PARAM_INT);
+                        $statement->execute();
+                        //var_dump($statement);
+                        
+                        // enregistrement de la position de la déclaration cible
+                        $statement->bindValue(':q_id', $target->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', ($targetposition+1), PDO::PARAM_INT);
+                        $statement->execute();
+                        //var_dump($statement);
+                        
+                        $this->env->getPdo()->commit();
+                        return new Feedback('Une position par défaut pour la déclaration a été choisie ('.$targetposition.')', 'info');
+                        
+                    } catch (Exception $e) {
+                        $this->env->getPdo()->rollBack();
+                        trigger_error($e->getMessage().' ('.$e->getLine().')');
+                    }
+                } else {
+                    return new Feedback('Pas de motif de modifier la position de la déclaration.', 'info');
+                }
+                
+            } else {
+                // la position de la déclaration cible est connue
+                if (empty($position)) {
+                    try {
+                        $this->env->getPdo()->beginTransaction();
+                        
+                        // décalage des positions de la déclaration cible et suivantes
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=(position+1) WHERE commitment_id=:c_id AND position>=:position');
+                        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', $target_position, PDO::PARAM_INT);
+                        $statement->execute();
+                        
+                        // enregistrement de la position de la déclaration à la position cible
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:=position WHERE commitment_id=:c_id AND quote_id=:q_id');
+                        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', $target_position, PDO::PARAM_INT);
+                        $statement->execute();
+                        
+                        $this->env->getPdo()->commit();
+                        
+                    } catch (Exception $e) {
+                        $this->env->getPdo()->rollBack();
+                        trigger_error($e->getMessage());
+                    }
+
+                } else {
+                    // les positions des deux déclarations sont connues
+                    try {
+                        
+                        if ($position == $target_position) {
+                            throw new Exception('La déclaration et la déclaration cible sont à la même position !');
+                        }
+                        
+                        $this->env->getPdo()->beginTransaction();
+
+                        if ($position > $target_position) {
+                            // la déclaration est derrière la position cible
+                            
+                            // décalage des positions des déclarations à partir de la position cible et avant la position courante de la déclaration (+1)
+                            $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=(position+1) WHERE commitment_id=:c_id AND position>=:target_position AND position<:position');
+                            $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                            $statement->bindValue(':position', $position, PDO::PARAM_INT);
+                            $statement->bindValue(':target_position', $target_position, PDO::PARAM_INT);
+                            $statement->execute();
+                         }
+                         else {
+                            // la déclaration est devant la position cible
+                             
+                            // décalage des déclarations situées après la déclaration et avant la position cible (-1)
+                            $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=(position-1) WHERE commitment_id=:c_id AND position>:position AND position<=:target_position ');
+                            $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                            $statement->bindValue(':position', $position, PDO::PARAM_INT);
+                            $statement->bindValue(':target_position', $target_position, PDO::PARAM_INT);
+                            $statement->execute();
+                         }
+                         
+                        // dans tous les cas, enregistrement de la position de la déclaration à la position cible
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:position WHERE commitment_id=:c_id AND quote_id=:q_id');
+                        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+                        $statement->bindValue(':position', $target_position, PDO::PARAM_INT);
+                        $statement->execute();
+                         
+                        $this->env->getPdo()->commit();
+                        
+                        return new Feedback('La déclaration est repositionnée.', 'success');
+                        
+                    } catch (Exception $e) {
+                        $this->env->getPdo()->rollBack();
+                        trigger_error($e->getMessage());
+                    }
+                }
+            }
+
+        } catch (Exception $e) {
+            trigger_error($e->getMessage());
+        }        
+    }
+
+    public function getMaxQuotePositionInCommitment(Commitment $c) {
+        try {
+            $statement = $this->env->getPdo()->prepare('SELECT MAX(position) FROM commitment_quote WHERE commitment_id=:c_id GROUP BY commitment_id');
+            $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+            $statement->execute();
+            $result = $statement->fetchColumn();
+            return $result !== false ? $result : null;
+        } catch (Exception $e) {
+            trigger_error($e->getMessage());
+        }
+    }
+    
+    public function getQuotePositionInCommitment(Quote $q, Commitment $c) {
+        try {
+            $statement = $this->env->getPdo()->prepare('SELECT position FROM commitment_quote WHERE quote_id=:q_id AND commitment_id=:c_id');
+            $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+            $statement->execute();
+            $result = $statement->fetchColumn();
+            return $result !== false ? $result : null;
+        } catch (Exception $e) {
+            trigger_error($e->getMessage());
         }
     }
     
@@ -160,7 +350,7 @@ class Manifesto {
         $statement = $this->env->getPdo()->prepare('INSERT INTO quote_tweet SET quote_id=:q_id, tweet_url=:t_url');
         $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
         $statement->bindValue(':t_url', $t->getUrl(), PDO::PARAM_INT);
-        return $statement->execute();
+        return $statement->execute()? new Feedback('Le tweet est associé') : new Feedback('Le tweet n\'a pu être associé', 'warning');
     }    
 
     public function getQuoteCommitment(Quote $q) {

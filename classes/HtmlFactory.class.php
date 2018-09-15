@@ -34,6 +34,9 @@ class HtmlFactory {
 					case 'warning' :
 						$classes[] = 'alert-warning';
 						break;
+					case 'danger' :
+						$classes[] = 'alert-danger';
+						break;						
 					default :
 						$classes[] = 'alert-info';
 				}
