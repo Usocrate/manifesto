@@ -152,11 +152,11 @@ class Manifesto {
             $statement->execute(array($q->getId()));
     
             // on fixe la position à laquelle insérer la déclaration
-            $lastposition = $this->getMaxQuotePositionInCommitment($c);
-            $targetposition = empty($lastposition) ? 1 : ($lastposition + 1);
+            $max = $this->getMaxQuotePositionInCommitment($c);
+            $targetposition = empty($max) ? 1 : ($max+1);
             
             // on associe la déclaration à un engagement
-            $statement = $this->env->getPdo()->prepare('INSERT INTO commitment_quote SET commitment_id=:c_id, quote_id=:q_id, position=:=position');
+            $statement = $this->env->getPdo()->prepare('INSERT INTO commitment_quote SET commitment_id=:c_id, quote_id=:q_id, position=:position');
             $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
             $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
             $statement->bindValue(':position', $targetposition, PDO::PARAM_INT);
@@ -254,7 +254,7 @@ class Manifesto {
                         $statement->execute();
                         
                         // enregistrement de la position de la déclaration à la position cible
-                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:=position WHERE commitment_id=:c_id AND quote_id=:q_id');
+                        $statement = $this->env->getPdo()->prepare('UPDATE commitment_quote SET position=:position WHERE commitment_id=:c_id AND quote_id=:q_id');
                         $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
                         $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
                         $statement->bindValue(':position', $target_position, PDO::PARAM_INT);
