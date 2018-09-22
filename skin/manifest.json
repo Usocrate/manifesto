@@ -1,0 +1,17 @@
+{
+    "name": "Usocrate",
+    "icons": [
+        {
+            "src": "https:\/\/usocrate.fr\/skin\/images\/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image\/png"
+        },
+        {
+            "src": "https:\/\/usocrate.fr\/skin\/images\/android-chrome-256x256.png",
+            "sizes": "256x256",
+            "type": "image\/png"
+        }
+    ],
+    "theme_color": "#0098b6",
+    "display": "standalone"
+}

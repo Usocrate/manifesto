@@ -31,6 +31,7 @@ header('charset=utf-8');
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="skin/home.css" />
+	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
 </head>
 <body id="manifesto-doc">
 	<div class="container">
@@ -40,7 +41,7 @@ header('charset=utf-8');
 				<h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1>
 				<p>
 					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
-					Sa pratique transforme en profondeur les relations interpersonnelles, les rapports de production et la manière dont nous nous représentons le monde.</p>
+					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
 				<p>
 					Le constat est simple: les modes de production industriels anciens ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.

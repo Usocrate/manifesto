@@ -121,6 +121,22 @@ class Environment {
             return false;
         }
     }
+    
+    public function getHtmlHeadTagsForFavicon() {
+		$output = array();
+		$output[] = '<link rel="icon" type="image/png" sizes="32x32" href="'.$this->getSkinUrl().'/images/favicon-32x32.png">';
+		$output[] = '<link rel="icon" type="image/png" sizes="16x16" href="'.$this->getSkinUrl().'/images/favicon-16x16.png">';
+		$output[] = '<link rel="manifest" href="'.$this->getSkinUrl().'/manifest.json">';
+		$output[] = '<meta name="application-name" content="'.ToolBox::toHtml( $this->getProjectName() ).'">';
+		$output[] = '<meta name="theme-color" content="#0098b6">';
+		return $output;
+	}
+	
+	public function writeHtmlHeadTagsForFavicon() {
+		foreach ($this->getHtmlHeadTagsForFavicon() as $tag) {
+			echo $tag;
+		}
+	}
 
     public function getProjectName() {
         return $this->project_name;
@@ -137,6 +153,10 @@ class Environment {
     public function getProjectUrl() {
         return $this->project_url;
     }
+    
+    public function getSkinUrl() {
+        return $this->project_url.'/skin';
+    }    
 
     public function getProjectLaunchYear() {
         return $this->project_launch_year;
@@ -148,6 +168,6 @@ class Environment {
     
     public function hasGoogleAnalyticsKey() {
         return ! empty($this->ga_key);
-    }    
+    }
 }
 ?>
