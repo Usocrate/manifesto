@@ -128,7 +128,7 @@ class Environment {
 		$output[] = '<link rel="icon" type="image/png" sizes="16x16" href="'.$this->getSkinUrl().'/images/favicon-16x16.png">';
 		$output[] = '<link rel="manifest" href="'.$this->getSkinUrl().'/manifest.json">';
 		$output[] = '<meta name="application-name" content="'.ToolBox::toHtml( $this->getProjectName() ).'">';
-		$output[] = '<meta name="theme-color" content="#0098b6">';
+		$output[] = '<meta name="theme-color" content="#079bb8">';
 		return $output;
 	}
 	
