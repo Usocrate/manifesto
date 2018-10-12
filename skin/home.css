@@ -199,12 +199,18 @@ footer {
 		border-top: 0;
 	}
 	
+	.jumbotron h1 {
+		padding-top: 80px;
+		padding-left: 1em;
+		text-align: left;
+	}
+	
 	#manifesto-doc main {
 		padding : 0 1em;
 	}
 
-	#manifesto-doc h1, #manifesto-doc h2, #manifesto-doc h3 {
-		text-align: center;	
+	#manifesto-doc h2, #manifesto-doc h3 {
+		text-align: center;
 	}
 
 	#intro, #method {
@@ -215,7 +221,7 @@ footer {
 	
 	#intro {
 		padding:2em 2em 0 2em;
-		margin-top:-250px;
+		margin-top:-270px;
 		margin-bottom: 4em;
 		background-color:#fff;
 		border-style: dashed;

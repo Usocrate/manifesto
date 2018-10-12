@@ -35,10 +35,9 @@ header('charset=utf-8');
 </head>
 <body id="manifesto-doc">
 	<div class="container">
-		<div class="jumbotron"></div>
+		<div class="jumbotron"><h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1></div>
 		<main>
 			<section id="intro">
-				<h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1>
 				<p>
 					Le numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
