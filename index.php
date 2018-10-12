@@ -43,8 +43,8 @@ header('charset=utf-8');
 					Le numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Si les usages du numérique sont largement étudiés et commentés, la façon dont sont produits ces services numériques qui occupent nos vies est plus rarement abordée.<br>
-					Avant d'être consommés, ces services sont d'abord produits.<br>
+					Si les usages du numérique sont largement étudiés et commentés, les conditions dans lesquelles sont construites ces applications qui occupent nos vies est plus rarement abordée.<br>
+					C'est pourtant là que tout se décide.<br>
 					Et le constat est simple : les modes de production industriels anciens, loin des enjeux collectifs et individuels de la transformation actuelle, sont encore très ancrés.<br>
 				</p>
 				<p>
