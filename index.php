@@ -40,14 +40,14 @@ header('charset=utf-8');
 			<section id="intro">
 				<h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1>
 				<p>
-					Le numérique est le moteur d’une révolution sociale qui dépasse les problématiques technologiques.<br>
+					Le numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Le constat est simple: les modes de production industriels anciens ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
+					Le constat est simple : les modes de production industriels anciens ne sont plus à la mesure des enjeux collectifs et individuels de cette transformation.<br>
 					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.
 				</p>
 				<p>
-					Pour ceux qui portent une démarche de conception centrée sur l’humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
+					Pour ceux qui portent une démarche de conception centrée sur l'humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
 				</p>
 				<p>
 					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans la conception de services numériques; pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
@@ -82,7 +82,7 @@ header('charset=utf-8');
 							<h3>Humaniste</h3>
 							<ul>
 								<li><strong>Améliorer la vie des gens</strong>, impacter notamment leurs conditions de travail en construisant des outils numériques adaptés, efficaces et libérant les potentiels individuels.</li>
-								<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong>, refuser d’en faire un vecteur d’aliénation et de déshumanisation.</li>
+								<li>Mettre le numérique <strong>au service de l'intelligence humaine</strong>, refuser d’en faire un instrument d’aliénation et de déshumanisation.</li>
 								<li>Veiller à ce que les services développés soient accessibles et utilisables par tous pour <strong>une société numérique inclusive</strong>.</li>
 							</ul>
 							<p>
@@ -101,7 +101,7 @@ header('charset=utf-8');
 									Il s'agit de garantir l'<strong>utilité</strong>, l'<strong>utilisabilité</strong> et l'<strong>attractivité</strong> de notre production numérique.
 								</li>
 								<li>Penser "valeur d'usage" permet de <strong>rationaliser les politiques d'investissements</strong> et d'<strong>assurer la viabilité des produits développés</strong> qu’ils le soient dans un esprit de service public ou pour le secteur marchand.</li>
-								<li>Etre à l'écoute des usagers est <strong>le meilleur axe d’innovation</strong> pour les entreprises en ne les condamnant pas à copier leurs concurrents à moindre coût.</li>
+								<li>La <strong>proximité avec les usagers</strong> permet de découvrir des <strong>opportunités d'innover</strong>. Les entreprises ne sont plus condamnées à copier leurs concurrents à moindre coût.</li>
 							</ul>
 							<p>
 								<span class="badge badge-pill badge-default">Créativité</span> 
