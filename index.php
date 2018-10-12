@@ -38,6 +38,7 @@ header('charset=utf-8');
 		<div class="jumbotron"><h1>Manifeste <span class="badge badge-info" style="display:none">beta</span><br><small>Pour une usocratie numérique</small></h1></div>
 		<main>
 			<section id="intro">
+				<div class="goahead"><i class="fas fa-angle-down"></i><i class="fas fa-angle-down"></i><i class="fas fa-angle-down"></i></div>
 				<p>
 					Le numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
@@ -309,5 +310,6 @@ header('charset=utf-8');
 			});
 		});
 	</script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

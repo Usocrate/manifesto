@@ -84,6 +84,7 @@ h3 {
 	color:#fff;
 	font-size: 1em;
 	padding:.4em;
+	border-radius:.3rem;
 }
 
 h4 {
@@ -103,6 +104,7 @@ dl {
 	background-color:#dfdfdf;
 	margin:0;
 	padding:1em;
+	border-radius:.3rem;
 }
 
 dt {
@@ -157,6 +159,16 @@ footer {
 	margin: 1em 0;
 }
 
+#intro .goahead {
+	text-align:center;
+	padding:1em;
+	display:none;
+}
+
+#intro .goahead svg {
+	color: #C9462C;
+}
+	
 .subscriptionCard {
 	border: 3px dashed #dfdfdf;
 	padding:1em;
@@ -191,12 +203,18 @@ footer {
 	dl {
 		height:250px;
 	}
+	
+	.container, .container-fluid {
+		padding-top: 0;
+	}
 
 	.jumbotron {
 		background-image: url('images/relaxUser_1110x740.png') !important;
 		margin-bottom:2em;
 		height:740px;
 		border-top: 0;
+		border-top-left-radius:0;
+		border-top-right-radius:0;
 	}
 	
 	.jumbotron h1 {
@@ -220,7 +238,7 @@ footer {
 	}
 	
 	#intro {
-		padding:2em 2em 0 2em;
+		padding:0 2em;
 		margin-top:-270px;
 		margin-bottom: 4em;
 		background-color:#fff;
@@ -228,6 +246,11 @@ footer {
 		border-color: #dfdfdf;
 		border-width: 3px 3px 0 3px;
 	}
+	
+	#intro .goahead {
+		display:block;
+	}
+	
 	
 	#method {
 		text-align:center;
