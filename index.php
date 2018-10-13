@@ -90,7 +90,7 @@ header('charset=utf-8');
 							<p>
 								<span class="badge badge-pill badge-default">Utilité</span>
 								<span class="badge badge-pill badge-default">Progrès</span>
-								<span class="badge badge-pill badge-default">Ethique</span>
+								<span class="badge badge-pill badge-default">Encapacitation</span>
 							</p>
 						</div>
 					</div>
