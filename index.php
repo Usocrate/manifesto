@@ -39,7 +39,7 @@ header('charset=utf-8');
 		<main>
 			<section id="intro">
 				<p>
-					Le numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
+					<span class="firstLetter">L</span>e numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
 				<p>
 					Si les usages du numérique sont largement étudiés et commentés, les conditions dans lesquelles sont construites ces applications qui occupent nos vies sont plus rarement abordées.<br>

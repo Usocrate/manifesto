@@ -228,8 +228,8 @@ footer {
 	}
 	
 	#intro {
-		padding:1em 2em 0.6em 2em;
-		margin-top:-270px;
+		padding:2em 2em 0.6em 2em;
+		margin-top:-280px;
 		margin-bottom: 2em;
 		background-color:#fff;
 		border-style: dashed;
@@ -237,8 +237,19 @@ footer {
 		border-width: 3px 3px 0 3px;
 	}
 	
-	#intro .goahead {
+	#intro P .firstLetter {
+		font-family:'Sigmar one';
+		font-size: 6em;
+		width:1em;
+		height:1em;
+		line-height:100%;
 		display:block;
+		float:left;
+		vertical-align:middle;
+		text-align:center;
+		margin: -.1em .1em .1em -.1em;
+		padding:0;
+		color:#0098B6;
 	}
 	
 	
