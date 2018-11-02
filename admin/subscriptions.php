@@ -41,7 +41,7 @@ header('charset=utf-8');
 			<?php
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {
-				echo '<h2>'.htmlspecialchars($s[usocrate_id]);
+				echo '<h2>'.htmlspecialchars($s[id]);
 				if (!empty($s[mail])) echo ' <small>('.htmlspecialchars($s[mail]).')</small>';
 				echo '</h2>';
 				echo '<p>Usocrate depuis le '.$s[timestamp].'</p>';
