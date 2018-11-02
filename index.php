@@ -253,12 +253,12 @@ header('charset=utf-8');
 								</ul>
 					            <form id="subscription_form">
 					            	<div class="form-group ">
-										<label for="id_i">Je me présente</label>
-										<input type="text" id="id_i" name="id" class="form-control input-lg" placeholder="un profil Twitter, LinkedIn,...">
+										<label for="introduction_i">Je me présente</label>
+										<textarea type="text" id="introduction_i" name="introduction" class="form-control input-lg" placeholder="un profil Twitter ou LinkedIn, peut-être ?" rows="3"></textarea>
 				                  	</div>
 									<div class="form-group ">
-										<label for="mail_i">Un email ?</label>
-										<input type="email" id="mail_i" name="mail" class="form-control input-lg" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr">
+										<label for="email_i">Un email ?</label>
+										<input type="email" id="email_i" name="email" class="form-control input-lg" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr">
 						            </div>
 						            <input name="cmd" value="registerSubscription" type="hidden">
 						            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>
@@ -289,7 +289,7 @@ header('charset=utf-8');
 				e.preventDefault();
 				
 				<?php if ($env->hasGoogleAnalyticsKey()): ?>
-					ga('send', 'event', {'eventCategory':'engagement','eventAction':'souscription','eventLabel':'nouvel usocrate','eventValue':$("#id_i").val()});
+					ga('send', 'event', {'eventCategory':'engagement','eventAction':'souscription','eventLabel':'nouvel usocrate','eventValue':$("#introduction_i").val()});
 				<?php endif; ?>
 				
 				$.ajax({

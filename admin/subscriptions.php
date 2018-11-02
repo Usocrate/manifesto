@@ -10,6 +10,22 @@ function __autoload($class_name) {
 $env = new Environment ( '../config/host.json' );
 $h = new HtmlFactory($env);
 $m = new Manifesto($env);
+
+if (isset($_POST['cmd'])) {
+	
+	ToolBox::formatUserPost($_POST);
+	
+	switch ($_POST['cmd']) {
+	    case 'registerSubscription' :
+	    	// enregistrement des données de la souscription
+	    	$feedback = $m->registerSubscription(new Subscription($_POST));
+	        $alerts[$feedback->getType()][]  = $feedback->getMessage();
+	        break;
+	    default:
+	    	$alerts['warning'] = 'commande inconnue';
+	}	
+}
+
 $subscriptions = $m->getSubscriptions();
 
 header('charset=utf-8');
@@ -39,29 +55,23 @@ header('charset=utf-8');
 		</header>
 		<main>
 			<?php
+			if (isset($alerts)) {
+				echo $h->getAlertsTag($alerts);
+			}
+			
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {
-				echo '<h2>'.htmlspecialchars($s[id]);
-				if (!empty($s[mail])) echo ' <small>('.htmlspecialchars($s[mail]).')</small>';
+				echo '<h2>Matricule n°'.htmlspecialchars($s[id]);
+				if (!empty($s[email])) echo ' <small>('.htmlspecialchars($s[email]).')</small>';
 				echo '</h2>';
+				echo '<p>'.htmlspecialchars($s[introduction]).'</p>';
 				echo '<p>Usocrate depuis le '.$s[timestamp].'</p>';
+				echo '<p><a href="subscription_edit.php?id='.urlencode($s['id']).'">Editer</a></p>';
 			}
 			?>
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
-	
-	<?php if ($env->hasGoogleAnalyticsKey()): ?>
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-	  ga('create', '<?php echo $env->getGoogleAnalyticsKey() ?>', 'auto');
-	  ga('send', 'pageview');
-	</script>
-	<?php endif; ?>
-	
 	<script>$(document).ready(function(){});</script>
 </body>
 </html>

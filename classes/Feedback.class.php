@@ -33,4 +33,8 @@ class Feedback {
     public function getDatum($key) {
         return isset($this->data[$key]) ? $this->data[$key] : null;
     }
+    
+    public function toJson() {
+        return json_encode($this);
+    }
 }

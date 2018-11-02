@@ -21,12 +21,13 @@ if (isset($_POST['cmd'])) {
     
     switch ($_POST['cmd']) {
         case 'registerSubscription' :
-            $output  = $m->registerSubscription($_POST['id'],$_POST['mail']);
+            $feedback  = $m->registerSubscription(new Subscription($_POST));
+            $output = array();
+            $output['type'] = $feedback->getType();
+            $output['message'] = $feedback->getMessage();
             break;
         case 'registerReference' :
-        	$reference = new Reference($_POST);
-            $feedback  = $m->registerReference($reference);
-            $output = $feedback->getMessage();
+            $feedback  = $m->registerReference(new Reference($_POST));
             break;            
     }
 }

@@ -397,6 +397,13 @@ class Manifesto {
         $statement->execute();
         return $statement->fetchAll();
     }
+    
+    public function getSubscription($id) {
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM subscription WHERE id = ?');
+        $statement->execute(array($id));
+        $data = $statement->fetch();
+        return new Subscription($data);
+    }
 
     public function registerReference(Reference $r) {
         //print_r($r);
@@ -415,7 +422,7 @@ class Manifesto {
         } else {
             return new Feedback('Référence "'.$r->getTitle().'" non enregistrée', 'warning');
         }
-    }    
+    }
 
     public function registerQuote(Quote $q) {
         //print_r($r);
@@ -446,15 +453,28 @@ class Manifesto {
             return new Feedback('la déclaration n\'a pu être supprimée', 'warning');
         }
     }
-    
-    public function registerSubscription($id) {
-        $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
-        $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);
-        $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
-        if ($statement->execute()) {
-            $output['success'] = true;
-            $output['message'] = 'Bienvenue camarade usocrate.';
+
+    public function registerSubscription(Subscription $s) {
+        if ($s->hasId()) {
+            $statement = $this->env->getPdo()->prepare('UPDATE subscription SET introduction=:introduction, email=:email, timestamp=:timestamp WHERE id=:id');
+            $statement->bindValue(':id', $s->getId(), PDO::PARAM_STR);
+        } else {
+            $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET introduction=:introduction, email=:email, timestamp=:timestamp');   
         }
-        return $output;
-    }
+        if ($s->hasId()) {
+            $statement->bindValue(':id', $s->getId(), PDO::PARAM_INT);
+        }
+        $statement->bindValue(':introduction', $s->getIntroduction(), PDO::PARAM_STR);
+        $statement->bindValue(':email', $s->getEmail(), PDO::PARAM_STR);
+        $statement->bindValue(':timestamp', $s->getTimestamp(), PDO::PARAM_STR);
+        if ($statement->execute()) {
+            if (!$s->hasId()) {
+                $s->setId($this->env->getPdo()->lastInsertId());
+                return new Feedback('Bienvenue camarade usocrate.', 'success', array('registredSubscription' => $s));
+            }
+            return new Feedback('Souscription enregistrée.', 'success', array('registredSubscription' => $s));
+        } else {
+            return new Feedback('Echec de l\'enregistrement.', 'error', array('unregistredSubscription' => $s));
+        }
+    }        
 }
