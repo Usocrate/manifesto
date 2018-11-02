@@ -448,7 +448,7 @@ class Manifesto {
     }
     
     public function registerSubscription($id) {
-        $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET usocrate_id=:id, mail=:mail');
+        $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET id=:id, mail=:mail');
         $statement->bindValue(':id', $_POST['id'], PDO::PARAM_STR);
         $statement->bindValue(':mail', $_POST['mail'], PDO::PARAM_STR);
         if ($statement->execute()) {
