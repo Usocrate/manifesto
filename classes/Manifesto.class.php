@@ -393,7 +393,7 @@ class Manifesto {
     }    
 
     public function getSubscriptions() {
-        $statement = $this->env->getPdo()->prepare('SELECT * FROM subscription ORDER BY timestamp DESC');
+        $statement = $this->env->getPdo()->prepare('SELECT * FROM subscription ORDER BY id DESC');
         $statement->execute();
         return $statement->fetchAll();
     }
