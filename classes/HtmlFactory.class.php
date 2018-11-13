@@ -12,9 +12,9 @@ class HtmlFactory {
     
     public function getFooterTag() {
         $tags = array();
-        $tags['brand'] = '<a href="'.$this->env->getProjectUrl().'"><span class="brand">'.htmlspecialchars($this->env->getProjectName()).'</span></a>';
-        $tags['launchYear'] = htmlspecialchars($this->env->getProjectLaunchYear());
-        $tags['punchline'] = htmlspecialchars($this->env->getProjectPunchline());
+        $tags['brand'] = '<a href="'.$this->env->getProjectUrl().'"><span class="brand">'.ToolBox::toHtml($this->env->getProjectName()).'</span></a>';
+        $tags['launchYear'] = ToolBox::toHtml($this->env->getProjectLaunchYear());
+        $tags['punchline'] = ToolBox::toHtml($this->env->getProjectPunchline());
         if (isset($_SESSION['extended'])) {
             $tags['admin'] = '<a href="'.$this->env->getProjectUrl().'/admin">Admin</a>';
         }
@@ -42,7 +42,6 @@ class HtmlFactory {
 				}
 				$html.= '<div class="'.implode(' ',$classes).'">';
 				foreach ($messages as $m) {
-					//$html.=  htmlspecialchars($m).'<br>';
 					$html.=  $m.'<br>';
 				}
 				$html.= '</div>';

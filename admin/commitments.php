@@ -58,8 +58,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="../skin/home.css" rel="stylesheet" type="text/css">
@@ -83,7 +83,7 @@ header('charset=utf-8');
 			<?php 
 				foreach ($commitments as $c) {
 					echo '<li>';
-					echo '<h2>'.ucfirst(htmlspecialchars($c->getTitle())).'</h2>';
+					echo '<h2>'.ucfirst(ToolBox::toHtml($c->getTitle())).'</h2>';
 					$quotes = $manifesto->getCommitmentQuotes($c);
 					
 					$toPlace = array();
@@ -106,7 +106,7 @@ header('charset=utf-8');
 								$previous = $placed[$i-1];
 							}
 							echo '<li>';
-							echo '<a href="quote_edit.php?id='.$placed[$i]->getId().'">'.htmlspecialchars($placed[$i]->getContent()).'</a>';
+							echo '<a href="quote_edit.php?id='.$placed[$i]->getId().'">'.ToolBox::toHtml($placed[$i]->getContent()).'</a>';
 							if (isset($previous)) {
 								echo ' <small><a href="'.$_SERVER['PHP_SELF'].'?cmd=quoteUp&q_id='.$placed[$i]->getId().'&t_id='.$previous->getId().'&c_id='.$c->getId().'"><i class="fa fa-arrow-alt-circle-up"></i></a></small>';
 							}
@@ -115,7 +115,7 @@ header('charset=utf-8');
 						
 						// on affiche les déclarations à positionner à la fin
 						foreach ($toPlace as $q) {
-							echo '<li><a href="quote_edit.php?id='.$q->getId().'">'.htmlspecialchars($q->getContent()).'</a>';
+							echo '<li><a href="quote_edit.php?id='.$q->getId().'">'.ToolBox::toHtml($q->getContent()).'</a>';
 							echo ' <span class="badge badge-warning"><a href="'.$_SERVER['PHP_SELF'].'?cmd=placeQuote&q_id='.$q->getId().'&c_id='.$c->getId().'">à positionner</a></span>';
 							echo '</li>';
 						}

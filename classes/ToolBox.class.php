@@ -2,7 +2,7 @@
 class ToolBox {
     
 	public static function toHtml($input) {
-		return htmlentities($input, ENT_HTML5);
+		return nl2br( htmlentities($input, ENT_HTML5) );
 	}
 	
 	public static function formatUserPost($input) {

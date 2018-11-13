@@ -35,8 +35,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="../skin/home.css" rel="stylesheet" type="text/css">
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -61,10 +61,10 @@ header('charset=utf-8');
 			
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {
-				echo '<h2>Matricule n°'.htmlspecialchars($s[id]);
-				if (!empty($s[email])) echo ' <small>('.htmlspecialchars($s[email]).')</small>';
+				echo '<h2>Matricule n°'.ToolBox::toHtml($s[id]);
+				if (!empty($s[email])) echo ' <small>('.ToolBox::toHtml($s[email]).')</small>';
 				echo '</h2>';
-				echo '<p>'.htmlspecialchars($s[introduction]).'</p>';
+				echo '<p>'.ToolBox::toHtml($s[introduction]).'</p>';
 				echo '<p>Usocrate depuis le '.$s[timestamp].'</p>';
 				echo '<p><a href="subscription_edit.php?id='.urlencode($s['id']).'">Editer</a></p>';
 			}

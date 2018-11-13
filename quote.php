@@ -29,8 +29,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($quote->getContent()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($quote->getContent()) ?></title>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -43,12 +43,12 @@ header('charset=utf-8');
 		<nav aria-label="breadcrumb" role="navigation">
 		  <ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="index.php">Manifesto</a></li>
-		    <li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($quote->getContent()) ?></li>
+		    <li class="breadcrumb-item active" aria-current="page"><?php echo ToolBox::toHtml($quote->getContent()) ?></li>
 		  </ol>
 		</nav>
-		<h1><?php echo htmlspecialchars($quote->getContent()) ?></h1>
+		<h1><?php echo ToolBox::toHtml($quote->getContent()) ?></h1>
 		<main>
-			<p><?php echo htmlspecialchars($quote->getComment()) ?></p>
+			<p><?php echo ToolBox::toHtml($quote->getComment()) ?></p>
 			<?php 
 				$tweets = $manifesto->getQuoteTweets($quote);
 				foreach ($tweets as $t) {
@@ -62,12 +62,12 @@ header('charset=utf-8');
 					echo '<ul>';
 					foreach ($references as $r) {
 						echo '<li>';
-						echo '<a href="'.$r->getUrl().'" target="_blank"><strong>'.htmlspecialchars($r->getTitle()).'</strong></a>';
+						echo '<a href="'.$r->getUrl().'" target="_blank"><strong>'.ToolBox::toHtml($r->getTitle()).'</strong></a>';
 						if ( strlen($r->getAuthor()) > 0 ) {
-							echo ' <small>('.htmlspecialchars($r->getAuthor()).')</small>';
+							echo ' <small>('.ToolBox::toHtml($r->getAuthor()).')</small>';
 						}
 						if ( strlen($r->getComment())>0 ) {
-							echo '<br>'.nl2br(htmlspecialchars($r->getComment()));
+							echo '<br>'.ToolBox::toHtml($r->getComment());
 						}
 						echo '</li>';
 					}

@@ -58,8 +58,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -72,12 +72,12 @@ header('charset=utf-8');
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
 					<li class="breadcrumb-item"><a href="quotes.php">Les déclarations</a></li>
-					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo ToolBox::toHtml($doc_title) ?></li>
 				</ol>
 			</nav>
 			<h1>
 				<?php
-					echo htmlspecialchars($doc_title);
+					echo ToolBox::toHtml($doc_title);
 					if ($quote->hasId()) {
 						echo ' <small><a href="../quote.php?id='.$quote->getId().'"><i class="fa fa-eye"></i></a></small>';
 					}
@@ -91,11 +91,11 @@ header('charset=utf-8');
 			<input type="hidden" name="id" value="<?php echo $quote->getId() ?>" />
 			<div class="form-group">
 				<label for="content_i">Contenu</label>
-				<textarea id="content_i" name="content" class="form-control" cols="140" rows="1"><?php echo htmlspecialchars($quote->getContent()) ?></textarea>
+				<textarea id="content_i" name="content" class="form-control" cols="140" rows="1"><?php echo $quote->getContent() ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="comment_i">Commentaire</label>
-				<textarea id="comment_i" name="comment" class="form-control" rows="20"><?php echo htmlspecialchars($quote->getComment()) ?></textarea>
+				<textarea id="comment_i" name="comment" class="form-control" rows="20"><?php echo $quote->getComment() ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="commitment_id_i">Engagement</label>
@@ -104,7 +104,7 @@ header('charset=utf-8');
 						$valueToSelect = $manifesto->getQuoteCommitment($quote)->getId();
 						foreach ($manifesto->getCommitments() as $c) {
 							echo strcmp($c->getId(), $valueToSelect)==0 ? '<option value="'.$c->getId().'" selected>' : '<option value="'.$c->getId().'">';
-							echo htmlspecialchars($c->getTitle());
+							echo ToolBox::toHtml($c->getTitle());
 							echo '</option>';
 						}
 					?>
@@ -124,7 +124,7 @@ header('charset=utf-8');
 			} else {
 				$label = 'Associer un tweet';	
 			}
-			echo '<a href="quote_tweets.php?quote_id='.$quote->getId().'">'.htmlspecialchars($label).'</a>';
+			echo '<a href="quote_tweets.php?quote_id='.$quote->getId().'">'.ToolBox::toHtml($label).'</a>';
 		?>
 		</p>
 		</section>

@@ -47,8 +47,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -61,10 +61,10 @@ header('charset=utf-8');
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
 					<li class="breadcrumb-item"><a href="subscriptions.php">Les souscriptions</a></li>
-					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($doc_title) ?></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo ToolBox::toHtml($doc_title) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlspecialchars($doc_title) ?></h1>
+			<h1><?php echo ToolBox::toHtml($doc_title) ?></h1>
 		</header>
 		<main>
 		<?php echo $h->getAlertsTag($alerts) ?>
@@ -73,15 +73,15 @@ header('charset=utf-8');
 			<input type="hidden" name="id" value="<?php echo $subscription->getId() ?>" />
 			<div class="form-group">
 				<label for="introduction_i">Introduction du souscripteur</label>
-				<textarea id="introduction_i" name="introduction" class="form-control" cols="140" rows="3"><?php echo htmlspecialchars($subscription->getIntroduction()) ?></textarea>
+				<textarea id="introduction_i" name="introduction" class="form-control" cols="140" rows="3"><?php echo $subscription->getIntroduction() ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="email_i">Email</label>
-				<input type="email" id="email_i" name="email" class="form-control" rows="140" value="<?php echo htmlspecialchars($subscription->getEmail()) ?>"></input>
+				<input type="email" id="email_i" name="email" class="form-control" rows="140" value="<?php echo ToolBox::toHtml($subscription->getEmail()) ?>"></input>
 			</div>
 			<div class="form-group">
 				<label for="timestamp_i">Timestamp</label>
-				<input type="text" id="timestamp_i" name="timestamp" class="form-control" rows="140" value="<?php echo htmlspecialchars($subscription->getTimestamp()) ?>"></input>
+				<input type="text" id="timestamp_i" name="timestamp" class="form-control" rows="140" value="<?php echo ToolBox::toHtml($subscription->getTimestamp()) ?>"></input>
 			</div>			
 			<button type="submit" class="btn btn-primary">Enregistrer</button>
 		</form>

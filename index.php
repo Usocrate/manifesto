@@ -26,8 +26,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="skin/home.css" />
@@ -123,13 +123,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[1]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[1]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[1]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -140,13 +140,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[2]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[2]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[2]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -166,13 +166,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[3]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[3]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[3]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -183,13 +183,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[4]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[4]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[4]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -207,13 +207,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[5]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[5]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[5]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>
@@ -224,13 +224,13 @@ header('charset=utf-8');
 							<div class="area">
 								<?php
 									$quotes = $m->getCommitmentQuotes($commitments[6]);
-									echo '<h4>'.ucfirst(htmlspecialchars($commitments[6]->getTitle())).'</h4>';
+									echo '<h4>'.ucfirst(ToolBox::toHtml($commitments[6]->getTitle())).'</h4>';
 								?>								
 								<p>Moi <span class="brand">usocrate</span>...</p>
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>' : '<li>'.ucfirst(htmlspecialchars($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
 										}
 									?>
 								</ul>

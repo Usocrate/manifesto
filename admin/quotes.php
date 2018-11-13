@@ -42,8 +42,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="../skin/home.css" rel="stylesheet" type="text/css">
@@ -67,7 +67,7 @@ header('charset=utf-8');
 			<?php 
 				foreach ($quotes as $q) {
 					echo '<li>';
-					echo '<h2>'.ucfirst(htmlspecialchars($q->getContent()));
+					echo '<h2>'.ucfirst(ToolBox::toHtml($q->getContent()));
 					echo ' <small>';
 					echo '<a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a>';
 					echo '<a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a>';
@@ -77,14 +77,14 @@ header('charset=utf-8');
 					}					
 					echo '</h2>';
 					echo '<div>';
-					echo '<p>'.nl2br(htmlspecialchars($q->getComment())).'</p>';
+					echo '<p>'.ToolBox::toHtml($q->getComment()).'</p>';
 					echo '</div>';
 					echo '<div>';
 					$tweet = mb_eregi_replace('\[quote\]', $q->getContent(), $pattern);
 					echo '<p>';
 					echo '<i class="fab fa-twitter" style="color:#1da1f2"></i> ';
 					echo '<small>';
-					echo ucfirst(htmlspecialchars($tweet)).'</small>';
+					echo ucfirst(ToolBox::toHtml($tweet)).'</small>';
 					echo mb_strlen($tweet)>140 ? ' <span class="badge badge-danger">+'.(mb_strlen($tweet)-140).'</span>':' <span class="badge badge-success">-'.(140-mb_strlen($tweet)).'</span>';
 					echo '</p>';
 					echo '</div>';
@@ -101,12 +101,12 @@ header('charset=utf-8');
 					} else {
 						$label = 'Associer un tweet';	
 					}
-					echo '<a href="quote_tweets.php?quote_id='.$q->getId().'">'.htmlspecialchars($label).'</a>';
+					echo '<a href="quote_tweets.php?quote_id='.$q->getId().'">'.ToolBox::toHtml($label).'</a>';
 					echo '</p>';
 					echo '<div>';
 					
 					if(!empty($q->getLastEdition())) {
-						'<div><p><small>Révisée le '.htmlspecialchars($q->getLastEdition()).'</small></p><div>';
+						'<div><p><small>Révisée le '.ToolBox::toHtml($q->getLastEdition()).'</small></p><div>';
 					}
 					echo '<div class="cmdbar">';
 					echo '<a href="quotes.php?cmd=deleteQuote&id='.$q->getId().'"><i class="fa fa-trash"></i> <span>retirer</span></a>';

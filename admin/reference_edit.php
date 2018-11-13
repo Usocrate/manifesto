@@ -44,8 +44,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -58,10 +58,10 @@ header('charset=utf-8');
 					<li class="breadcrumb-item"><a href="../index.php">Manifesto</a></li>
 					<li class="breadcrumb-item"><a href="index.php">Administration</a></li>
 					<li class="breadcrumb-item"><a href="references.php">Les références</a></li>
-					<li class="breadcrumb-item active" aria-current="page"><?php echo htmlspecialchars($reference->getTitle()) ?></li>
+					<li class="breadcrumb-item active" aria-current="page"><?php echo ToolBox::toHtml($reference->getTitle()) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlspecialchars($reference->getTitle()) ?></h1>
+			<h1><?php echo ToolBox::toHtml($reference->getTitle()) ?></h1>
 		</header>
 		<main>
 		<?php echo $h->getAlertsTag($alerts) ?>
@@ -70,7 +70,7 @@ header('charset=utf-8');
 			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
 			<div class="form-group">
 				<label for="title_i">Intitulé</label>
-				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo htmlspecialchars($reference->getTitle()) ?>"></input>
+				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo ToolBox::toHtml($reference->getTitle()) ?>"></input>
 			</div>
 			<div class="form-group">
 				<label for="url_i">Url</label>
@@ -78,7 +78,7 @@ header('charset=utf-8');
 			</div>
 			<div class="form-group">
 				<label for="comment_i">Commentaire</label>
-				<textarea id="comment_i" name="comment" class="form-control"><?php echo htmlspecialchars($reference->getComment()) ?></textarea>
+				<textarea id="comment_i" name="comment" class="form-control"><?php echo $reference->getComment() ?></textarea>
 			</div>
 			<div class="form-group">
 				<label for="author_i">Auteur</label>
@@ -103,7 +103,7 @@ header('charset=utf-8');
 					echo '>';
 					echo '<label class="custom-control-label" for="q'.$q->getId().'">';
 					echo '<a href="quote_edit.php?id='.$q->getId().'">';
-					echo htmlspecialchars(ucfirst($q->getContent()));
+					echo ToolBox::toHtml(ucfirst($q->getContent()));
 					echo '</a>';
 					echo ' <small><a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a> <a href="../quote.php?id='.$q->getId().'"><i class="fa fa-eye"></i></a></small>';
 					echo '</label>';

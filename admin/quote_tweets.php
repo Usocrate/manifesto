@@ -42,8 +42,8 @@ header('charset=utf-8');
 <head>
 	<meta charset="UTF-8">	
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="description" content="<?php echo htmlspecialchars($env->getProjectDescription()) ?>" />
-	<title><?php echo htmlspecialchars($env->getProjectName()) ?></title>
+	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
+	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -60,7 +60,7 @@ header('charset=utf-8');
 					<li class="breadcrumb-item active">Tweets</li>
 				</ol>
 			</nav>
-			<h1><?php echo htmlspecialchars('Tweets'); ?></h1>
+			<h1><?php echo ToolBox::toHtml('Tweets'); ?></h1>
 		</header>
 		<main>
 			<section><?php echo $h->getAlertsTag($alerts) ?></section>
