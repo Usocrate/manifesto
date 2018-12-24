@@ -15,22 +15,33 @@ $m = new Manifesto($env);
 
 $output = array();
 
-if (isset($_POST['cmd'])) {
+if (isset($_REQUEST['cmd'])) {
     
-    ToolBox::formatUserPost($_POST);
+    ToolBox::formatUserPost($_REQUEST);
     
-    switch ($_POST['cmd']) {
+    switch ($_REQUEST['cmd']) {
         case 'registerSubscription' :
-            $feedback  = $m->registerSubscription(new Subscription($_POST));
-            $output = array();
-            $output['type'] = $feedback->getType();
-            $output['message'] = $feedback->getMessage();
+            $feedback  = $m->registerSubscription(new Subscription($_REQUEST));
             break;
         case 'registerReference' :
-            $feedback  = $m->registerReference(new Reference($_POST));
-            break;            
+            $feedback = $m->registerReference(new Reference($_REQUEST));
+            break;
+        case 'getReferenceTitleFromUrl' :
+            if (!empty($_REQUEST['url'])) {
+                $r = new Reference();
+                $r->setUrl($_REQUEST['url']);
+                $title = $r->getTitleFromUrl();
+                $feedback = new Feedback();
+                $feedback->setType('success');
+                $feedback->addDatum('title', $title);
+            }
+            break;
+        default :
+            $feedback = new Feedback('Commande indéterminée','warning');
     }
+} else {
+    $feedback = new Feedback('Commande indéterminée','warning');
 }
 header('Content-type: text/plain; charset=UTF-8');
-echo json_encode($output);
+echo $feedback->toJson();
 ?>
