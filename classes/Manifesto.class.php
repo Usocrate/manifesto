@@ -457,16 +457,13 @@ class Manifesto {
     public function registerSubscription(Subscription $s) {
         if ($s->hasId()) {
             $statement = $this->env->getPdo()->prepare('UPDATE subscription SET introduction=:introduction, email=:email, timestamp=:timestamp WHERE id=:id');
-            $statement->bindValue(':id', $s->getId(), PDO::PARAM_STR);
-        } else {
-            $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET introduction=:introduction, email=:email, timestamp=:timestamp');   
-        }
-        if ($s->hasId()) {
             $statement->bindValue(':id', $s->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':timestamp', $s->getTimestamp(), PDO::PARAM_STR);
+        } else {
+            $statement = $this->env->getPdo()->prepare('INSERT INTO subscription SET introduction=:introduction, email=:email');   
         }
         $statement->bindValue(':introduction', $s->getIntroduction(), PDO::PARAM_STR);
         $statement->bindValue(':email', $s->getEmail(), PDO::PARAM_STR);
-        $statement->bindValue(':timestamp', $s->getTimestamp(), PDO::PARAM_STR);
         if ($statement->execute()) {
             if (!$s->hasId()) {
                 $s->setId($this->env->getPdo()->lastInsertId());

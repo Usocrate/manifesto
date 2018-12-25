@@ -32,6 +32,23 @@ FOOTER .brand {
 	color:#000;
 }
 
+.info {
+	background-color: #d9edf7;
+	color: #70bce1;
+	font-size: .8em;
+	margin: 1em 0;
+	padding: .6em 1em;
+}
+
+.info BUTTON {
+	display: inline;
+	background-color: inherit;
+	color: #1b6082;
+	border: none;
+	text-align: left;
+	text-transform: none;
+}
+
 .monochrome {
 	color: inherit !important;
 }
