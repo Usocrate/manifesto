@@ -52,7 +52,7 @@ class Environment {
     public function parseConfigFile() {
         try {
             if (is_readable($this->config_file_path)) {
-                $data = json_decode(file_get_contents($this->config_file_path), true);
+                $data = json_decode(file_get_contents($this->config_file_path));
                 foreach ($data as $key => $value) {
                     switch ($key) {
                         case 'db_host':

@@ -46,6 +46,7 @@ header('charset=utf-8');
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
 	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="../skin/home.css" />
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -69,12 +70,12 @@ header('charset=utf-8');
 			<input type="hidden" name="cmd" value="registerReference" />
 			<input type="hidden" name="id" value="<?php echo $reference->getId() ?>" />
 			<div class="form-group">
-				<label for="title_i">Intitulé</label>
-				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo ToolBox::toHtml($reference->getTitle()) ?>"></input>
-			</div>
-			<div class="form-group">
 				<label for="url_i">Url</label>
 				<input id="url_i" type="url" name="url" class="form-control" value="<?php echo $reference->getUrl() ?>"></input>
+			</div>
+			<div class="form-group">
+				<label for="title_i">Intitulé</label>
+				<input id="title_i"type="text" name="title" class="form-control" value="<?php echo ToolBox::toHtml($reference->getTitle()) ?>"></input>
 			</div>
 			<div class="form-group">
 				<label for="comment_i">Commentaire</label>
@@ -118,6 +119,50 @@ header('charset=utf-8');
 		</main>
 		<?php echo $h->getFooterTag() ?>
 	</div>
+	<script>
+		$(document).ready(function(){
+
+    		function displayInputSuggestion(id, value) {
+    			var i = $('#'+id);
+    			var sid = id+'_s';
+    			if (value !== null && value !== undefined && value.length>0) {
+    		        if ($('#'+sid)) {
+    		        	$('#'+sid).slideUp('slow').remove();
+    		        }
+    		        var html = '<div id="'+sid+'" class="info info-suggestion">Suggestion : <button type="button" value="'+value+'">'+value+'</button></div>';
+    		        i.after(html);
+    		        $('#'+sid+' button').each(function() {
+    		    	    $(this).click(function () {
+    		    	    	i.val($(this).val());
+    		    	    	i.focus();
+    		    	    });
+    		    	});
+    			} else {
+    		        if ($('#'+sid)) {
+    		        	$('#'+sid).slideUp('slow').remove();
+    		        }
+    			}
+    		};
+    		
+    		function removeFormerSuggestions() {
+    			$('.info-suggestion').slideUp('slow').remove();
+    		};
+    
+    		function suggestTitleFromUrl() {
+    			$.ajax({
+    			  method:"GET",
+    			  url:"../api.php",
+    			  dataType:"json",
+    			  data:{"cmd":"getReferenceTitleFromUrl","url": $("#url_i").val()}
+    			}).done(function( r ) {
+    	        	displayInputSuggestion('title_i', r.data.title);
+    			});
+    		};
+    
+    		$("#url_i").change(removeFormerSuggestions);
+    		$("#url_i").change(suggestTitleFromUrl);
+		});
+	</script>	
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>	
 </body>
 </html>
