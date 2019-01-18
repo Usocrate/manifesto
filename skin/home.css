@@ -49,11 +49,24 @@ h1 a, h2 a, h3 a {
 h1 {
 	color: #C9462C;
 	font-family: 'Sigmar One', cursive;
-	margin: 0 0 1em 0;
 }
 
 h1 small{
 	color: #0098B6;
+}
+
+.jumbotron h1 {
+	line-height: 1.4em;
+	margin: 0 0 .4em 0;
+}
+
+.jumbotron h1 small {
+	background-color: #0098B6;
+	color: white;
+	margin-left: -1em;
+	padding: .2em .6em .2em 1em;	
+	font-family: 'Open Sans', cursive;
+	font-size:.6em;	
 }
 
 h2 {
@@ -208,9 +221,15 @@ footer {
 	}
 	
 	.jumbotron h1 {
-		padding-top: 80px;
+		padding-top: 60px;
 		padding-left: 1em;
 		text-align: left;
+		transform:rotate(-1deg);
+	}
+	.jumbotron h1 small {
+		opacity: .9;		
+		padding: .2em .6em;
+		margin-left: 0;
 	}
 	
 	#manifesto-doc main {

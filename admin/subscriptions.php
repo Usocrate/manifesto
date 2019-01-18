@@ -61,11 +61,11 @@ header('charset=utf-8');
 			
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {
-				echo '<h2>Matricule n°'.ToolBox::toHtml($s[id]);
-				if (!empty($s[email])) echo ' <small>('.ToolBox::toHtml($s[email]).')</small>';
+				echo '<h2>Matricule n°'.ToolBox::toHtml($s['id']);
+				if (!empty($s['email'])) echo ' <small>('.ToolBox::toHtml($s['email']).')</small>';
 				echo '</h2>';
-				echo '<p>'.ToolBox::toHtml($s[introduction]).'</p>';
-				echo '<p>Usocrate depuis le '.$s[timestamp].'</p>';
+				echo '<p>'.ToolBox::toHtml($s['introduction']).'</p>';
+				echo '<p>Usocrate depuis le '.$s['timestamp'].'</p>';
 				echo '<p><a href="subscription_edit.php?id='.urlencode($s['id']).'">Editer</a></p>';
 			}
 			?>
