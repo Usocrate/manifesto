@@ -155,7 +155,7 @@ ul {
 
 ul li {
 	margin:1em .4em;
-	list-style-type: square;
+	list-style:square;
 }
 
 dl {
@@ -244,10 +244,6 @@ footer {
 		padding-top: 0 1em 1em 1em;
 	}
 	
-	main {
-		padding:0;
-	}
-
 	.jumbotron {
 		background-image: url('images/relaxUser_1110x740.png') !important;
 		margin-bottom:2em;

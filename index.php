@@ -42,17 +42,19 @@ header('charset=utf-8');
 					<span class="firstLetter">L</span>e numérique est le moteur d'une révolution sociale qui dépasse les problématiques technologiques.<br>
 					Sa pratique transforme en profondeur les relations interpersonnelles, les conditions de travail et la manière dont nous nous représentons le monde.</p>
 				<p>
-					Si les usages du numérique sont largement étudiés et commentés, les conditions dans lesquelles sont construites ces applications qui occupent nos vies sont plus rarement abordées.<br>
+					Si les usages du numérique sont largement étudiés et commentés, les conditions dans lesquelles sont construites ces applications qui occupent nos vies sont rarement abordées.<br>
 					C'est pourtant là que tout se décide.<br>
-					Et le constat est simple : les modes de production industriels anciens, loin des enjeux collectifs et individuels de la transformation actuelle, sont encore très ancrés.<br>
+					Et le constat est critique : les modes de production issus du monde industriel, loin des enjeux collectifs et individuels de la transformation actuelle, sont encore très ancrés.<br>
 				</p>
 				<p>
-					Le numérique a besoin d'une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
-					Pour ceux qui portent une démarche de conception centrée sur l'humain et les usages (ergonomes, designers), trop d’énergie est encore dépensée à convaincre les donneurs d’ordre et à obtenir les moyens de travailler.
+					Le numérique attend une renaissance qui placerait l'humain au coeur de toute initiative... pour ne pas réduire l'innovation à une succession de gadgets technologiques inutiles, aliénants et hautement périssables.<br>
+					Ceux qui portent cette exigence (ergonomes, designers, ...) doivent, encore aujourd'hui, dépenser beaucoup d’énergie à convaincre les donneurs d’ordre et obtenir les moyens de travailler.
 				</p>
 				<p>
-					Ce manifeste veut contribuer à lever quelques archaïsmes trop courants dans la conception de services numériques; pour libérer l’innovation et augmenter l’utilité sociale de notre production.<br/>
-					Professionnel qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), ce manifeste s'adresse à toi.<br/>
+					Ce manifeste veut dénoncer quelques partis pris archaïques souvent constatés et contribuer à les régler.<br/>
+					Professionnel qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), il s'adresse à toi.</p>
+				<p>
+					Libérons l’innovation en augmentant l’utilité sociale de notre production numérique !
 				</p>
 			</section>
 			<section id="definition">
@@ -159,7 +161,7 @@ header('charset=utf-8');
 				</div>
 				
 				<div class="area">
-					<h3>2- Contribuer à changer les indicateurs de réussite des projets</h3>
+					<h3>2- Promouvoir d'autres indicateurs de réussite pour les projets</h3>
 					<blockquote style="display:none">Le numérique rend obsolète l'ancien modèle de production industriel.</blockquote>
 					<div class="row">
 						<div class="col-md-6">
