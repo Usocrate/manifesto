@@ -258,7 +258,7 @@ header('charset=utf-8');
 				                  	</div>
 									<div class="form-group ">
 										<label for="email_i">Un email ?</label>
-										<input type="email" id="email_i" name="email" class="form-control input-lg" placeholder="pour être informé de l'évolution de l'initiative usocrate.fr">
+										<input type="email" id="email_i" name="email" class="form-control input-lg" placeholder="pour suivre l'initiative usocrate.fr">
 						            </div>
 						            <input name="cmd" value="registerSubscription" type="hidden">
 						            <button type="submit" class="btn btn-block btn-primary">Oui, j'en suis</button>

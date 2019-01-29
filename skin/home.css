@@ -9,6 +9,23 @@ body {
 	background-color: #efefef;
 }
 
+.container, .container-fluid {
+	background-color:#fff;
+	padding: 0;
+}
+
+main {
+	padding:15px;
+}
+
+.jumbotron {
+	background-image: url('images/relaxUser_414x250.png');
+	background-color: #fff;
+	background-repeat: no-repeat;
+	padding:250px 0 0 0;
+	margin:0;
+}
+
 a, a:hover {
 	color : #9F3723;
 }
@@ -28,7 +45,14 @@ em {
 	color:#C9462C;
 }
 
-FOOTER .brand {
+footer {
+	background-color: #efefef;
+	font-size:.8em;
+	padding:.3em 15px;
+	margin-top:1em;
+}
+
+footer .brand {
 	color:#000;
 }
 
@@ -73,25 +97,27 @@ h1 small{
 }
 
 .jumbotron h1 {
-	line-height: 1.4em;
-	margin: 0 0 .4em 0;
+	line-height: 1em;
+	margin: .3em 15px;
+	padding: .3em 0;
 }
 
 .jumbotron h1 small {
 	background-color: #0098B6;
 	color: white;
-	margin-left: -1em;
-	padding: .2em .6em .2em 1em;	
+	line-height: 1em;
+	margin: 0 0 0 -15px;
+	padding: .3em 15px;	
 	font-family: 'Open Sans', cursive;
-	font-size:.6em;	
+	font-size:.5em;	
 }
 
 h2 {
 	border-top: 3px dashed #dfdfdf;
 	font-family: 'Sigmar One', cursive;
 	color: #0098B6;
-	margin-top: 1em;
-	padding-top: 1em;
+	margin-top: .5em;
+	padding-top: .5em;
 }
 
 h2 em {
@@ -112,13 +138,15 @@ h2 small svg, a svg {
 h3 {
 	background-color: #0098B6;
 	color:#fff;
-	font-size: 1em;
+	font-size:1em;
 	padding:.4em;
+	margin:.3em 0;
 	border-radius:.3rem;
 }
 
 h4 {
 	font-weight:bolder;
+	font-size:1.1em;
 }
 
 ul {
@@ -132,7 +160,7 @@ ul li {
 
 dl {
 	background-color:#dfdfdf;
-	margin:0;
+	margin: .3em 0;
 	padding:1em;
 	border-radius:.3rem;
 }
@@ -143,11 +171,6 @@ dt {
 
 dt span.brand {
 	font-size: 1.2em;
-}
-
-.container, .container-fluid {
-	background-color:#fff;
-	padding: 1em;
 }
 
 footer {
@@ -177,18 +200,6 @@ footer {
 	background-color: #e0e0e0;
 }
 
-.jumbotron {
-	background-color: #fff;
-	padding:0;
-	margin:0;
-}
-
-.jumbotron > div {
-	background-color: #fff;
-	padding: 1em;
-	margin: 1em 0;
-}
-
 .subscriptionCard {
 	border: 3px dashed #dfdfdf;
 	padding:1em;
@@ -216,26 +227,41 @@ footer {
 }
 
 .area {
-	margin: 1em .5em 1.5em .5em;
+	margin: 1em 0;
+}
+
+@media (min-width: 415px) {
+	.jumbotron {
+		background-image: none;
+		padding:0;
+		margin:0;
+	}
 }
 
 @media ( min-width : 962px) {
-	dl {
-		height:250px;
+
+	.container, .container-fluid {
+		padding-top: 0 1em 1em 1em;
 	}
 	
-	.container, .container-fluid {
-		padding-top: 0;
+	main {
+		padding:0;
 	}
 
 	.jumbotron {
 		background-image: url('images/relaxUser_1110x740.png') !important;
 		margin-bottom:2em;
+		padding:0;
 		height:740px;
 		border-top: 0;
 		border-top-left-radius:0;
 		border-top-right-radius:0;
 	}
+	
+	dl {
+		margin:0;
+		height:250px;
+	}	
 	
 	.jumbotron h1 {
 		padding-top: 60px;
