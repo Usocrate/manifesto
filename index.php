@@ -53,9 +53,6 @@ header('charset=utf-8');
 				<p>
 					Ce manifeste veut dénoncer quelques partis pris archaïques souvent constatés et contribuer à les régler.<br/>
 					Professionnel qui a entre les mains la destinée de services numériques (chef de produit, designers, chef de projets, financeur), il s'adresse à toi.</p>
-				<p>
-					Libérons l’innovation en augmentant l’utilité sociale de notre production numérique !
-				</p>
 			</section>
 			<section id="definition">
 				<div class="row justify-content-md-center">
