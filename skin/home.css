@@ -90,15 +90,15 @@ h1 a, h2 a, h3 a {
 h1 {
 	color: #C9462C;
 	font-family: 'Sigmar One', cursive;
+	margin : .3em 15px
 }
 
-h1 small{
+h1 small {
 	color: #0098B6;
 }
 
 .jumbotron h1 {
 	line-height: 1em;
-	margin: .3em 15px;
 	padding: .3em 0;
 }
 
