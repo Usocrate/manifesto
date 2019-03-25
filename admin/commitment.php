@@ -94,13 +94,40 @@ header('charset=utf-8');
 						if ($i>0) {
 							$previous = $placed[$i-1];
 						}
+						
 						echo '<h2>';
 						echo '<a href="quote_edit.php?id='.$placed[$i]->getId().'">'.ToolBox::toHtml($placed[$i]->getContent()).'</a>';
 						if (isset($previous)) {
 							echo ' <small><a href="'.$_SERVER['PHP_SELF'].'?cmd=quoteUp&q_id='.$placed[$i]->getId().'&t_id='.$previous->getId().'&c_id='.$commitment->getId().'"><i class="fa fa-arrow-alt-circle-up"></i></a></small>';
 						}
 						echo '</h2>';
-						echo '<div>'.ToolBox::toHtml($placed[$i]->getComment()).'</div>';
+						
+						$references = $manifesto->getQuoteReferences($placed[$i]);
+
+						if (count($references)>0)  {
+							echo '<div class="container">';
+							echo '<div class="row">';
+							echo '<div class="col-md-8">'.ToolBox::toHtml($placed[$i]->getComment()).'</div>';
+							echo '<div class="col-md-4">';
+							//echo '<div><strong>Références</strong></div>';
+							echo '<ul>';
+							foreach ($references as $r) {
+								echo '<li>';
+								echo '<a href="'.$r->getUrl().'" target="_blank"><strong>'.ToolBox::toHtml($r->getTitle()).'</strong></a>';
+								if ( strlen($r->getAuthor()) > 0 ) {
+									echo ' <small>('.ToolBox::toHtml($r->getAuthor()).')</small>';
+								}
+								if ( strlen($r->getComment())>0 ) {
+									echo '<br>'.ToolBox::toHtml($r->getComment());
+								}
+								echo '</li>';
+							}
+							echo '</ul>';
+							echo '</div>';							
+							echo '</div>';
+						} else {
+							echo '<div>'.ToolBox::toHtml($placed[$i]->getComment()).'</div>';
+						}
 					}
 					
 					if (count($toPlace)>0) {
