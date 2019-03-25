@@ -100,7 +100,7 @@ header('charset=utf-8');
 							echo ' <small><a href="'.$_SERVER['PHP_SELF'].'?cmd=quoteUp&q_id='.$placed[$i]->getId().'&t_id='.$previous->getId().'&c_id='.$commitment->getId().'"><i class="fa fa-arrow-alt-circle-up"></i></a></small>';
 						}
 						echo '</h2>';
-						echo '<div>'.$placed[$i]->getComment().'</div>';
+						echo '<div>'.ToolBox::toHtml($placed[$i]->getComment()).'</div>';
 					}
 					
 					if (count($toPlace)>0) {
