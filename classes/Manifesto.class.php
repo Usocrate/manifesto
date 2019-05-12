@@ -29,6 +29,29 @@ class Manifesto {
         return $output;
     }
     
+    public function getQuoteStats($criteria = null, $sort = 'Longuest comment first') {
+        
+        $sql = 'SELECT q.id, q.content, LENGTH(q.comment) AS comment_length, COUNT(DISTINCT(r.reference_id)) AS references_count, COUNT(DISTINCT(t.tweet_url)) AS tweets_count';
+        $sql.= ' FROM quote AS q LEFT JOIN quote_reference AS r ON (r.quote_id = q.id)';
+        $sql.= ' LEFT JOIN quote_tweet AS t ON (t.quote_id = q.id)';
+        $sql.= ' GROUP BY q.id';
+        
+        switch ($sort) {
+            case 'Longuest comment first':
+                $sql.= ' ORDER BY LENGTH(comment) DESC';
+                break;
+            case 'With most tweets first':
+                $sql.= ' ORDER BY COUNT(DISTINCT(t.tweet_url)) DESC';
+                break;
+            case 'With most references first':
+                $sql.= ' ORDER BY COUNT(DISTINCT(r.references_id)) DESC';
+        }
+
+        $statement = $this->env->getPdo()->prepare($sql);
+        $statement->execute();
+        return $statement->fetchAll();
+    }    
+    
     public function getCommitmentQuotes(Commitment $c, $criteria = null, $sort = null) {
         
         $sql = 'SELECT quote.*, commitment_quote.position FROM commitment_quote INNER JOIN quote ON (commitment_quote.quote_id = quote.id) WHERE commitment_quote.commitment_id=?';

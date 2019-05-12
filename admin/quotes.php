@@ -62,11 +62,33 @@ header('charset=utf-8');
 			<h1>Les déclarations <small><a href="quote_edit.php"><i class="fa fa-plus"></i></a></small></h1>
 		</header>		
 		<main>
-			<?php echo $h->getAlertsTag($alerts) ?>	
-			<ul>
 			<?php 
+				echo $h->getAlertsTag($alerts);
+			
+				$stats = $manifesto->getQuoteStats();
+				echo '<table class="table">';
+				echo '<thead><tr><th></th><th>Argument.</th><th>Réf.</th><th>Tweets</th></tr></thead>';
+				echo '<tbody>';
+				$i = 0;
+				foreach ($stats as $s) {
+					echo '<tr>';
+					echo '<td><a href="#q'.$s['id'].'">'.ucfirst(ToolBox::toHtml($s['content'])).'</a></td>';
+					echo '<td>'.$s['comment_length'];
+					if ($i==0) echo ' <small>car.</small>';
+					echo '</td>';
+					echo '<td>'.$s['references_count'].'</td>';
+					echo '<td>'.$s['tweets_count'].'</td>';
+					echo '</tr>';
+					$i++;
+				}
+				echo '</tbody>';
+				echo '</table>';
+			?>
+			
+			<ul>
+			<?php
 				foreach ($quotes as $q) {
-					echo '<li>';
+					echo '<li id="q'.$q->getId().'">';
 					echo '<h2>'.ucfirst(ToolBox::toHtml($q->getContent()));
 					echo ' <small>';
 					echo '<a href="quote_edit.php?id='.$q->getId().'"><i class="fa fa-edit"></i></a>';
