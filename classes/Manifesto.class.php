@@ -163,6 +163,14 @@ class Manifesto {
         return $statement->execute();
     }
     
+    public function isQuoteAttachedToCommitment(Quote $q, Commitment $c) {
+        $statement = $this->env->getPdo()->prepare('SELECT COUNT(*) FROM commitment_quote WHERE commitment_id=:c_id AND quote_id=:q_id GROUP BY quote_id');
+        $statement->bindValue(':c_id', $c->getId(), PDO::PARAM_INT);
+        $statement->bindValue(':q_id', $q->getId(), PDO::PARAM_INT);
+        $statement->execute();
+        return $statement->fetchColumn()>0;
+    }
+    
     public function attachQuoteToCommitment(Quote $q, Commitment $c) {
         try {  
             //$this->env->getPdo()->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

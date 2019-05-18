@@ -30,8 +30,10 @@ if (isset($_REQUEST['cmd'])) {
             if (isset($_REQUEST['commitment_id'])) {
             	$c = new Commitment();
             	$c->setId($_REQUEST['commitment_id']);
-				$feedback = $manifesto->attachQuoteToCommitment($quote, $c);
-				$alerts[$feedback->getType()][]  = $feedback->getMessage();
+            	if (!$manifesto->isQuoteAttachedToCommitment($quote, $c)) {
+            		$feedback = $manifesto->attachQuoteToCommitment($quote, $c);
+					$alerts[$feedback->getType()][]  = $feedback->getMessage();
+            	}
             }
             header('Location:./quotes.php');
             exit;
