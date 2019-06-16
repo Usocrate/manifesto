@@ -33,6 +33,7 @@ if (isset($_REQUEST['cmd'])) {
 if (!isset($subscription)) {
 	if (!empty($_REQUEST['id'])) {
 		$subscription = $manifesto->getSubscription($_REQUEST['id']);
+		//print_r($subscription);
 	} else {
 		$subscription = new Subscription;
 	}	
@@ -79,6 +80,20 @@ header('charset=utf-8');
 				<label for="email_i">Email</label>
 				<input type="email" id="email_i" name="email" class="form-control" rows="140" value="<?php echo ToolBox::toHtml($subscription->getEmail()) ?>"></input>
 			</div>
+			<div class="form-group">
+				<?php $options = Subscription::getStatusOptions() ?>
+				<label for="status_i">État</label>
+				<select id="status_i" name="status" class="form-control" >
+					<?php 
+					$valueToSelect = $subscription->getStatus();
+					foreach($options as $label=>$value) {
+					    echo '<option value="'.$value.'"';
+					    if (strcmp($valueToSelect,$value)==0) echo ' selected';
+                        echo '>'.ToolBox::toHtml($label).'</option>';
+					}
+					?>
+				</select>
+			</div>			
 			<div class="form-group">
 				<label for="timestamp_i">Timestamp</label>
 				<input type="text" id="timestamp_i" name="timestamp" class="form-control" rows="140" value="<?php echo ToolBox::toHtml($subscription->getTimestamp()) ?>"></input>

@@ -230,6 +230,18 @@ footer {
 	margin: 1em 0;
 }
 
+.checkingArea {
+	color : #cecece;
+}
+
+.positivelyActive {
+	color : green;
+}
+
+.negativelyActive {
+	color : red;
+}
+
 @media (min-width: 415px) {
 	.jumbotron {
 		background-image: none;

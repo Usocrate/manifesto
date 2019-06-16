@@ -4,6 +4,7 @@ class Subscription {
     private $id;
     private $introduction;
     private $email;
+    private $status;
     private $timestamp;
     
     public function __construct($data=null) {
@@ -41,6 +42,18 @@ class Subscription {
     
     public function setEmail($input) {
         $this->email = $input;
+    }
+    
+    public function getStatus() {
+        return isset($this->status) ? $this->status : null;
+    }
+    
+    public static function getStatusOptions() {
+        return array('candidature à examiner'=>'to check', 'candidature validée'=>'validated', 'candidature rejetée'=>'rejected');
+    }
+    
+    public function setStatus($input) {
+        $this->status = $input;
     }
     
     public function getTimestamp() {
