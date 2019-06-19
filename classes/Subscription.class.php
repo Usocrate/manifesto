@@ -56,6 +56,14 @@ class Subscription {
         $this->status = $input;
     }
     
+    public function isValidated() {
+        return isset($this->status) && strcmp($this->status,'validated')==0;
+    }
+
+    public function isRejected() {
+        return isset($this->status) && strcmp($this->status,'rejected')==0;
+    }    
+    
     public function getTimestamp() {
         return isset($this->timestamp) ? $this->timestamp : null;
     }

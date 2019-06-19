@@ -23,6 +23,12 @@ if (isset($_REQUEST['cmd'])) {
         case 'registerSubscription' :
             $feedback  = $m->registerSubscription(new Subscription($_REQUEST));
             break;
+        case 'registerSubscriptionAsValidated' :
+            $feedback = $m->registerSubscriptionAsValidated($_REQUEST['id']);
+            break;
+        case 'registerSubscriptionAsRejected' :
+            $feedback = $m->registerSubscriptionAsRejected($_REQUEST['id']);
+            break;            
         case 'registerReference' :
             $feedback = $m->registerReference(new Reference($_REQUEST));
             break;

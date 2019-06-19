@@ -525,5 +525,39 @@ class Manifesto {
         } else {
             return new Feedback('Echec de l\'enregistrement.', 'error', array('unregistredSubscription' => $s));
         }
-    }        
+    }
+
+    public function registerSubscriptionAsValidated($id) {
+        $s = $this->getSubscription($id);
+        if ($s->isValidated()) {
+            return new Feedback('La souscription est déjà validée.', 'success', array('registredSubscription' => $s));
+        } else {
+            $s->setStatus('validated');
+            $statement = $this->env->getPdo()->prepare('UPDATE subscription SET status=:status WHERE id=:id');
+            $statement->bindValue(':id', $s->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':status', $s->getStatus(), PDO::PARAM_STR);
+            if ($statement->execute()) {
+                return new Feedback('Souscription validée.', 'success', array('registredSubscription' => $s));
+            } else {
+                return new Feedback('Echec de l\'enregistrement.', 'error', array('unregistredSubscription' => $s));
+            }            
+        }            
+    }
+
+    public function registerSubscriptionAsRejected($id) {
+        $s = $this->getSubscription($id);
+        if ($s->isRejected()) {
+            return new Feedback('La souscription est déjà rejetée.', 'success', array('registredSubscription' => $s));
+        } else {
+            $s->setStatus('rejected');
+            $statement = $this->env->getPdo()->prepare('UPDATE subscription SET status=:status WHERE id=:id');
+            $statement->bindValue(':id', $s->getId(), PDO::PARAM_INT);
+            $statement->bindValue(':status', $s->getStatus(), PDO::PARAM_STR);
+            if ($statement->execute()) {
+                return new Feedback('Souscription rejetée.', 'success', array('registredSubscription' => $s));
+            } else {
+                return new Feedback('Echec de l\'enregistrement.', 'error', array('unregistredSubscription' => $s));
+            }            
+        }            
+    }    
 }
