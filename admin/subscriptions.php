@@ -43,6 +43,7 @@ header('charset=utf-8');
 	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
 	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
 	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link href="../skin/home.css" rel="stylesheet" type="text/css">
 	<?php echo $env->writeHtmlHeadTagsForFavicon(); ?>
@@ -86,16 +87,28 @@ header('charset=utf-8');
 			<?php
 			//print_r($subscriptions);
 			foreach ($subscriptions as $s) {
+			    echo '<div subscription-id="'.$s['id'].'">';
 				echo '<h2>Matricule n°'.ToolBox::toHtml($s['id']);
 				echo ' <a href="subscription_edit.php?id='.urlencode($s['id']).'"><i class="fas fa-edit"></i></a>';
 				echo '</h2>';
 				if (!empty($s['email'])) echo '<p><a href="mailto:'.$s['email'].'">'.$s['email'].'</a><p>';
 				echo '<p>'.ToolBox::toHtml($s['introduction']).'</p>';
-				echo '<p><small>Usocrate depuis le '.$s['timestamp'].'</small></p>';
-				echo '<div class="checkingArea">';
-				echo strcmp($s['status'], 'rejected')==0 ? '<span class="negativelyActive"><i class="fas fa-ban"></i> rejetée</span>' : '<i class="fas fa-ban"></i> rejetée';
-				echo ' | ';
-				echo strcmp($s['status'], 'validated')==0 ? '<span class="positivelyActive"><i class="fas fa-check"></i> validée</span>' : '<i class="fas fa-check"></i> validée';
+				switch ($requestedStatus) {
+				    case 'to check':
+				        echo '<p><small>Demande enregistrée le '.$s['timestamp'].'</small></p>';
+				        echo '<div class="checkingArea">';
+				        echo '<button class="ban-button"><i class="fas fa-ban"></i> rejeter</button>';
+				        echo ' ';
+				        echo '<button class="check-button"><i class="fas fa-check"></i> valider</button>';
+				        echo '</div>';
+				        break;
+				    case 'validated':
+				        echo '<p><small>Usocrate depuis le '.$s['timestamp'].'</small></p>';
+				        break;
+				    case 'rejected':
+				        echo '<p><small>Demande enregistrée le '.$s['timestamp'].'</small></p>';
+				        break;
+				}
 				echo '</div>';
 			}
 			?>
@@ -103,6 +116,52 @@ header('charset=utf-8');
 		<?php echo $h->getFooterTag() ?>
 	</div>
 	<script defer="" src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-	<script>$(document).ready(function(){});</script>
+	<script>
+	$(document).ready(function(){
+		$(".ban-button").on("click", function( event ){
+			var button = $(this);
+			var checkingArea = $(this).parent();
+			var item = checkingArea.parent();
+			var id = item.attr('subscription-id');
+			$.ajax({
+			    url: "../api.php",
+			    data: "cmd=registerSubscriptionAsRejected&id="+id,
+			    dataType : "json",
+			})
+			.done(function( json ) {
+				//alert(json.message);
+				button.addClass( "negativelyActive" );
+				item.slideUp(400, function(){$(this).remove()});
+			})
+			.fail(function( xhr, status, errorThrown ) {
+				console.log( "Erreur: " + errorThrown );
+			    console.log( "Etat: " + status );
+			    console.dir( xhr );
+			 });
+		});
+		
+		$(".check-button").on("click", function( event ){
+			var button = $(this);
+			var checkingArea = $(this).parent();
+			var item = checkingArea.parent();
+			var id = item.attr('subscription-id');
+			$.ajax({
+			    url: "../api.php",
+			    data: "cmd=registerSubscriptionAsValidated&id="+id,
+			    dataType : "json",
+			})
+			.done(function( json ) {
+				//alert(json.message);
+				button.addClass( "positivelyActive" );
+				item.slideUp(400, function(){$(this).remove()});
+			})
+			.fail(function( xhr, status, errorThrown ) {
+				console.log( "Erreur: " + errorThrown );
+			    console.log( "Etat: " + status );
+			    console.dir( xhr );
+			 });
+		});		
+	});
+	</script>
 </body>
 </html>
