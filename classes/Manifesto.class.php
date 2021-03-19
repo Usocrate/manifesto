@@ -505,6 +505,26 @@ class Manifesto {
         }
     }
 
+    public function registerCommitment(Commitment $c) {
+    	//print_r($r);
+    	if ($c->hasId()) {
+    		$statement = $this->env->getPdo()->prepare('UPDATE commitment SET title=:title WHERE id=:id');
+    		$statement->bindValue(':id', $c->getId(), PDO::PARAM_INT);
+    	} else {
+    		$statement = $this->env->getPdo()->prepare('INSERT INTO commitment SET title=:title');
+    	}
+    	$statement->bindValue(':title', $c->getTitle(), PDO::PARAM_STR);
+
+    	if ($statement->execute()) {
+    		if (!$c->hasId()) {
+    			$c->setId($this->env->getPdo()->lastInsertId());
+    		}
+    		return new Feedback('Engagement "'.$c->getTitle().'" enregistré', 'success', array('registredCommitment' => $c));
+    	} else {
+    		return 'Engagement "'.$c->getTitle().'" non enregistré';
+    	}
+    }
+    
     public function registerSubscription(Subscription $s) {
         if ($s->hasId()) {
             $statement = $this->env->getPdo()->prepare('UPDATE subscription SET introduction=:introduction, email=:email, status=:status, timestamp=:timestamp WHERE id=:id');

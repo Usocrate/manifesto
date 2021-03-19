@@ -70,7 +70,7 @@ header('charset=utf-8');
 					<li class="breadcrumb-item active"><?php echo ucfirst(ToolBox::toHtml($commitment->getTitle())) ?></li>
 				</ol>
 			</nav>
-			<h1><?php echo ucfirst(ToolBox::toHtml($commitment->getTitle())) ?> <small><a href="commitment_edit.php?c_id=<?php echo $commitment->getId() ?>"><i class="fa fa-edit"></i></a></small></h1>
+			<h1><?php echo ucfirst(ToolBox::toHtml($commitment->getTitle())) ?> <small><a href="commitment_edit.php?id=<?php echo $commitment->getId() ?>"><i class="fa fa-edit"></i></a></small></h1>
 		</header>		
 		<main>
 			<?php 
