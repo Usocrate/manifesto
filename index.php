@@ -72,7 +72,7 @@ header('charset=utf-8');
 			</section>			
 			<section id="method">
 				<h2><em>1</em> Méthode</h2>
-				<div><p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank">ISO 9241-210</a></strong><br>Ergonomie de l'interaction homme-système -- Partie 210<br><em>Conception centrée sur l'opérateur humain pour les systèmes interactifs</em></p></div>
+				<div><p><strong><a href="https://www.iso.org/fr/standard/52075.html" target="_blank" rel="noopener">ISO 9241-210</a></strong><br>Ergonomie de l'interaction homme-système -- Partie 210<br><em>Conception centrée sur l'opérateur humain pour les systèmes interactifs</em></p></div>
 			</section>
 			<section id="purpose">
 				<h2><em>2</em> Ambitions</h2>
