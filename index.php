@@ -128,7 +128,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
@@ -145,7 +145,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
@@ -171,7 +171,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
@@ -188,7 +188,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
@@ -212,7 +212,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
@@ -229,7 +229,7 @@ header('charset=utf-8');
 								<ul>
 									<?php
 										foreach ($quotes as $q) {
-											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>';
+											echo isset($_SESSION['extended']) ? '<li><a href="/quote.php?id='.$q->getId().'">'.ucfirst(ToolBox::toHtml($q->getContent())).'</a></li>' : '<li>'.ucfirst(ToolBox::toHtml($q->getContent())).'</li>';
 										}
 									?>
 								</ul>
