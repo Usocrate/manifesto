@@ -25,7 +25,7 @@ header('charset=utf-8');
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">	
-	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0" />
 	<meta name="description" content="<?php echo ToolBox::toHtml($env->getProjectDescription()) ?>" />
 	<title><?php echo ToolBox::toHtml($env->getProjectName()) ?></title>
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -253,7 +253,7 @@ header('charset=utf-8');
 					            <form id="subscription_form">
 					            	<div class="form-group ">
 										<label for="introduction_i">Je me présente</label>
-										<textarea type="text" id="introduction_i" name="introduction" class="form-control input-lg" placeholder="un profil Twitter ou LinkedIn, peut-être ?" rows="3"></textarea>
+										<textarea id="introduction_i" name="introduction" class="form-control input-lg" placeholder="un profil Twitter ou LinkedIn, peut-être ?" rows="3"></textarea>
 				                  	</div>
 									<div class="form-group ">
 										<label for="email_i">Un email ?</label>
